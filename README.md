@@ -1,1 +1,1 @@
-doc.corezoid.com
+https://doc.corezoid.com
