@@ -39,7 +39,7 @@
 | --- | --- |
 | __conveyor_set_param_return_type_error__ | software |
 | __conveyor_set_param_return_type_tag__ | set_param_wrong_convert_param |
-| __conveyor_set_param_return_description__ | Param: {{param}}, Value: {{value}}", Try convert to: {{type}} |
+| __conveyor_set_param_return_description__ | Param: `{{param}}`, Value: `{{value}}`", Try convert to: `{{type}}` |
 
 #### Нет доступа к указанной диаграмме состояний
 
@@ -47,7 +47,7 @@
 | --- | --- |
 | __conveyor_set_param_return_type_error__ | software |
 | __conveyor_set_param_return_type_tag__ | access_denied |
-| __conveyor_set_param_return_description__ | Param: {{param}}, User: {{user_id}}, Conv_id: {{diag_id}} |
+| __conveyor_set_param_return_description__ | Param: `{{param}}`, User: `{{user_id}}`, Conv_id: `{{diag_id}}` |
 
 #### Указан ID процесса или диаграмма состояний удалена
 
@@ -55,6 +55,6 @@
 | --- | --- |
 | __conveyor_set_param_return_type_error__ | software |
 | __conveyor_set_param_return_type_tag__ | access_refused |
-| __conveyor_set_param_return_description__ | Param: {{param}}, Conv_id: {{diag_id}} is not state type |
+| __conveyor_set_param_return_description__ | Param: `{{param}}`, Conv_id: `{{diag_id}}` is not state type |
 
 > При использовании CONV в других логиках отличается только наименование параметров, значения те же.
