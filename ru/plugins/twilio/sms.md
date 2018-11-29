@@ -37,7 +37,10 @@
 https://corezoid.com/api/1/json/callback/559a817f4b8ff96bf5000b/cb9f670f5c223ec42e1
 
 В значение параметра `StatusCallback` добавляем -
-https://corezoid.com/api/1/json/plugins/twilio/559a817f4b8ff96bf5000b/cb9f670f5c223ec42e1
+https://corezoid.com/api/1/json/plugins/twilio/CONV_ID/559a817f4b8ff96bf5000b/cb9f670f5c223ec42e1
+
+где `CONV_ID - id процесса, которому принадлежит хеш.
+
 
 Нажмите **Deploy**, чтобы изменения вступили в силу.
 

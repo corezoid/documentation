@@ -35,7 +35,9 @@ For example, you get callback url -
 https://corezoid.com/api/1/json/callback/559a817f4b8ff96bf5000b/cb9f670f5c223ec42e1
 
 The parameter value `StatusCallback` will be -
-https://corezoid.com/api/1/json/plugins/twilio/559a817f4b8ff96bf5000b/cb9f670f5c223ec42e1
+https://corezoid.com/api/1/json/plugins/twilio/CONV_ID/559a817f4b8ff96bf5000b/cb9f670f5c223ec42e1
+
+where `CONV_ID - process ID of this hash.
 
 Press **Deploy** to commit changes.
 
