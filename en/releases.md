@@ -1,5 +1,17 @@
 # Release Notes
 
+## 13.12.2018
+
+**New Features:**
+- Added file upload master. Now you can observe status of download:
+
+![img](interface/img/releases/upload_master.gif)
+
+**Fixes:**
+- Fixed validation of email with using letters in different registers. While adding email with letters in different registers - email would be reduced to lower case.
+- Fixed error in incorrect download tasks in **csv** file from processes.
+
+
 ## 04.10.2018
 
 **New Features:**
