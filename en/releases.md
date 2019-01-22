@@ -1,5 +1,26 @@
 # Release Notes
 
+## 23.01.2019
+
+**New Features:**
+- Added new logic GIT Call. Now you could build additional logic for tasks processing with using external libraries. More information about using GIT Call you could read in documentation.
+
+Example with using [moment library](https://github.com/moment/moment/) from GitHub:
+
+![img](interface/img/releases/git_call.png)
+
+- Now **CONV** function allows you to get any inclusions of the task parameters from State Diagram, also array elements. Example: `{{conv[12345].ref[template].message.attachment.payload.buttons[0]}}`
+- Added UUID и Crypto support in Erlang language in logic **Code**.
+
+**Fixes:**
+- Increased input field for error message (check-box Throw exception) in logic **Reply to Process**.
+- Bug with connecting accounts Corezoid and Sender after creating company in Sender.
+- Bug with reading tasks from the deleted state diagram.
+- Bug with checking rights for **Copy task**/**Modify task**/**Call Process** after moving object from/to shared folder.
+- Incorrect work of logic **Condition** when checking conditions for an empty object or array.
+
+
+
 ## 13.12.2018
 
 **New Features:**
