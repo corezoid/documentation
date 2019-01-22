@@ -20,7 +20,6 @@ Example with using [moment library](https://github.com/moment/moment/) from GitH
 - Incorrect work of logic **Condition** when checking conditions for an empty object or array.
 
 
-
 ## 13.12.2018
 
 **New Features:**
