@@ -17,6 +17,7 @@
        * [POST](interface/nodes/api/post.md)
        * [PUT / DELETE / HEAD / PATCH](interface/nodes/api/put__delete__head.md)
        * [Коды ошибок](interface/nodes/api/errors.md)
+   * [Логика GIT Call](interface/nodes/git_call.md)
    * [Логика Waiting for Callback](interface/nodes/callback.md)
    * [Логика Code](interface/nodes/code.md)
        * [Библиотеки JavaScript](interface/nodes/function_code.md)
