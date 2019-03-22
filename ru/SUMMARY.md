@@ -1,7 +1,7 @@
 # Summary
 
 * [Введение](README.md)
-* [Быстрый старт](interface/process_and_state/quick_start.md)
+* [Быстрый старт](quick_start.md)
 * [Глоссарий](int_glossary.md)
 * [Процессы и состояния](interface/process_and_state/processes.md)
    * [Диаграмма состояний](interface/process_and_state/state_diagramm.md)

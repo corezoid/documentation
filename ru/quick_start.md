@@ -20,14 +20,14 @@
 
 Для начала работы с Corezoid сперва необходимо [зарегистрироваться](https://admin.corezoid.com/signup).  
   
-![](../img/quick_start/registration.png)
+![](interface/img/quick_start/registration.png)
 
 
 ## Браузер процессов
 
 После регистрации вы попадаете в браузер процессов, который состоит из 4 компонентов:
 
-![](../img/quick_start/process_browser.png)
+![](interface/img/quick_start/process_browser.png)
 
   
 
@@ -44,16 +44,16 @@
 
 Для создания процесса нажмите в левом верхнем углу кнопку **“Create”** и выберите из выпадающего списка пункт **“Process”**.
 
- ![](../img/quick_start/create_process1.png)
+ ![](interface/img/quick_start/create_process1.png)
 
   
 В появившемся окне укажите произвольное название процесса и короткое описание (опционально), которое поможет понять предназначение и функциональность процесса. После этого нажмите кнопку “**OK**”.  
   
-![](../img/quick_start/create_process2.png)
+![](interface/img/quick_start/create_process2.png)
 
 Поздравляем! Вы создали свой первый процесс на платформе Corezoid :)
 
-![](../img/quick_start/create_process3.png)
+![](interface/img/quick_start/create_process3.png)
 
 
 ##  Редактор процессов
@@ -73,7 +73,7 @@
     
 Зеленая соединяющая узлы линия показывает направление движения заявки по процессу.
 
-  ![](../img/quick_start/process_editor.png)
+  ![](interface/img/quick_start/process_editor.png)
 
   
 **Сверху расположено меню управления процессом:**  
@@ -102,7 +102,7 @@
 
 Промежуточные изменения автоматически сохраняются каждые 10 секунд. К 20 последним изменениям можно применить кнопки Undo/Redo.
 
-  ![](../img/quick_start/edit_mode.gif)
+  ![](interface/img/quick_start/edit_mode.gif)
 
 ###  Режим “View”
 
@@ -114,7 +114,7 @@
     
 2.  **Archive** - это архив заявок, которые находятся сейчас в узле. В этой вкладке вы можете видеть список всех заявок и содержимое этих заявок.  
       
-![](../img/quick_start/view_mode.gif)
+![](interface/img/quick_start/view_mode.gif)
 
 Также в этом режиме вы можете создавать новые заявки и смотреть как они обрабатываются вашим процессом.
 
@@ -128,7 +128,7 @@
 
 Пример заявки в процессе:
 
-![](../img/quick_start/tasks.png)
+![](interface/img/quick_start/tasks.png)
 
 1.  **ID** - уникальный идентификатор, по которому можно найти и модифицировать заявку в рамках всей системы Corezoid.
     
@@ -143,7 +143,7 @@
 
 ###  Создание новой заявки вручную
 
-![](../img/quick_start/create_new_task.png)
+![](interface/img/quick_start/create_new_task.png)
 
 **Рассмотрим процесс создания новой заявки на примере скриншота, где:**  
   
@@ -189,7 +189,7 @@
 
 Для тестирования процесса в режиме реального времени перейдите в режим Debug.  
   
-![](../img/quick_start/debug_mode.gif)
+![](interface/img/quick_start/debug_mode.gif)
 
 Перед Вами открылся интерфейс тестирования. В этом режиме вы можете работать как с заявками, которые уже поступают в процесс из внешних систем, так и эмулировать создание новых заявок аналогично режиму “View”.
 
@@ -206,7 +206,7 @@
 
 Для добавления нового узла наведите на линию, которая соединяет стартовый и финальный узлы, нажмите иконку “+” и в появившемся списке выберите логику **API Call**.
 
-![](../img/quick_start/apicall_and_condition.png)
+![](interface/img/quick_start/apicall_and_condition.png)
 
 
 ### API Call
@@ -214,11 +214,11 @@
 Логика API Call позволяет вызывать API в форматах: JSON, XML, SOAP.
 При добавления логики API Call у вас появляется 4 узла: узел API Call + 3 узла, которые отвечают за обработку ошибок, возникающих при вызове API.
   
-![](../img/quick_start/apicall.png)
+![](interface/img/quick_start/apicall.png)
 
 Теперь давайте настроим параметры вызова API. Для этого кликните на узел **API Call** и в появившемся боковом меню вы увидите параметры вызова API:
 
-![](../img/quick_start/apicall2.png)
+![](interface/img/quick_start/apicall2.png)
 
 1.  **Add title** - поле для ввода названия узла. Мы настоятельно рекомендуем добавлять название всем узлам, чтобы пользователи могли без труда “прочитать” процесс и понимать, что в нем происходит без необходимости заходить в каждый узел и смотреть для чего используется та или иная логика. 
       
@@ -246,19 +246,19 @@
 
 2.  Создать новый API Key  
 
-    ![](../img/quick_start/api_openweather.png)
+    ![](interface/img/quick_start/api_openweather.png)
     
 Далее необходимо добавить следующий URL в узел **API Call**:  [http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID={APIKEY](http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=%7BAPIKEY)}, где {APIKEY} - ключ, который вы создали.
 
 И выбрать **Request method: GET**, т.к. мы хотим запросить данные у API.
 
-![](../img/quick_start/api_openweather_get.png)
+![](interface/img/quick_start/api_openweather_get.png)
 
 Далее переходим в режим View, создаем новую пустую заявку, нажав на кнопку **“+ New task”**, и жмем кнопку **“Add task”**. 
 
 После успешной обработки заявки, жмем на узел **“Final”** и справа у появится боковое меню с описание параметров заявки, в которой содержится ответ API в формате JSON.
 
-![](../img/quick_start/api_openweather_json.png)
+![](interface/img/quick_start/api_openweather_json.png)
 
 **Поздравляем! Вы успешно вызвали ваш первый API с помощью Corezoid.**
 
@@ -274,7 +274,7 @@
 У вас должно получиться так, как на скриншоте ниже:
 
 
- ![](../img/quick_start/condition_node.png)
+ ![](interface/img/quick_start/condition_node.png)
 
 Теперь разберем элементы узла Condition:
 
@@ -330,10 +330,10 @@
 4.  Так как мы работаем с числами, выбираем тип значения “N”  
       
     У вас должна получиться следующая конструкция:  
-     ![](../img/quick_start/maintemp1.png)
+     ![](interface/img/quick_start/maintemp1.png)
 5.  Нажимаем на кнопку “+ Add condition”
 6.  Добавляем второе условие, которое состоит из 2 параметров:  
-    ![](../img/quick_start/maintemp2.png)
+    ![](interface/img/quick_start/maintemp2.png)
       
     Для добавления второго элемента, нажмите кнопку “+ Add parameter”
     
@@ -343,12 +343,12 @@
 Теперь давайте добавим финальные узлы, в которое будут маршрутизироваться заявки в зависимости от текущей температуры:
 
 1.  Нажмите на кнопку “+” возле каждого из условий и выберите узел “End: Success”  
-    ![](../img/quick_start/maintemp3.png) 
+    ![](interface/img/quick_start/maintemp3.png) 
 2.  Добавьте в поле “title” название узла “Warm”.
 3.  Повторите операцию со вторым условием, назвав узел “Normal”
 4.  Переименуйте узел “Final” на “Cold”
     
-![](../img/quick_start/maintemp4.png)
+![](interface/img/quick_start/maintemp4.png)
   
 Мы не добавляли третье условие, так как если ни одно из условий выше не будет выполнено, значит температура ниже 5 градусов и мы по безусловному переходу переведем заявку в узел “Cold”.
 
@@ -362,7 +362,7 @@
 
 На момент написания этого текста в Лондоне было +8.46 градусов и заявка ожидаемо попала в узел “Normal”, так как температура находится в диапазоне от +5 до +20.
 
-  ![](../img/quick_start/temp_json.png)
+  ![](interface/img/quick_start/temp_json.png)
 
 Поздравляем! Теперь вы умеете вызывать API и работать управлять заявками с помощью узла **Condition**.
 
