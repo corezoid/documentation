@@ -115,6 +115,7 @@
 Для отслеживания работы процесса в режиме реального времени перейдите во вкладку **View**.
 
 При клике на любой узел в режиме **View** у вас появляется боковое меню с 2 вкладками:
+
 1.  **Statistics** - статистика в разрезе количества обработанных заявок за выбранный период времени;
     
 2.  **Archive** - это архив заявок, которые находятся сейчас в узле. В этой вкладке вы можете видеть список всех заявок и содержимое этих заявок.  
@@ -234,12 +235,9 @@
 4.  **Request format** - формат запроса. Бывает 2 типов: *Default* - стандартный HTTP-вызов API; *Corezoid* - запрос к внутреннему [API Сorezoid](https://doc.corezoid.com/ru/interface/nodes/api/corezoid.html) (продвинутое использование Corezoid).  
       
 5.  **Методы вызова API** - все стандартные HTTP-методы, необходимые для работы с API: [GET](https://doc.corezoid.com/ru/interface/nodes/api/get.html), [POST](https://doc.corezoid.com/ru/interface/nodes/api/post.html), [PUT, DELETE, HEAD, PATCH](https://doc.corezoid.com/ru/interface/nodes/api/put__delete__head.html). 
-
-Подробнее об HTTP-методах можно прочитать [здесь](https://ru.wikipedia.org/wiki/HTTP#%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B).  
+Подробнее об HTTP-методах можно прочитать [здесь](https://ru.wikipedia.org/wiki/HTTP#%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B).
     
-6.  **Content-Type** - выбор типа формата данных при запросе к API: application/json, application/x-www-form-urlencoded, application/xml, text/xml, application/soap+xml  
-
-Подробнее о Content-type можно прочитать [здесь](https://developer.mozilla.org/ru/docs/Web/HTTP/%D0%97%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B8/Content-Type).  
+6.  **Content-Type** - выбор типа формата данных при запросе к API: application/json, application/x-www-form-urlencoded, application/xml, text/xml, application/soap+xml. Подробнее о Content-type можно прочитать [здесь](https://developer.mozilla.org/ru/docs/Web/HTTP/%D0%97%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B8/Content-Type).  
       
 7.  **Parameters** - описание параметров, которые будут переданы в API. Параметры описываются в формате “key-value”, по аналогии созданию новой заявки.  
     
