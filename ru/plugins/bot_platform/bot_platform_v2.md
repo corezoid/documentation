@@ -46,47 +46,47 @@
 
   - [Event](#event)
 
-[Процесс Router](#процесс-router)
+  - [Процесс Router](#процесс-router)
 
-[Процесс Send Message](#процесс-send-message)
+  - [Процесс Send Message](#процесс-send-message)
 
-[Описание параметров](#описание-параметров)
+  - [Описание параметров](#описание-параметров)
 
-[Папка Config](#папка-config)
+  - [Папка Config](#папка-config)
 
-[Tokens](#tokens)
+  - [Tokens](#tokens)
 
-[Command](#command)
+  - [Command](#command)
 
-[Attachments](#attachments)
+  - [Attachments](#attachments)
 
-[Пример](#пример:)
+  - [Пример](#пример)
 
-[Как работает Dynamic attachment?](#как-работает-dynamic-attachment?)
+- [Как работает Dynamic attachment?](#как-работает-dynamic-attachment?)
 
-[Добавление шаблона](#добавление-шаблона)
+- [Добавление шаблона](#добавление-шаблона)
 
-[Массив элементов items](#массив-элементов-items)
+- [Массив элементов items](#массив-элементов-items)
 
-[Преобразование JSON](#преобразование-json)
+- [Преобразование JSON](#преобразование-json)
 
-[Localization](#localization)
+- [Localization](#localization)
 
-[User Profile](#user-profile)
+- [User Profile](#user-profile)
 
-[Расширение функций бота](#расширение-функций-бота)
+- [Расширение функций бота](#расширение-функций-бота)
 
-[Добавление новой команды](#добавление-новой-команды)
+- [Добавление новой команды](#добавление-новой-команды)
 
-[Работа с конфигурацией в Bot platform](#работа-с-конфигурацией-в-bot-platform)
+- [Работа с конфигурацией в Bot platform](#работа-с-конфигурацией-в-bot-platform)
 
-[Commands](#commands)
+  - [Commands](#commands)
 
-[Localization](#localization)
+  - [Localization](#localization)
 
-[Attachments](#attachments)
+  - [Attachments](#attachments)
 
-[Логика процесса](#логика-процесса-авторизации)
+- [Логика процесса](#логика-процесса-авторизации)
 
   
   
@@ -442,7 +442,7 @@
   
   
 
-#### Пример:
+#### Пример
 
 По умолчанию диаграмма состояний **Attachments** уже  содержит примеры готовых приложений.
   
