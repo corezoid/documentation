@@ -22,7 +22,7 @@
 ## Работа с конфигурацией в Bot Platform
 
 Для добавления логики авторизации, нам необходимо произвести ряд изменений в стандартных процессах Bot Platform. Общий алгоритм работы процесса авторизации представлен на схеме:
-![](../interface/img/bot_platform_v2/auth.png)
+![](interface/img/bot_platform_v2/auth.png)
 
 
 ### Commands
@@ -40,7 +40,7 @@
 1.  Откройте диаграмму состояний **Commands** (в папке Config).
 2.  Переведите процесс в режим **View**.
 3.  Нажмите “+ New task” и заполните данные заявки:
-![](../interface/img/bot_platform_v2/new_task.png)
+![](interface/img/bot_platform_v2/new_task.png)
 
 
 где:
