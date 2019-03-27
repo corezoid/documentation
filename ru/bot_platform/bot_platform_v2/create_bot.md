@@ -26,9 +26,9 @@
 3.  Перейти на специальную [страницу](http://developers.facebook.com/apps) для разработчиков. Если вы впервые находитесь на этой странице, то вас попросят зарегистрироваться в качестве разработчика.
 4.  Открыть меню “Мои приложения” и нажать кнопку “Создать приложение”.
 5.  Заполните форму:  
-![](../img/botplatform2_0/create_a_new_app_id.png)
+![](../interface/img/bot_platform_v2/create_a_new_app_id.png)
 6.  После создания приложения, в меню слева добавить продукт Messenger нажатием кнопки «Настроить» ("Set up").
-![](../img/botplatform2_0/page_access_token.png)
+![](../interface/img/bot_platform_v2/page_access_token.png)
 7.  Выберите страницу и сгенерируйте токен доступа к странице:
 8.  Сохранить токен для использования на следующем шаге.
     
@@ -58,10 +58,10 @@
 Для создания **Bot Platform**:
 
 -   В левом верхнем углу кликните на выпадающий список под надписью “Company” и выберите созданную на предыдущем шаге компанию Sender.
-![](../img/botplatform2_0/create_bot_platform1.png)
+![](../interface/img/bot_platform_v2/create_bot_platform1.png)
 -   нажмите кнопку **"Create"** и выберите **Bot Platform**
 -   отметьте чекбоксы необходимых мессенджеров и введите ключи, полученные при создании ботов:
-![](../img/botplatform2_0/create_bot_platform2.png)
+![](../interface/img/bot_platform_v2/create_bot_platform2.png)
 -   Нажмите кнопку **"Next"**.  
       
    
@@ -69,16 +69,16 @@
   
 
 Если был выбран Facebook Messenger, в диалоговом окне будет доступен для копирования webhook (URL для отправки сообщений из Facebook Messenger):
-![](../img/botplatform2_0/webhook_for_fb.png)
+![](../interface/img/bot_platform_v2/webhook_for_fb.png)
 
 **Скопируйте этот URL и завершите настройку приложения Facebook:**
 1.  В настройках продукта Facebook в блоке [Webhook](https://en.wikipedia.org/wiki/Webhook) нажмите кнопку “Настройка Webhooks":
-![](../img/botplatform2_0/setup_webhooks_fb.png)
+![](../interface/img/bot_platform_v2/setup_webhooks_fb.png)
 2.  В поле “URL обратного вызова” вставьте скопированный URL.
 3.  В поле “Подтвердить маркер” вставьте маркер доступа страницы, полученный ранее.
 4.  Выберите [события](https://developers.facebook.com/docs/messenger-platform/webhook), которые необходимо получать в процесс. Рекомендуется отметить `messages, messaging_postbacks, messaging_optins`. Подтвердите действие.
 5.  После успешного сохранения выберите страницу, на события которой будет подписано приложение и нажмите кнопку “Подписаться”:
-![](../img/botplatform2_0/subscribe_fb_page.png)
+![](../interface/img/bot_platform_v2/subscribe_fb_page.png)
 
   
 

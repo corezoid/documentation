@@ -6,11 +6,11 @@
 
 
 
-- [Как создать бота с помощью Bot Platform 2.0](bot_platform/bot_platform_v2/create_bot.md)
-- [Базовый функционал Bot Platform 2.0](bot_platform/bot_platform_v2/basic_function.md)
-- [Объекты папки Bot Platform 2.0](bot_platform/bot_platform_v2/object_folder.md)
-- [Расширение функций бота](bot_platform/bot_platform_v2/expansion.md)
-- [Авторизация пользователей по номеру телефона](bot_platform/bot_platform_v2/authorization.md)
+- [Как создать бота с помощью Bot Platform 2.0](create_bot.md)
+- [Базовый функционал Bot Platform 2.0](basic_function.md)
+- [Объекты папки Bot Platform 2.0](object_folder.md)
+- [Расширение функций бота](expansion.md)
+- [Авторизация пользователей по номеру телефона](authorization.md)
 
   
   
@@ -28,4 +28,4 @@
 
 # Архитектура
 
-  ![](../img/botplatform2_0/architecture.png)
+  ![](../interface/img/bot_platform_v2/architecture.png)
