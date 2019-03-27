@@ -45,7 +45,8 @@
 
   
 Нажмите кнопку **Connect to messenger**, выберите мессенджер и укажите новый токен для подключения webhook к процессу. Также необходимо обязательно актуализировать токены в [диаграмме Tokens](https://docs.google.com/document/d/1TE6x4j1UTEo1sb7hyflKHL_Zz5OqAxVt1igSguvkBBw/edit#heading=h.bflip5i11roz). REF заявки должен называться “token”.
-![](interface/img/bot_platform_v2/connect_to_messenger.png)
+
+![img](../img/bot_platform_v2/connect_to_messenger.png)
 
 ## Процесс Main
 
@@ -100,13 +101,15 @@
 ## Процесс Router
 
 Процесс, который реализует главную логику обработки событий **Bot platform**. Здесь реализована обработка всех типов [event](https://docs.google.com/document/d/1TE6x4j1UTEo1sb7hyflKHL_Zz5OqAxVt1igSguvkBBw/edit#heading=h.dvaac7swglpy).
-![](interface/img/bot_platform_v2/router.png)
-  
+
+![img](../img/bot_platform_v2/router.png)
+
 
 ## Процесс Send Message
 
 Процесс, который отвечает за отправку сообщений пользователям. Здесь происходит получение шаблонов текстов и приложений (кнопки, “карусель” и др.), локализация и динамическая подстановка значений в шаблоны.
-![](interface/img/bot_platform_v2/send_message.png)
+
+![img](../img/bot_platform_v2/send_message.png)
 
 
 
@@ -245,17 +248,19 @@
 
 **mainKeyboard - кнопки главного меню**
 
-Facebook Messenger:  
-![](interface/img/bot_platform_v2/main_keyboard_fb.png)  
-  
+Facebook Messenger:
+
+![img](../img/bot_platform_v2/main_keyboard_fb.png)
+
 
 Viber:
-![](interface/img/bot_platform_v2/main_keyboard_viber.png)  
 
-  
+![img](../img/bot_platform_v2/main_keyboard_viber.png)
+
 
 Telegram:
-![](interface/img/bot_platform_v2/main_keyboard_telegram.png)  
+
+![img](../img/bot_platform_v2/main_keyboard_telegram.png)
 
 
 Детальнее с типами сообщений можно ознакомиться непосредственно в документации API мессенджера:
@@ -404,7 +409,8 @@ Telegram:
 -   **disableExitButton** = false|true (флаг отображение кнопки “Выход”)
 
 Все остальные действия с объектом выполняет узел с логикой **Code** "createDynamicAttachment".
-![](interface/img/bot_platform_v2/disableExitButton.png)
+
+![img](../img/bot_platform_v2/disableExitButton.png)
 
   
 
@@ -444,12 +450,14 @@ Telegram:
 
 **Пример отображения**
 Facebook Messenger:  
-![](interface/img/bot_platform_v2/rates_usd_fb.png)
+
+![img](../img/bot_platform_v2/rates_usd_fb.png)
+
   
-  
-Viber:  
-![](interface/img/bot_platform_v2/rates_viber.png)  
-  
+Viber:
+
+![img](../img/bot_platform_v2/rates_viber.png)
+
 
 ### Localization
 
@@ -491,7 +499,8 @@ Viber:
 
 
 Для отправки текстового сообщения необходимо передать в значение параметра `text_id` название ключа (key) из заявки **localization**.
-![](interface/img/bot_platform_v2/send_text_message.png)
+
+![img](../img/bot_platform_v2/send_text_message.png)
 
   
 

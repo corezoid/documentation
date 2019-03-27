@@ -36,10 +36,14 @@
 2.  [Создать](https://www.facebook.com/help/104002523024878?helpref=about_content) новую страницу, для которой будет работать бот.
 3.  Перейти на специальную [страницу](http://developers.facebook.com/apps) для разработчиков. Если вы впервые находитесь на этой странице, то вас попросят зарегистрироваться в качестве разработчика.
 4.  Открыть меню “Мои приложения” и нажать кнопку “Создать приложение”.
-5.  Заполните форму:  
-![](interface/img/bot_platform_v2/create_a_new_app_id.png)
+5.  Заполните форму:
+
+![img](../img/bot_platform_v2/create_a_new_app_id.png)
+
 6.  После создания приложения, в меню слева добавить продукт Messenger нажатием кнопки «Настроить» ("Set up").
-![](interface/img/bot_platform_v2/page_access_token.png)
+
+![img](../img/bot_platform_v2/page_access_token.png)
+
 7.  Выберите страницу и сгенерируйте токен доступа к странице:
 8.  Сохранить токен для использования на следующем шаге.
     
@@ -69,10 +73,14 @@
 Для создания **Bot Platform**:
 
 -   В левом верхнем углу кликните на выпадающий список под надписью “Company” и выберите созданную на предыдущем шаге компанию Sender.
-![](interface/img/bot_platform_v2/create_bot_platform1.png)
+
+![img](../img/bot_platform_v2/create_bot_platform1.png)
+
 -   нажмите кнопку **"Create"** и выберите **Bot Platform**
 -   отметьте чекбоксы необходимых мессенджеров и введите ключи, полученные при создании ботов:
-![](interface/img/bot_platform_v2/create_bot_platform2.png)
+
+![img](../img/bot_platform_v2/create_bot_platform2.png)
+
 -   Нажмите кнопку **"Next"**.  
       
    
@@ -80,7 +88,8 @@
   
 
 Если был выбран Facebook Messenger, в диалоговом окне будет доступен для копирования webhook (URL для отправки сообщений из Facebook Messenger):
-![](interface/img/bot_platform_v2/webhook_for_fb.png)
+
+![img](../img/bot_platform_v2/webhook_for_fb.png)
 
 **Скопируйте этот URL и завершите настройку приложения Facebook:**
  1.  В настройках продукта Facebook в блоке [Webhook](https://en.wikipedia.org/wiki/Webhook) нажмите кнопку “Настройка Webhooks":![](interface/img/bot_platform_v2/setup_webhooks_fb.png)
