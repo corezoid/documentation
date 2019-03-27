@@ -83,13 +83,11 @@
 ![](interface/img/bot_platform_v2/webhook_for_fb.png)
 
 **Скопируйте этот URL и завершите настройку приложения Facebook:**
-1.  В настройках продукта Facebook в блоке [Webhook](https://en.wikipedia.org/wiki/Webhook) нажмите кнопку “Настройка Webhooks":
-![](interface/img/bot_platform_v2/setup_webhooks_fb.png)
-2.  В поле “URL обратного вызова” вставьте скопированный URL.
-3.  В поле “Подтвердить маркер” вставьте маркер доступа страницы, полученный ранее.
-4.  Выберите [события](https://developers.facebook.com/docs/messenger-platform/webhook), которые необходимо получать в процесс. Рекомендуется отметить `messages, messaging_postbacks, messaging_optins`. Подтвердите действие.
-5.  После успешного сохранения выберите страницу, на события которой будет подписано приложение и нажмите кнопку “Подписаться”:
-![](interface/img/bot_platform_v2/subscribe_fb_page.png)
+ 1.  В настройках продукта Facebook в блоке [Webhook](https://en.wikipedia.org/wiki/Webhook) нажмите кнопку “Настройка Webhooks":![](interface/img/bot_platform_v2/setup_webhooks_fb.png)
+ 2.  В поле “URL обратного вызова” вставьте скопированный URL.
+ 3.  В поле “Подтвердить маркер” вставьте маркер доступа страницы, полученный ранее.
+ 4.  Выберите [события](https://developers.facebook.com/docs/messenger-platform/webhook), которые необходимо получать в процесс. Рекомендуется отметить `messages, messaging_postbacks, messaging_optins`. Подтвердите действие.
+ 5.  После успешного сохранения выберите страницу, на события которой будет подписано приложение и нажмите кнопку “Подписаться”:![](interface/img/bot_platform_v2/subscribe_fb_page.png)
 
   
 
