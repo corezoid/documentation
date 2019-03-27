@@ -79,14 +79,14 @@
 ### Attachments
 
 Мессенджеры предоставляют возможность получить номер телефона, если пользователь нажмет на специальную кнопку:
-| Мессенджер         | Параметр                           | Пример кнопки                                                                                                                    |
-|--------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Viber              | ["ActionType":"share-phone"](https://developers.viber.com/docs/tools/keyboards/#buttons-parameters)         | `{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}` |
-| Telegram           | ["request_contact":true](https://core.telegram.org/bots/api#keyboardbutton) | `{"request_contact": true,"text": "{{t'sharePhone}}"}`|
-| Facebook Messenger | ["content_type":"user_phone_number"](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/#phone) | `{"content_type": "user_phone_number"}`                                                                                           |
 
-  
+| Мессенджер | Параметр | Пример кнопки |
+|---|---|---|
+| Viber | ["ActionType":"share-phone"](https://developers.viber.com/docs/tools/keyboards/#buttons-parameters) | `{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}` |
+| Telegram | ["request_contact":true](https://core.telegram.org/bots/api#keyboardbutton) | `{"request_contact": true,"text": "{{t'sharePhone}}"}`|
+| Facebook Messenger | ["content_type":"user_phone_number"](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/#phone) | `{"content_type": "user_phone_number"}` |
 
+ 
 Для этого вам необходимо добавить в диаграмму состояний **Attachments** шаблон приложения, в котором будет 2 кнопки:
 
 -   для отправки номера телефона;
