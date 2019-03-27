@@ -1,19 +1,19 @@
 # Как создать бота с помощью Bot Platform
 - [Шаг 1. Регистрация бота в мессенджере](#шаг-1.-регистрация-бота-в-мессенджере.)
 
-  - [Telegram](#**telegram**)
+  - [Telegram](#telegram)
 
-  - [Viber](#**viber**)
+  - [Viber](#viber)
 
-  - [Facebook Messenger](#**facebook-messenger**)
+  - [Facebook Messenger](#facebook-messenger)
 
-- [Шаг 2. Создание компании в Sender](#шаг-2.-создание-компании-в-sender)
+- [Шаг 2. Создание компании в Sender](#шаг-2-создание-компании-в-sender)
 
-- [Шаг 3. Подключение бота к Bot Platform](#шаг-3.-подключение-бота-к-bot-platform)
+- [Шаг 3. Подключение бота к Bot Platform](#шаг-3-подключение-бота-к-bot-platform)
 
 ## Шаг 1. Регистрация бота в мессенджере.
 
-### **Telegram**
+### Telegram
 
 1.  Откройте в Telegram чат с ботом [BotFather](http://telegram.me/BotFather) и нажмите кнопку **Start**.
 2.  Отправьте боту команду `/newbot` для создания нового робота.
@@ -22,7 +22,7 @@
 5.  Сохраните токен для использования на следующем шаге.
     
 
-### **Viber**
+### Viber
 
 1.  Авторизоваться на [partners.viber.com](https://partners.viber.com/)
 2.  Нажать **Create Bot Account**, заполнить информацию о боте.
@@ -30,7 +30,7 @@
 4.  Сохранить токен для использования на следующем шаге.
     
 
-### **Facebook Messenger**
+### Facebook Messenger
 
 1.  Войти в свой аккаунт [facebook](https://www.facebook.com/).
 2.  [Создать](https://www.facebook.com/help/104002523024878?helpref=about_content) новую страницу, для которой будет работать бот.
@@ -52,7 +52,7 @@
 
 
 
-## Шаг 2. Создание компании в Sender
+## Шаг 2 Создание компании в Sender
 
 При создании **Bot Platform** необходимо выбрать существующую или создать новую компанию в [Sender](https://sender.mobi/ru/). Это необходимо для реализации стандартного функционала подключения оператора в чат в боте.  
   
@@ -68,7 +68,7 @@
 
 Если нет учетной записи в Sender, необходимо установить приложение [Sender](https://sender.mobi/ru/) и зарегистрироваться с номером телефона или использовать для авторизации в [web-версии](http://chat.sender.mobi)  [виртуальный номер](https://cosmos.mobi).
 
-## Шаг 3. Подключение бота к Bot Platform
+## Шаг 3 Подключение бота к Bot Platform
 
 Для создания **Bot Platform**:
 
@@ -92,11 +92,14 @@
 ![img](../img/bot_platform_v2/webhook_for_fb.png)
 
 **Скопируйте этот URL и завершите настройку приложения Facebook:**
- 1.  В настройках продукта Facebook в блоке [Webhook](https://en.wikipedia.org/wiki/Webhook) нажмите кнопку “Настройка Webhooks":![](interface/img/bot_platform_v2/setup_webhooks_fb.png)
+ 1.  В настройках продукта Facebook в блоке [Webhook](https://en.wikipedia.org/wiki/Webhook) нажмите кнопку “Настройка Webhooks":
+ ![](../img/bot_platform_v2/setup_webhooks_fb.png)
  2.  В поле “URL обратного вызова” вставьте скопированный URL.
  3.  В поле “Подтвердить маркер” вставьте маркер доступа страницы, полученный ранее.
  4.  Выберите [события](https://developers.facebook.com/docs/messenger-platform/webhook), которые необходимо получать в процесс. Рекомендуется отметить `messages, messaging_postbacks, messaging_optins`. Подтвердите действие.
- 5.  После успешного сохранения выберите страницу, на события которой будет подписано приложение и нажмите кнопку “Подписаться”:![](interface/img/bot_platform_v2/subscribe_fb_page.png)
+ 5.  После успешного сохранения выберите страницу, на события которой будет подписано приложение и нажмите кнопку “Подписаться”:
+ 
+ ![](../img/bot_platform_v2/subscribe_fb_page.png)
 
   
 
