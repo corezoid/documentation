@@ -1,5 +1,30 @@
 # Объекты папки Bot Platform 2.0
 
+  - [Процессы Viber/Telegram/Facebook Receiver](#процессы-viber/telegram/facebook-receiver)
+
+  - [Процесс Main](#процесс-main)
+
+  - [Описание параметров](#описание-параметров)
+
+  - [Event](#event)
+
+  - [Процесс Router](#процесс-router)
+
+  - [Процесс Send Message](#процесс-send-message)
+
+  - [Описание параметров](#описание-параметров)
+
+  - [Папка Config](#папка-config)
+
+  - [Tokens](#tokens)
+
+  - [Command](#command)
+
+  - [Attachments](#attachments)
+
+  - [Пример](#пример)
+
+
 ## Процессы Viber/Telegram/Facebook Receiver
 
 С этих процессов начинается работа бота. [Webhook](https://en.wikipedia.org/wiki/Webhook) каждого бота подключается к одноименному процессу **Receiver** на этапе создания **Bot Platform** (Telegram и Viber - автоматически, Facebook Messenger - ручная настройка).

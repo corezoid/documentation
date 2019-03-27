@@ -1,4 +1,13 @@
 # Расширение функций бота
+- [Добавление новой команды](#добавление-новой-команды)
+
+- [Работа с конфигурацией в Bot platform](#работа-с-конфигурацией-в-bot-platform)
+
+  - [Commands](#commands)
+
+  - [Localization](#localization)
+
+  - [Attachments](#attachments)
 
 ## Добавление новой команды
 
@@ -73,7 +82,7 @@
 | Мессенджер         | Параметр                           | Пример кнопки                                                                                                                    |
 |--------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Viber              | ["ActionType":"share-phone"](https://developers.viber.com/docs/tools/keyboards/#buttons-parameters)         | `{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}` |
-| Telegram           | ["request_contact":true](https://core.telegram.org/bots/api#keyboardbutton)             | `{"request_contact": true,"text": "{{t'sharePhone}}"}`                                                                           |
+| Telegram           | ["request_contact":true](https://core.telegram.org/bots/api#keyboardbutton) | `{"request_contact": true,"text": "{{t'sharePhone}}"}`|
 | Facebook Messenger | ["content_type":"user_phone_number"](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/#phone) | `{"content_type": "user_phone_number"}`                                                                                           |
 
   
