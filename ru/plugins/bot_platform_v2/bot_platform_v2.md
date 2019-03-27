@@ -28,4 +28,5 @@
 
 # Архитектура
 
+
   ![img](../img/bot_platform_v2/architecture.png)
