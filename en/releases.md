@@ -27,6 +27,7 @@
 ## 23.01.2019
 
 **New Features:**
+
 1. Added new logic GIT Call. Now you could build additional logic for tasks processing with using external libraries. More information about using GIT Call you could read in documentation.
 Example with using [moment library](https://github.com/moment/moment/) from GitHub:
 ![img](interface/img/releases/git_call.png)
@@ -34,6 +35,7 @@ Example with using [moment library](https://github.com/moment/moment/) from GitH
 3. Added UUID и Crypto support in Erlang language in logic **Code**.
 
 **Fixes:**
+
 1. Increased input field for error message (check-box Throw exception) in logic **Reply to Process**.
 2. Bug with connecting accounts Corezoid and Sender after creating company in Sender.
 3. Bug with reading tasks from the deleted state diagram.
