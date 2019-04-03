@@ -12,6 +12,9 @@
     - [Режим “View”](#режим-view)
     - [Режим “Debug”](#режим-debug)
 - [Работа с логиками API Call, Condition](#работа-с-узлами-api-call-condition)
+- [Работа с логиками Call Process/Reply to Process](#сall-process)
+- [Работа с логиками Copy Task/Modify Task](#сopy-task)
+- [Работа со State Diagram](#state-diagram)
 
   
   
