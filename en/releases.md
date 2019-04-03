@@ -5,10 +5,9 @@
 **New Features**
 
 1.  We improved processes search experience, when users search by part of the process name. Now instead of 20 items you can see 30 processes names in the drop-down list. If there’s more than 30 variants of processes names in the search results, user will be recommended to repeat the search better specifying the name of the process.
-![img](interface/img/releases/1_25p1.png)
-
+![img](interface/img/releases/p1.png)
 2.  **Google reCaptcha** was added to the authorisation page and displayed when user enters invalid password for 5 times:
-![img](interface/img/releases/1_25p2.png)
+![img](interface/img/releases/p2.png)
   
 
 **Fixes:**
@@ -20,8 +19,7 @@
 3.  We’ve fixed the issue with debug mode, when users view the history of the task in the final node after successfully executing the request (TypeError: Cannot read property `toString` of null)
 
 4.  We’ve fixed the issue with a display of “Throw exception” input field. Now when users widen **Reply to Process** field, the field “Throw exception” widens as well:
-![img](interface/img/releases/1_25p4.png)
-  
+![img](interface/img/releases/p3.png)
 5.  We’ve updated the display of the **Git Call** data in terminal. Now terminal saves the state of the latest build. When user makes any changes into dependencies, the “build” indicator will be active until user starts assembling the build. The rebuild function was also added to rewrite a dependency if it was updated in Git.
     
 6.  We’ve fixed the bug with tasks upload in the `View mode` of the node.
@@ -29,21 +27,18 @@
 ## 23.01.2019
 
 **New Features:**
-- Added new logic GIT Call. Now you could build additional logic for tasks processing with using external libraries. More information about using GIT Call you could read in documentation.
-
+1. Added new logic GIT Call. Now you could build additional logic for tasks processing with using external libraries. More information about using GIT Call you could read in documentation.
 Example with using [moment library](https://github.com/moment/moment/) from GitHub:
-
 ![img](interface/img/releases/git_call.png)
-
-- Now **CONV** function allows you to get any inclusions of the task parameters from State Diagram, also array elements. Example: `{{conv[12345].ref[template].message.attachment.payload.buttons[0]}}`
-- Added UUID и Crypto support in Erlang language in logic **Code**.
+2. Now **CONV** function allows you to get any inclusions of the task parameters from State Diagram, also array elements. Example: `{{conv[12345].ref[template].message.attachment.payload.buttons[0]}}`
+3. Added UUID и Crypto support in Erlang language in logic **Code**.
 
 **Fixes:**
-- Increased input field for error message (check-box Throw exception) in logic **Reply to Process**.
-- Bug with connecting accounts Corezoid and Sender after creating company in Sender.
-- Bug with reading tasks from the deleted state diagram.
-- Bug with checking rights for **Copy task**/**Modify task**/**Call Process** after moving object from/to shared folder.
-- Incorrect work of logic **Condition** when checking conditions for an empty object or array.
+1. Increased input field for error message (check-box Throw exception) in logic **Reply to Process**.
+2. Bug with connecting accounts Corezoid and Sender after creating company in Sender.
+3. Bug with reading tasks from the deleted state diagram.
+4. Bug with checking rights for **Copy task**/**Modify task**/**Call Process** after moving object from/to shared folder.
+5. Incorrect work of logic **Condition** when checking conditions for an empty object or array.
 
 
 ## 13.12.2018
