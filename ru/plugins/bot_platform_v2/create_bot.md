@@ -91,7 +91,7 @@
 
 ![img](../img/bot_platform_v2/webhook_for_fb.png)
 
-**Скопируйте этот URL и завершите настройку приложения Facebook:**
+Скопируйте этот URL и завершите настройку приложения Facebook:
  1.  В настройках продукта Facebook в блоке [Webhook](https://en.wikipedia.org/wiki/Webhook) нажмите кнопку “Настройка Webhooks":
  ![](../img/bot_platform_v2/setup_webhooks_fb.png)
  2.  В поле “URL обратного вызова” вставьте скопированный URL.

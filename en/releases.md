@@ -1,5 +1,31 @@
 # Release Notes
 
+## 03.04.2019
+
+**New Features**
+
+1.  We improved processes search experience, when users search by part of the process name. Now instead of 20 items you can see 30 processes names in the drop-down list. If there’s more than 30 variants of processes names in the search results, user will be recommended to repeat the search better specifying the name of the process.
+![img](interface/img/releases/1_25p1.png)
+
+2.  **Google reCaptcha** was added to the authorisation page and displayed when user enters invalid password for 5 times:
+![img](interface/img/releases/1_25p2.png)
+  
+
+**Fixes:**
+
+1.  We have fixed the issue with the speed of upload of large files.We accelerated the creation of processes from a file. Now json folder structure loads much faster.
+
+2.  We’ve fixed the issue with access sharing for the group owner. When members of the group share objects, the access is granted for the group owner as well.
+    
+3.  We’ve fixed the issue with debug mode, when users view the history of the task in the final node after successfully executing the request (TypeError: Cannot read property `toString` of null)
+
+4.  We’ve fixed the issue with a display of “Throw exception” input field. Now when users widen **Reply to Process** field, the field “Throw exception” widens as well:
+![img](interface/img/releases/1_25p4.png)
+  
+5.  We’ve updated the display of the **Git Call** data in terminal. Now terminal saves the state of the latest build. When user makes any changes into dependencies, the “build” indicator will be active until user starts assembling the build. The rebuild function was also added to rewrite a dependency if it was updated in Git.
+    
+6.  We’ve fixed the bug with tasks upload in the `View mode` of the node.
+
 ## 23.01.2019
 
 **New Features:**
