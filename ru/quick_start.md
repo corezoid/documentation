@@ -707,8 +707,7 @@ Corezoid позволяет создавать универсальные мод
 1.  Создать новую диаграмму состояний аналогично созданию процесса: с помощью кнопки **Create** и выбора в выпадающем списке пункта **The state diagram**.
 2.  Назвать диаграмму состояний **Config**.
 
-| ![](interface/img/quick_start/create_the_state_diagram.png) | ![](interface/img/quick_start/config.png) |
-|-------------------------------------------------------------|-------------------------------------------|
+![](interface/img/quick_start/create_the_state_diagram_name_config.png)
 
 3. Удалить узел **Inactive users**
 4. Переименовать узел в **Config**
