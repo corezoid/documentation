@@ -6,17 +6,17 @@
 
 ## Содержание:
 
-- [Регистрация](#регистрация)
-- [Браузер процессов](#браузер-процессов)
-- [Создание процесса](#создание-процесса)
+1. [Регистрация](#регистрация)
+2. [Браузер процессов](#браузер-процессов)
+3. [Создание процесса](#создание-процесса)
     - [Режим “Edit”](#режим-edit)
     - [Режим “View”](#режим-view)
     - [Режим “Debug”](#режим-debug)
-- [Работа с логиками API Call, Condition](#работа-с-узлами-api-call-condition)
-- [Set parameter](#set-parameter)
-- [Работа с логиками Call Process/Reply to Process](#работа-с-логиками-call-processreply-to-process)
-- [Работа с логиками Copy Task/Modify Task](#работа-с-логиками-copy-task-waiting-for-callback-modify-task)
-- [Работа со State Diagram](#state-diagram)
+4. [Работа с логиками API Call, Condition](#работа-с-узлами-api-call-condition)
+5. [Set parameter](#set-parameter)
+6. [Работа с логиками Call Process/Reply to Process](#работа-с-логиками-call-processreply-to-process)
+7. [Работа с логиками Copy Task/Modify Task](#работа-с-логиками-copy-task-waiting-for-callback-modify-task)
+8. [Работа со State Diagram](#state-diagram)
 
   
   
