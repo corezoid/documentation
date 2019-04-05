@@ -12,6 +12,7 @@
     - [Режим “View”](#режим-view)
     - [Режим “Debug”](#режим-debug)
 - [Работа с логиками API Call, Condition](#работа-с-узлами-api-call-condition)
+- [Set parameter](#set-parameter)
 - [Работа с логиками Call Process/Reply to Process](#работа-с-логиками-call-processreply-to-process)
 - [Работа с логиками Copy Task/Modify Task](#работа-с-логиками-copy-task-waiting-for-callback-modify-task)
 - [Работа со State Diagram](#state-diagram)
@@ -609,7 +610,8 @@ Corezoid позволяет создавать универсальные мод
   
 Максимальный размер заявки в диаграмме состояний - 5 KB.
 
-**Учет состояний объектов**
+###Учет состояний объектов
+
 Концепция Corezoid гласит, что процессы рождают состояния, а состояния - процессы.
 С точки зрения бизнеса, диаграмма состояний может быть использована для описания всех состояний жизненного цикла клиента и реакций в случае изменения или отсутствия изменения состояний.
 
@@ -649,9 +651,13 @@ Corezoid позволяет создавать универсальные мод
 Для хранения ключей API OpenWeatherMap в диаграмме состояний необходимо:
 
 1.  Создать новую диаграмму состояний аналогично созданию процесса: с помощью кнопки **Create** и выбора в выпадающем списке пункта **The state diagram**.
+
 2.  Назвать диаграмму состояний **Config**.
+
 ![](interface/img/quick_start/create_the_state_diagram.png)
+
 ![](interface/img/quick_start/config.png)
+
 3. Удалить узел **Inactive users**
 4. Переименовать узел в **Config**
 5. Выбрать в боковом меню **Additionally** и убрать чекбокс с пункта **Limit the time of the task in the node**
