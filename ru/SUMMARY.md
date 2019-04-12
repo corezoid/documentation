@@ -140,5 +140,11 @@
        * [Получение курсов топлива](plugins/azs_avias/rates_avias.md)
        * [Получение адресов заправок](plugins/azs_avias/address_avias.md)
 * [Bot platform v1](plugins/bot_platform/README.md) 
+* [Bot platform v2](plugins/bot_platform_v2/bot_platform_v2.md)
+    * [Как создать бота с помощью Bot Platform](plugins/bot_platform_v2/create_bot.md)
+    * [Базовый функционал Bot Platform](plugins/bot_platform_v2/basic_function.md)
+    * [Объекты папки Bot Platform 2.0](plugins/bot_platform_v2/object_folder.md)
+    * [Расширение функций бота](plugins/bot_platform_v2/expansion.md)
+    * [Авторизация пользователей по номеру телефона](plugins/bot_platform_v2/authorization.md)
 * [История изменений](releases.md)
 
