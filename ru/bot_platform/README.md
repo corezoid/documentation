@@ -19,7 +19,7 @@
 3. обработка сообщений согласно главной логики бота (ботов)
 4. отправка обратных сообщений пользователям в тот канал (мессенжер), откуда было получено обращение
 
-![img](../img/BotPlatform/Multichannel-bot.png)
+![img](../plugins/img/BotPlatform/Multichannel-bot.png)
   
 При подключении каждый мессенжер подключается к одному процессу-приемнику [Receiver & Route message](#receiver-and-route-message) для получения webhook-ов.
   
@@ -31,14 +31,14 @@
 * подключить или обновить ключи Бота нужного мессенжера
   
 
-![img](../img/BotPlatform/webhook.gif)
+![img](../plugins/img/BotPlatform/webhook.gif)
   
   
 ### Для создания мультиплатформенного робота
   
 Выберите [компанию  Sender](#что-такое-компания-sender-и-зачем-ее-выбирать) -> Нажмите Create -> Bot platform -> [Выберите нужные мессенжеры](#подключение-мессенжеров) и добавьте их ключи
   
-![img](../img/BotPlatform/choose_messengers.gif)
+![img](../plugins/img/BotPlatform/choose_messengers.gif)
   
 В Вашем аккаунте сформируется [папка с процессами](#описание-объектов-папки-bot) **"Bot"**. В них уже реализована следующая [логика в процессе **MAIN logic**](#main-logic):
   
@@ -47,7 +47,7 @@
 * подключение оператора
   
   
-![img](../img/BotPlatform/BotPlatformDemo.gif)
+![img](../plugins/img/BotPlatform/BotPlatformDemo.gif)
   
 
 Для того, чтобы реализовать Вашего Бота с помощью Bot platform, Вам нужно настроить всего один процесс - [**MAIN logic**](#main-logic)! 
@@ -60,16 +60,16 @@
 Для реализации функционала подключения операторов в чат с пользователями Ваших Ботов. 
 Потому как, [Sender](https://sender.mobi/ru/) - это мессенжер, который является рабочим местом операторов Вашей компании. Сообщения пользователей разных мессенжеров обрабатываются в едином интерфейсе.
   
-![img](../img/BotPlatform/SenderOperatorChat.gif)
+![img](../plugins/img/BotPlatform/SenderOperatorChat.gif)
   
 Для базовой настройки и тестирования перейдите в [административное окружение Sender](https://admin.sender.mobi/), создайте компанию и добавьте в нее операторов.
   
-![img](../img/BotPlatform/AddOperator.gif)
+![img](../plugins/img/BotPlatform/AddOperator.gif)
   
 Подключение оператора и маршрутизация сообщений из мессенжеров в операторский чат Sender осуществляется с помощью Логики Sender action - Category "Widgets" - Robot "Send Message For Bot Platform"
 Для получения ответов от операторов процесс приемник подключается к событию Sender "Получение сообщений от бот платформы" (автоматом при создании BotPlatform).
   
-![img](../img/BotPlatform/Sender_Admin_robots.png)
+![img](../plugins/img/BotPlatform/Sender_Admin_robots.png)
   
 Отправка сообщений от оператора пользователю в мессенжер осуществляется через обычный вызов API нужного мессенжера. 
   
@@ -88,7 +88,7 @@
   
 Пример заявки, содержащей текст и кнопки для выбора языка общения бота.
   
-![img](../img/BotPlatform/TaskArchive.png)
+![img](../plugins/img/BotPlatform/TaskArchive.png)
   
 Заявка с референсом **lang_list** содержит 3 объекта - **ua**, **en**, **ru**.
   
@@ -104,17 +104,17 @@
   
 1) легко управлять текстами сообщений (редактировать, добавлять новые, удалять и т.д.), т.к. они собраны в "одном месте"
   
-![img](../img/BotPlatform/EditText.gif)
+![img](../plugins/img/BotPlatform/EditText.gif)
   
 2) при создании заявки на отправку сообщения в процесс [Send message](#send-messages) достаточно указать только его **text_id**. Вместо того, чтобы "нагружать" процессы узлами для отправки множества текстов сообщений для множества мессенжеров на разных языках.
   
 Например, для отправки сообщения о выборе языка общения сейчас нужен всего 1 узел и выглядит он так:
   
-![img](../img/BotPlatform/Сommand_Lang.png)
+![img](../plugins/img/BotPlatform/Сommand_Lang.png)
   
 А могло бы выглядеть вот так:
   
-![img](../img/BotPlatform/Сommand_Lang__Copy.png)
+![img](../plugins/img/BotPlatform/Сommand_Lang__Copy.png)
   
 И это всего лишь для одного только сообщения. Разница очевидна :)
   
@@ -198,7 +198,7 @@
 * установка языка общения Бота
 * подключение оператора
   
-![img](../img/BotPlatform/MAIN_logic.png)
+![img](../plugins/img/BotPlatform/MAIN_logic.png)
   
 1. Получаем текущее состояние чата - **chat_state**
 2. Проверка полученных данных по заданным условиям
@@ -224,7 +224,7 @@
 * Из диаграммы состояний [Users](#users) получает признак языка общения пользователя. Если признак не получен, устанавливает по умолчанию **ru**
 * Если в полученной заявке содержится параметр **text_id**, получает соответствующий объект **text_object** из диаграммы состояний **Texts**:
 
-![img](../img/BotPlatform/TextObject_param.png)
+![img](../plugins/img/BotPlatform/TextObject_param.png)
 * Из **text_object** получает текст сообщения (**text**) и клавиатуру (**keyboard**)
 * По условию проверки параметра `{{channel}}` передает заявку на отправку сообщения в процесс с вызовом API соответствующего мессенжера
 
@@ -232,7 +232,7 @@
   
 Диаграмма состояний, предназначенная для хранения текущего состояния чата уникального пользователя мессенжера и токена мессенжера.
   
-![img](../img/BotPlatform/State_diagram.png)
+![img](../plugins/img/BotPlatform/State_diagram.png)
   
 Пример получения состояния чата (chat_state) пользователя Telegram c id = 10438 из диаграммы состояний 230638. 
  
@@ -248,7 +248,7 @@
   
 }
   
-![img](../img/BotPlatform/SetChatState.png)
+![img](../plugins/img/BotPlatform/SetChatState.png)
   
 Заявки создаются или обновляются из:
   
@@ -275,7 +275,7 @@
 
 ### Operators calling
   
-![img](../img/BotPlatform/Operators_calling.png)
+![img](../plugins/img/BotPlatform/Operators_calling.png)
   
 1. Обновление заявки в [State diagram](#state-diagram) по **ref** = `{{channel}}_{{chat_id}}` с передачей признака **chat = active**.
 2. Создание заявки в [State diagram](#state-diagram) с **ref** = `{{channel}}_{{chat_id}}` с передачей признака **chat = active** в случае ошибки **not\_found\_task** логики 1.
@@ -287,7 +287,7 @@
 
 ### Command Lang
   
-![img](../img/BotPlatform/Сommand_Lang_Sender_Admin.png)
+![img](../plugins/img/BotPlatform/Сommand_Lang_Sender_Admin.png)
   
 1. Обновление заявки в [**State diagram**](#state-diagram) по **ref** = `{{channel}}_{{chat_id}}` с передачей признака текущего процесса (**proc\_id**), команды (**command = lang**) и токена мессенжера (**token**)
 2. Создание заявки в [**State diagram**](#state-diagram) с **ref** = `{{channel}}_{{chat_id}}` с передачей признака текущего процесса (**proc\_id**), команды (**command = lang**) и токена мессенжера (**token**), в случае ошибки **not_found_task** логики 1
