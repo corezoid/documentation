@@ -147,4 +147,3 @@
    * [Расширение функций бота](bot_platform_v2/expansion.md)
    * [Авторизация пользователей по номеру телефона](bot_platform_v2/authorization.md)
 * [История изменений](releases.md)
-
