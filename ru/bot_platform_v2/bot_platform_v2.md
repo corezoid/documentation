@@ -30,3 +30,5 @@
 
 
   ![img](../plugins/img/bot_platform_v2/architecture.png)
+
+[Как создать бота с помощью Bot Platform 2.0](create_bot.md)

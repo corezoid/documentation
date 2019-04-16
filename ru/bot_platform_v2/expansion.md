@@ -41,17 +41,17 @@
 1.  Откройте диаграмму состояний **Commands** (в папке Config).
 2.  Переведите процесс в режим **View**.
 3.  Нажмите “+ New task” и заполните данные заявки:
-
 ![img](../interface/img/bot_platform_v2/new_task.png)
 
 где:
--   **REF** - название процесса/команды (в данном случае /auth)
--   **process_id** - ID процесса /auth  
 
-4.  Нажмите Add task.
+`REF` - название процесса/команды (в данном случае: /auth).
+
+`process_id` - ID процесса: /auth
+
+Нажмите Add task.
     
 
-  
 
 Теперь если отправить боту команду **“/auth”**, процесс **Router** будет получать идентификатор процесса из диаграммы состояний **Commands** и запускать процесс **/auth**.
 
@@ -64,18 +64,18 @@
 
 Отредактируйте заявку с текстами в диаграмме состояний **Localization**, добавив в нее текст сообщения и подпись для кнопки запроса телефона:
 
-    {
-    		"askPhone": {
-    		"ru": "Пожалуйста, нажмите кнопку для отправки номера телефона",
-    		"ua": "Будь ласка, натисніть кнопку для відправки номера телефону",
-    		"en": "Please press the button to share your phone number"
-    	},
-    		"sharePhone": {
-    		"ru": "Отправить мой номер телефона",
-    		"ua": "Надіслати мій номер телефону",
-    		"en": "Share my phone number"
-    	}
-    }
+        {
+            "askPhone": {
+                "ru": "Пожалуйста, нажмите кнопку для отправки номера телефона",
+                "ua": "Будь ласка, натисніть кнопку для відправки номера телефону",
+                "en": "Please press the button to share your phone number"
+            },
+            "sharePhone": {
+                "ru": "Отправить мой номер телефона",
+                "ua": "Надіслати мій номер телефону",
+                "en": "Share my phone number"
+            }
+        }
 
 ### Attachments
 
@@ -83,9 +83,9 @@
 
 | Мессенджер | Параметр | Пример кнопки |
 |---|---|---|
-| Viber |"ActionType":"share-phone"| `{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}`|
-|Telegram |"request_contact":true| `{"request_contact": true,"text": "{{t'sharePhone}}"}`|
-|Facebook Messenger|"content_type":"user_phone_number"|`{"content_type": "user_phone_number"}`|
+| Viber |"ActionType":"share-phone"|{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}|
+|Telegram |"request_contact":true|{"request_contact": true,"text": "{{t'sharePhone}}"}|
+|Facebook Messenger|"content_type":"user_phone_number"|{"content_type": "user_phone_number"}|
 
  
 Для этого вам необходимо добавить в диаграмму состояний **Attachments** шаблон приложения, в котором будет 2 кнопки:
@@ -99,65 +99,61 @@
   
 **REF: sharePhone**
 
-    {
-    	"facebook": {
-    		"type": "quick_replies",
-    		"buttons": [
-    	{
-    		"content_type": "user_phone_number"
-    	},
-    	{
-    		"content_type": "text",
-    		"title": "{{t'/exit}}",
-    		"payload": "/exit"
-    	}
-    ]
-    },
-    		"telegram": {
-    		"type": "keyboard",
-    		"buttons": [
-    	[
-    		{
-    			"request_contact": true,
-    		"text": "{{t'sharePhone}}"
-    		}
-    	],
-    		[
-    			{
-    				"text": "{{t'/exit}}"
-    			}
-    		]
-    	]
-    },
-    	"viber": {
-    		"type": "keyboard",
-    		"buttons": [
-    				{
-    					"Columns": 6,
-    					"Rows": 1,
-    					"BgColor": "#F3F3F3",
-    					"Text": "{{t'sharePhone}}",
-    					"ActionType": "share-phone",
-    					"ActionBody": "phone"
-    				},
-    		{
-    			"Columns": 6,
-    			"Rows": 1,
-    			"BgColor": "#F3F3F3"
-    			"Text": "{{t'/exit}}",
-    			"ActionType": "reply",
-    			"ActionBody": "/exit"
-    		}
-    	]
-    }
-    }
+        {
+            "facebook": {
+                "type": "quick_replies",
+                "buttons": [{
+                        "content_type": "user_phone_number"
+                    },
+                    {
+                        "content_type": "text",
+                        "title": "{{t'/exit}}",
+                        "payload": "/exit"
+                    }
+                ]
+            },
+            "telegram": {
+                "type": "keyboard",
+                "buttons": [
+                    [{
+                        "request_contact": true,
+                        "text": "{{t'sharePhone}}"
+                    }],
+                    [{
+                        "text": "{{t'/exit}}"
+                    }]
+                ]
+            },
+            "viber": {
+                "type": "keyboard",
+                "buttons": [{
+                        "Columns": 6,
+                        "Rows": 1,
+                        "BgColor": "#F3F3F3",
+                        "Text": "{{t'sharePhone}}",
+                        "ActionType": "share-phone",
+                        "ActionBody": "phone"
+                    },
+                    {
+                        "Columns": 6,
+                        "Rows": 1,
+                        "BgColor": "#F3F3F3"
+                        "Text": "{{t'/exit}}",
+                        "ActionType": "reply",
+                        "ActionBody": "/exit"
+                    }
+                ]
+            }
+        }
 
   
 
 > **Обратите внимание!** Ранее в диаграмме Localization был добавлен текст кнопки для отправки номера телефона в ключе локализации "`sharePhone`". Этот ключ мы будем использовать для подстановки локализированных текстов в наши кнопки:
 
-`"text": "{{t'sharePhone}}"` и `"Text": "{{t'sharePhone}}"`.
+`"Text": "{{t'sharePhone}}"` и `"Text": "{{t'/exit}}"`
 
 
 Когда пользователь нажмет эту кнопку, в процесс **Receiver** соответствующего мессенджера поступит объект с номером телефона пользователя, который в дальнейшем можно использовать для авторизации пользователя или других бизнес-процессов.
+
+[Авторизация пользователей по номеру телефона](authorization.md)
 
