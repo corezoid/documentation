@@ -55,4 +55,4 @@
 **7. Завершение процесса**
 Для завершения работы процесса и возврата в главное меню используется команда **/end**. Необходимо с помощью логики **Copy task** передать в **Router**  `"command": "/end"`.
 
-![img](../interface/img/bot_platform_v2/auth_7.png)
+![img](../interface/img/bot_platform_v2/auth_7_1.png)
