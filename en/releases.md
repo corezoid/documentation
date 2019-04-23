@@ -31,8 +31,8 @@ You can create universal business-processes, that can be accessed in all the mes
 **Fixes:**
 
 1. Sorting data and moving metrics when selecting the **Table chart** view mode in **Dashboard** menu.
-2. We’ve fixed the bug with rounding the value of the float number (floating point number). Rounding of float number will be done up to 6 symbols after comma.
-3. We’ve fixed the bugs with with **moment.js** in Usercode.
+2. We've fixed the bug with rounding the value of the float number (floating point number). Rounding of float number will be done up to 6 symbols after comma.
+3. We've fixed the bugs with with **moment.js** in Usercode.
 
 
 ## v3.5 - April 03 2019
