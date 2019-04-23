@@ -6,7 +6,7 @@
 
 1. New design of the registration landing page and single sign-on for all accounts of **Middleware** software. This new approach will allow Corezoid users to get access to all Middleware products depending on the business needs.
 ![img](../en/interface/img/releases/v3_5_1_p1.png)
-2. We have added visualization to the process of a new password validation.
+2. We have added visualization to the process of a new password validation.  
 ![img](../en/interface/img/releases/v3_5_1_p2.png)
 3. We have added a new version of the **Bot Platform (v 2.0)** – a set of universal Corezoid processes, that let manage bots in the most popular messengers:
    * Facebook Messenger;
@@ -33,6 +33,7 @@ You can create universal business-processes, that can be accessed in all the mes
 1.  We improved processes search experience, when users search by part of the process name. Now instead of 20 items you can see 30 processes names in the drop-down list. If there’s more than 30 variants of processes names in the search results, user will be recommended to repeat the search better specifying the name of the process.
 ![img](interface/img/releases/p1.png)
 2.  **Google reCaptcha** was added to the authorisation page and displayed when user enters invalid password for 5 times:
+
 ![img](interface/img/releases/p2.png)
   
 
