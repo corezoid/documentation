@@ -1,6 +1,41 @@
 # Release Notes
 
-##v3.5 - April 03 2019
+## v3.5.1 - April 24 2019
+
+**New:**
+
+1. New design of the registration landing page and single sign-on for all accounts of **Middleware** software. This new approach will allow Corezoid users to get access to all Middleware products depending on the business needs.
+
+![img](../en/interface/img/releases/v3_5_1_p1.png)
+
+2. We have added visualization to the process of a new password validation.
+
+![img](../en/interface/img/releases/v3_5_1_p2.png)
+
+3. We have added a new version of the **Bot Platform (v 2.0)** – a set of universal Corezoid processes, that let manage bots in the most popular messengers:
+   * Facebook Messenger;
+   * Viber;
+   * Telegram.
+
+We recommend all users to switch to a new version of the Bot Platform. Starting from 01.06.2019 we plan to cease the support of the old Bot Platform v. 1.0.
+You can create universal business-processes, that can be accessed in all the messengers, instead of designing business-logic separately for every messenger:
+
+![img](../en/interface/img/releases/v3_5_1_p4.png)
+
+4. We have added text highlighting to display long names of folders and processes:
+
+![img](../en/interface/img/releases/v3_5_1_p3.png)
+
+5. For those clients, who are using Corezoid dedicated environments, we created the feature of transferring objects from user to user globally within the system.
+
+**Fixes:**
+
+1. Sorting data and moving metrics when selecting the **Table chart** view mode in **Dashboard** menu.
+2. We’ve fixed the bug with rounding the value of the float number (floating point number). Rounding of float number will be done up to 6 symbols after comma.
+3. We’ve fixed the bugs with with **moment.js** in Usercode.
+
+
+## v3.5 - April 03 2019
 
 **New Features**
 
