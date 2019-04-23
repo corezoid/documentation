@@ -6,7 +6,7 @@
 
 1. New design of the registration landing page and single sign-on for all accounts of **Middleware** software. This new approach will allow Corezoid users to get access to all Middleware products depending on the business needs.
 ![img](../en/interface/img/releases/v3_5_1_p1.png)
-2. We have added visualization to the process of a new password validation.  
+2. We have added visualization to the process of a new password validation.
 ![img](../en/interface/img/releases/v3_5_1_p2.png)
 3. We have added a new version of the **Bot Platform (v 2.0)** – a set of universal Corezoid processes, that let manage bots in the most popular messengers:
    * Facebook Messenger;
