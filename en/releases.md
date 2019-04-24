@@ -8,16 +8,18 @@
 ![img](../en/interface/img/releases/v3_5_1_p1.png)
 2. We have added visualization to the process of a new password validation.<br/>
 ![img](../en/interface/img/releases/v3_5_1_p2.png)
-3. We have added a new version of the **Bot Platform (v 2.0)** – a set of universal Corezoid processes, that let manage bots in the most popular messengers:
+3. We have added text highlighting to display long names of folders and processes:<br/>
+![img](../en/interface/img/releases/v3_5_1_p3.png)
+4. For those clients, who are using Corezoid dedicated environments, we created the feature of transferring objects from user to user globally within the system.
+5. We have added a new version of the **Bot Platform (v 2.0)** – a set of universal Corezoid processes, that let manage bots in the most popular messengers:
    * Facebook Messenger;
    * Viber;
-   * Telegram.<br/>
+   * Telegram.
+
 We recommend all users to switch to a new version of the Bot Platform. Starting from 01.06.2019 we plan to cease the support of the old Bot Platform v. 1.0.<br/>
 You can create universal business-processes, that can be accessed in all the messengers, instead of designing business-logic separately for every messenger:<br/>
 ![img](../en/interface/img/releases/v3_5_1_p4.png)
-4. We have added text highlighting to display long names of folders and processes:<br/>
-![img](../en/interface/img/releases/v3_5_1_p3.png)
-5. For those clients, who are using Corezoid dedicated environments, we created the feature of transferring objects from user to user globally within the system.
+
 
 **Fixes:**
 
