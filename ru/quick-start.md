@@ -712,7 +712,7 @@ Corezoid позволяет создавать универсальные мод
 ![](interface/img/quick_start/limit_the_time_of_the_task_in_the_node.png)
 6. Нажать кнопку **Deploy**
 7. Перейти в режим **View**
-8. Cоздать новую заявку с **REF: weather_api** и телом заявки **```secret_key: {{значение секретного ключа для доступа к API из панели управления OpenWeatherMap}}```**
+8. Cоздать новую заявку с **REF: weather_api** и телом заявки ```secret_key: {{значение секретного ключа для доступа к API из панели управления OpenWeatherMap}}```
 ![](interface/img/quick_start/weather_api.png)
 9. Нажать **Add task**
 ![](interface/img/quick_start/secret_key_weather_api.png)
