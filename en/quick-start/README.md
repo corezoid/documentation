@@ -693,4 +693,4 @@ Now let's utilize the above knowledge for the weather process and store the key 
 
 **🎉 Congratulations! You learned to create configuration state diagrams and use them for API calls.**
 
-We recommend you to start the next stage of your training from studying Corezoid built-in [online dashboards](https://doc.corezoid.com/en/interface/dashboard.html), then go through a few [tutorials](https://new.corezoid.com/en/tutorials/) and deep dine into the Corezoid [documentation](https://doc.corezoid.com/en/).
+We recommend you to start the next stage of your training from studying Corezoid built-in [online dashboards](https://doc.corezoid.com/en/interface/dashboard.html), then go through a few [tutorials](https://corezoid.com/tutorials/) and deep dine into the Corezoid [documentation](https://doc.corezoid.com/en/).
