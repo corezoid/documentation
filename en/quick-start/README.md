@@ -9,12 +9,12 @@
 1. [Registation](#registation)
 2. [Process Browser](#process-browser)
 3. [How to create a new process](#how-to-create-a-new-process)
-    - ["Edit" mode](#“edit”-mode)
-    - [“View” mode](#“view”-mode)
-    - [“Debug” mode](#“debug”-mode)
-4. [Working with API Call, Condition and Set Parameter nodes](#working-with-api-call,-condition-and-set-parameter-nodes)
-5. [Working with Call Process and Reply to Process nodes](#работа-с-логиками-call-processreply-to-process)
-6. [Working with Copy Task and Modify Task nodes](#работа-с-логиками-copy-task-waiting-for-callback-modify-task)
+    - ["Edit" mode](#edit-mode)
+    - [“View” mode](#view-mode)
+    - [“Debug” mode](#debug-mode)
+4. [Working with API Call, Condition and Set Parameter nodes](#working-with-api-call-condition-and-set-parameter-nodes)
+5. [Working with Call Process and Reply to Process nodes](#working-with-call-process-reply-to-process-nodes)
+6. [Working with Copy Task and Modify Task nodes](#working-with-copy-task-waiting-for-callback-modify-task)
 7. [Working with State Diagrams](#state-diagram)
 
   
@@ -184,7 +184,7 @@ To test the process in real time switch to **Debug** tab.
   
 ![](img/debug_mode.gif)
 
-The testing interface opens up. This mode allows to both work with the existing tasks coming from external systems and emulate creating/adding new tasks just like in “View” mode.
+The testing interface opens up. This mode allows to both work with the existing tasks coming from external systems and emulate creating/adding new tasks just like in **“View”** mode.
 
 If a task got in the red cross node, then by clicking on it you can see the error description and figure out why this has happened.
 
@@ -197,7 +197,7 @@ We recommend running a test task after each change in the process to ensure it r
 ## Working with API Call, Condition and Set Parameter nodes
 
 
-You already have a process consisting of starting and ending nodes. Let’s add an API Call node.
+You already have a process consisting of starting and ending nodes. Let’s add an **API Call** node.
 
 To add a new node, hover a line between starting and ending nodes, click “+” icon and choose **API Call** from the drop-down list.
 
@@ -209,8 +209,8 @@ To add a new node, hover a line between starting and ending nodes, click “+”
 ### API Call
 
 
-API Call logic allows calling API in JSON, XML and SOAP formats.
-When you add API Call logic, 4 nodes will appear: API Call node + 3 more nodes that are responsible for handling errors relative to the API Call.
+**API Call** logic allows calling API in JSON, XML and SOAP formats.
+When you add **API Call** logic, 4 nodes will appear: API Call node + 3 more nodes that are responsible for handling errors relative to the API Call.
 
   
 ![](img/apicall.png)
@@ -226,20 +226,17 @@ Now let's set up **API call** parameters. Click the API Call node and in a side 
  
 3. **URL** - link to the API.
 
-
 4. **Request format** - there are 2 types: Default - standard HTTP API call; Corezoid - internal [Сorezoid API](https://doc.corezoid.com/en/interface/nodes/api/corezoid.html) call (advanced Corezoid usage).
       
-5.  **Methods of the API call** - all the standard HTTP-methods required to work with an API:[GET](https://doc.corezoid.com/en/interface/nodes/api/get.html), [POST](https://doc.corezoid.com/en/interface/nodes/api/post.html), [PUT, DELETE, HEAD, PATCH](https://doc.corezoid.com/en/interface/nodes/api/put__delete__head.html). 
+5.  **Methods of the API call** - all the standard HTTP-methods required to work with an API: [GET](https://doc.corezoid.com/en/interface/nodes/api/get.html), [POST](https://doc.corezoid.com/en/interface/nodes/api/post.html), [PUT, DELETE, HEAD, PATCH](https://doc.corezoid.com/en/interface/nodes/api/put__delete__head.html). 
 More information related to HTTP methods can be found [here](https://ru.wikipedia.org/wiki/HTTP#%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B).
     
-6.Content-Type - choosing data format type when calling API: application/json, application/x-www-form-urlencoded, application/xml, text/xml, application/soap+xml
-
-More information related to Content-Type can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type).  
-      
+6. **Content-Type** - choosing data format type when calling API: application/json, application/x-www-form-urlencoded, application/xml, text/xml, application/soap+xml
+    - More information related to Content-Type can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type).  
 7.  **Parameters** - describing parameters that will be passed to the API. Parameters should be input in the “key-value” format, the same as creating a new task.
 
-
 8. **Additionally** - additional API call parameters that will be studied in other lessons.
+
 
 
 Now let’s call the weather API service [OpenWeatherMap](https://openweathermap.org/current), that will tell us about the weather in the selected city today.
@@ -247,11 +244,10 @@ Now let’s call the weather API service [OpenWeatherMap](https://openweathermap
 
 **For this we need to:**
 
-1.  [Sign up](https://home.openweathermap.org/users/sign_up) в at weather service to get API access.
+1. [Sign up](https://home.openweathermap.org/users/sign_up) at weather service to get API access.
 
 2. Create a new API Key
-
-    ![](img/api_openweather.png)
+    ![](img/api_openweather.png) 
     
 Next this URL should be added to **API Call** node:  [http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID={APIKEY](http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=%7BAPIKEY)}, where {APIKEY} - a key, that you have created.
 
@@ -262,7 +258,6 @@ Also choose **Request method: GET**, since we want to receive data from the API.
 Next switch to the **View mode**, create a new empty task by clicking **“+ New task”** and press the button **“Add task”**.
 
 After the task is successfully processed, click **“Final”** node and on the right side menu task parameters description appears, where the API response is presented in JSON.
-
 
 ![](img/api_openweather_json.png)
 
@@ -285,23 +280,15 @@ It should look like on the screenshot below:
 
 **Now let's examine what Condition node consists of:**
 1. **Condition** - list of eligible conditional operators: 
-    
-    a. **==** - equal
-    
-    b. **=!** - not equal
-    
-    c. **>** - greater than
-    
-    d. **<** - lesser than
-    
-	e.  [RegExp](https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F)
-    
+    - **==** - equal
+    - **=!** - not equal
+    - **>** - greater than
+    - **<** - lesser than
+    - [RegExp](https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F)
 2. **+ Add parameter** - add new parameter to the condition
 
 3. **+ Add condition** - add new condition
-
 4. List of errors that block process modifications from being applied.
-
 5. **“+”** - adding new node for the task to go to if the condition is satisfied.
       
     
@@ -321,41 +308,40 @@ Let’s recall that API gives us response as a JSON object:
 where **temp** is current temperature.
 
 **To add such conditions we need to:**
-1. Аdd the following query: {{main.temp}}, where:
-
-- ```{{ }}``` - a format to address task parameters that are inside either nested objects or arrays;
-- `main` - first level of nesting (object name);
-- `temp` - a variable we want to address.
+1. Аdd the following query: ```{{main.temp}}```, where:
+    - ```{{ }}``` - a format to address task parameters that are inside either nested objects or arrays;
+    - `main` - first level of nesting (object name);
+    - `temp` - a variable we want to address.
 
 More on how to work with nested objects can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
 
-2. Choose conditional operator greater than (“>”)
-3. Fill “value” field with “20” - this is the temperature
+2. Choose conditional operator greater than **(“>”)**
+3. Fill **“value”** field with “20” - this is the temperature
 4. Since we are working with numbers, choose data type “N”
      ![](img/maintemp1.png)
-5. Press button “+ Add condition”
+5. Press button **“+ Add condition”**
 6. Add the second condition that consists of 2 parameters:
     ![](img/maintemp2.png)
       
-To add a second element, press “+ Add parameter”.
+To add a second element, press **“+ Add parameter”**.
 
 
 **Now let us find final nodes where the task will be redirected to depending on current temperature:**
 
 
-1.  Press “+” button next to every condition and choose node “End: Success”
+1.  Press **“+”** button next to every condition and choose node **“End: Success”**
     ![](img/maintemp3.png) 
-2.  Let's name our node as "Warm" (fill in the "title" field)
-3. Repeat №2 for the “Normal” node
-4. Rename “Final” node to “Cold”
+2.  Let's name our node as **"Warm"** (fill in the "title" field)
+3. Repeat step #2 for the **“Normal”** node
+4. Rename **“Final”** node to **“Cold”**
     
 ![](img/maintemp4.png)
   
 We didn’t add a third condition, because if none of the conditions above is satisfied, then temperature is below 5 degrees and we unconditionally reach the “Cold” node.
 
-
 **Now let us test added conditions:**
+
 1. Press **“Deploy”** button
 2. Switch to **“View”** mode
 3. Create an empty task in the process
@@ -383,11 +369,12 @@ Let’s try to find out how to use this node with our weather process.
 Weather data is “nested” inside main object that has one extra nesting level. Working with parameters like {{main.temp}} isn’t very convenient. To simplify this statement, we recommend creating a new parameter and setting temperature value to this new parameter by using Set Parameter node, so in the future we access temperature as a parameter of the first nesting level.
 
 **For this we require:**
-1. Add **Set Parameter** node to our process, locate it between **API Call** and **Condition** nodes
-2. Add new parameter using button **+ Add “key-value”**
-3. Fill **key** field with **currentTemp**
-4. Fill **value** field with **{{main.temp}}**
-5. Choose **N** (number) as data type
+
+1. Add **Set Parameter** node to our process, locate it between **API Call** and **Condition** nodes.
+2. Add new parameter using button **+ Add “key-value”**.
+3. Fill **key** field with **currentTemp**.
+4. Fill **value** field with **{{main.temp}}**.
+5. Choose **N** (number) as data type.
 
 
 As a result, we should have the same statement as it is on the screenshot:
@@ -420,7 +407,7 @@ Modular processes serve as a part of other processes’ logic. Usually such subp
 
 To work with modular processes, Corezoid has 2 type of nodes: **Call Process** and **Reply to Process**.
 
----
+
 
 ### Call Process
 
@@ -430,7 +417,8 @@ To work with modular processes, Corezoid has 2 type of nodes: **Call Process** a
 
 
 **Call Process** node consists of such components:
-1. **Process** - field of selecting a process, where the task will be sent to
+
+1. **Process** - field of selecting a process, where the task will be sent to.
 2. **Send all parameters** - enable this checkbox if you want to send all the task's data to the subprocess.
 3. List of parameters that are getting sent to the subprocess. If **Send all parameters** checkbox is enabled, then the list can be expanded with optional parameters that were not present originally.
 
@@ -446,7 +434,9 @@ To work with modular processes, Corezoid has 2 type of nodes: **Call Process** a
   
 
 **Reply to Process** node has this kind of components:
+
 1. **Throw exception** - if **Reply to Process** node is used to handle an error, this field has to specify description/error code for its successive handling.
+
 2. List of parameters that are to be returned to the main process.
 
 
@@ -459,21 +449,22 @@ To work with modular processes, Corezoid has 2 type of nodes: **Call Process** a
 
 To make our **GET Current Weather** process modular, we need to:
 
-1.  Delete the **Condition** none
-2.  Delete 2 final nodes that were connected to the **Condition** node
+1. Delete the **Condition** node
+2. Delete 2 final nodes that were connected to the **Condition** node
 3. Click “+” on the **Set Parameter** node and in the drop-down list add a **Reply to Process** node.
 4. Add 2 parameters to **Reply to Process** node:
     - “status”: “success”, type: String
     - **“currentTemp”: “{{currentTemp}}”**, type: **Number**, where: **status** and **currentTemp** are parameters that we will return to the main process.
 5. Connect **Reply to Process** node and the final node.
-Rename final node to Success
+Rename final node to **Success**.
 
 **🎉 Congratulations! A modular process has been successfully created.** 
 
 
 
 
-Now let us test it:
+**Now let us test it:**
+
 1. [Create new process](#how-to-create-a-new-process), call it **“Main Process”**
 2. Add a **Call Process** node
 3. On the side menu choose the previously created **GET Current Weather** subprocess.
@@ -497,6 +488,7 @@ If you have followed the instructions thoroughly, you should receive the same as
 Now let us make the task harder and try to receive current weather in any city we choose.
 
 **For this we have to:**
+
 1. Change the settings of **API Call** node: in the URL field replace the name of the city **“London”** by a variable ```{{city}}```, and the value of this variable will be received from the main process
 ![](img/api_call_city.png)
 2.  In the **Reply to Process** node, add a parameter ```city: {{city}}``` so that the main process can match the weather from modular subprocess and the city name.
@@ -603,6 +595,7 @@ To suit the **Copy Task**, the **Waiting for Callback** and the **Modify Task** 
 Besides processes, Corezoid allows you to create state diagrams.
 
 In practice, state diagrams are used for:
+
 1. Scoring object states
 2. Data storage
 
@@ -654,6 +647,7 @@ You can read more about the functions of the Set State logic [here](https://doc.
 Now let's utilize the above knowledge for the weather process and store the key for calling your weather API in the state diagram.
 
 **For storing the OpenWeatherMap API keys in the state diagram, you need to:**
+
 1. Create a new state diagram similarly to process creating: by means of the **Create** button and selecting **The state diagram** in the drop-down list.
 2. Name your state diagram as **Config**.
 ![](img/create_the_state_diagram_name_config.png)
@@ -674,6 +668,7 @@ Now let's utilize the above knowledge for the weather process and store the key 
 #### Let's apply it in your **GET Current Weather** process.
 
 **To do this, the GET Current Weather process is to be modified:**
+
 1. Add a **Set Parameter** node between the **Start** node and the **Call API** node.
 2. Name it **Config**.
 3. Add the ```secret_key``` parameter
