@@ -13,8 +13,8 @@
     - [“View” mode](#view-mode)
     - [“Debug” mode](#debug-mode)
 4. [Working with API Call, Condition and Set Parameter nodes](#working-with-api-call-condition-and-set-parameter-nodes)
-5. [Working with Call Process and Reply to Process nodes](#working-with-call-process-reply-to-process-nodes)
-6. [Working with Copy Task and Modify Task nodes](#working-with-copy-task-waiting-for-callback-modify-task)
+5. [Working with Call Process and Reply to Process nodes](#working-with-call-process-and-reply-to-process-nodes)
+6. [Working with Copy Task and Modify Task nodes](#working-with-copy-task-waiting-for-callback-and-modify-task-nodes)
 7. [Working with State Diagrams](#state-diagram)
 
   
@@ -168,7 +168,7 @@ Let’s see how the task is being created on the screenshot, where:
 2. **Numbe**r - number. E.g: 13, 0.4, 32.
 3. **Boolean** - boolean value, either true or false. E.g.: true, false.
 4. **Array** - data sequence. E.g.: ```[“Peter”, “Jacob”, 941, {“key”: “value”}, ...]```.
-5. **Object - JSON data object. E.g.: ```{“objectName”: “objectValue”}```.
+5. **Object** - JSON data object. E.g.: ```{“objectName”: “objectValue”}```.
 
 
 If a task started in the starting node and reached the final node, the counter in the final node is incremented by 1. It means that the task has successfully been handled by the process.
@@ -231,8 +231,7 @@ Now let's set up **API call** parameters. Click the API Call node and in a side 
 5.  **Methods of the API call** - all the standard HTTP-methods required to work with an API: [GET](https://doc.corezoid.com/en/interface/nodes/api/get.html), [POST](https://doc.corezoid.com/en/interface/nodes/api/post.html), [PUT, DELETE, HEAD, PATCH](https://doc.corezoid.com/en/interface/nodes/api/put__delete__head.html). 
 More information related to HTTP methods can be found [here](https://ru.wikipedia.org/wiki/HTTP#%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B).
     
-6. **Content-Type** - choosing data format type when calling API: application/json, application/x-www-form-urlencoded, application/xml, text/xml, application/soap+xml
-    - More information related to Content-Type can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type).  
+6. **Content-Type** - choosing data format type when calling API: application/json, application/x-www-form-urlencoded, application/xml, text/xml, application/soap+xml. More information related to Content-Type can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type).  
 7.  **Parameters** - describing parameters that will be passed to the API. Parameters should be input in the “key-value” format, the same as creating a new task.
 
 8. **Additionally** - additional API call parameters that will be studied in other lessons.
@@ -279,16 +278,21 @@ It should look like on the screenshot below:
  ![](img/condition_node.png)
 
 **Now let's examine what Condition node consists of:**
-1. **Condition** - list of eligible conditional operators: 
+
+1. **Condition** - list of eligible conditional operators:
+ 
     - **==** - equal
     - **=!** - not equal
     - **>** - greater than
     - **<** - lesser than
     - [RegExp](https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F)
+    
 2. **+ Add parameter** - add new parameter to the condition
 
 3. **+ Add condition** - add new condition
+
 4. List of errors that block process modifications from being applied.
+
 5. **“+”** - adding new node for the task to go to if the condition is satisfied.
       
     
@@ -308,19 +312,23 @@ Let’s recall that API gives us response as a JSON object:
 where **temp** is current temperature.
 
 **To add such conditions we need to:**
+
 1. Аdd the following query: ```{{main.temp}}```, where:
+
     - ```{{ }}``` - a format to address task parameters that are inside either nested objects or arrays;
     - `main` - first level of nesting (object name);
     - `temp` - a variable we want to address.
-
-More on how to work with nested objects can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
-
+    
+    More on how to work with nested objects can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
 2. Choose conditional operator greater than **(“>”)**
+
 3. Fill **“value”** field with “20” - this is the temperature
+
 4. Since we are working with numbers, choose data type “N”
      ![](img/maintemp1.png)
 5. Press button **“+ Add condition”**
+
 6. Add the second condition that consists of 2 parameters:
     ![](img/maintemp2.png)
       
@@ -398,7 +406,7 @@ If everything is alright, new parameter **currentTemp** should appear in the tas
 
 ---  
 
-## Working with Call Process/Reply to Process nodes
+## Working with Call Process and Reply to Process nodes
 
 
 Corezoid allows to make universal modular processes (subprocesses) that can be re-used in the future by other processes or users.
