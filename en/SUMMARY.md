@@ -1,7 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Glossary](int_glossary.md)
+* [Quick start](quick-start/README.md)
+* [Glossary](glossary.md)
 * [Processes and states](interface/process_and_state/processes.md)
    * [State diagram](interface/process_and_state/state_diagramm.md)
    * [Process](interface/process_and_state/create_process.md)

@@ -139,7 +139,7 @@
    * [АЗС "Авиас"](plugins/azs_avias/README.md)
        * [Получение курсов топлива](plugins/azs_avias/rates_avias.md)
        * [Получение адресов заправок](plugins/azs_avias/address_avias.md)
-* [Bot platform](plugins/bot_platform/README.md)
+* [Bot Platform](plugins/bot_platform/README.md)
     * [v1.0](plugins/bot_platform/v1/README.md)
     * [v2.0](plugins/bot_platform/v2/README.md)
        * [Как создать бота с помощью Bot Platform](plugins/bot_platform/v2/get-started.md)
