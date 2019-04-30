@@ -12,10 +12,9 @@
     - [Режим “Edit”](#режим-edit)
     - [Режим “View”](#режим-view)
     - [Режим “Debug”](#режим-debug)
-4. [Работа с логиками API Call, Condition](#работа-с-узлами-api-call-condition)
-5. [Set parameter](#set-parameter)
+4. [Работа с логиками API Call, Condition, Set Parameter](#работа-с-узлами-api-call-condition-set-parameter)
 6. [Работа с логиками Call Process/Reply to Process](#работа-с-логиками-call-processreply-to-process)
-7. [Работа с логиками Copy Task/Modify Task](#работа-с-логиками-copy-task-waiting-for-callback-modify-task)
+7. [Работа с логиками Copy Task, Waiting for Callback, Modify Task](#работа-с-логиками-copy-task-waiting-for-callback-modify-task)
 8. [Работа со State Diagram](#state-diagram)
 
   
@@ -224,7 +223,7 @@
 
 ---  
 
-## Работа с узлами: API Call, Condition
+## Работа с узлами: API Call, Condition, Set Parameter
 
 
 У Вас уже есть готовый процесс, который состоит из стартового и финального узла. Давайте теперь добавим в него новый узел с логикой API Call.
