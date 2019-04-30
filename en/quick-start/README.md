@@ -1,7 +1,5 @@
 
 # Quick Start
-
----
   
 
 ## Content:
@@ -20,18 +18,19 @@
   
   
 
+---
+
 ## Registation
 
----
 
 [Register](https://admin.corezoid.com/signup) to start working with Corezoid.
   
 ![](img/registration.png)
 
 
-## Process Browser
-
 ---
+
+## Process Browser
   
 After completing registration, you are directed to the process browser. It consists of 4 components:
 
@@ -43,9 +42,9 @@ After completing registration, you are directed to the process browser. It consi
 4. **Profile** - find information about your profile, active subscription and payments history.
     
 
-## How to create a new process
-
 ---
+
+## How to create a new process
 
 Make sure you are in the Workspace tab. Now, create a process by clicking on the **“Create”** button in the top left corner and choosing **“Process”** from the dropdown menu.
 
@@ -61,9 +60,9 @@ In the pop-up window enter a process name and a description (optional) that will
 ![](img/create_process3.png)
 
 
-##  Process Editor
-
 ---
+
+##  Process Editor
 
 To understand how Corezoid works, you have to understand that every process is a set of nodes.
 
@@ -96,9 +95,10 @@ A green line connecting the nodes shows how the task will move through the proce
 6. **Share** — use to permit other Corezoid users to view, upload data or edit the process.
   
 
+---
+
 ### “Edit” mode
 
----
 
 Process can be modified by dragging nodes to the process workspace from the list of available nodes (on the left side) or by clicking the “+” icon that appears when you hover the line between processes.
      
@@ -116,6 +116,7 @@ In-between changes are saved automatically every 10 seconds. The last 20 actions
 To track the process’ execution in real time, switch to **View** tab.
 
 If you click on any node in View mode, a side menu with two tabs will show up, the tabs are:
+
 1. **Statistics** - shows amount of processed tasks in a selected period of time.
 2. **Archive** - archive of tasks that are currently in the node. This tab shows a list of all the tasks and what they consist of.
       
