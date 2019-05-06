@@ -266,11 +266,11 @@ After the task is successfully processed, click on the **Final** node. Task para
 ###  Condition
 
 
-Now let’s learn how to distribute a stream of tasks in the process based on task data. For this we will use the Condition node: it is responsible for conditional logic operators “if …, then …”.
+Now let’s learn how to distribute a stream of tasks in the process based on task data. For this we will use the **Condition** node: it is responsible for conditional logic operators “if …, then …”.
 
-To start, we need to free up some space to add a new Condition node between the nodes API Call and Final. To do this, go back to Edit mode, click on the Final node and drag it down.
+To start, we need to free up some space to add a new **Condition** node between the nodes **API Call** and **Final**. To do this, go back to **Edit** mode, click on the **Final** node and drag it down.
 
-Next, hover the mouse over the line between API Call and Final nodes, click on the “+” button, and choose the Condition node from the list.
+Next, hover the mouse over the line between **API Call** and **Final** nodes, click on the **“+”** button, and choose the **Condition** node from the list.
 
 It should look like this:
 
@@ -292,7 +292,7 @@ It should look like this:
 5. **“+”** - add a new node for the task to go to if the condition is satisfied.
       
     
-Now lets add a condition to our process: if the temperature in London is greater than +20 degrees Celsius, we will redirect the task to the final node called **“Warm”**, if the temperature is between +5 and +20 degrees - to the node **“Normal”**, and if the temperature is less than 5 degrees - to the node **Cold”**.
+Now let’s add a condition to our process: if the temperature in London is greater than +20 degrees Celsius, we will redirect the task to the final node called **“Warm”**, if the temperature is between +5 and +20 degrees - to the node **“Normal”**, and if the temperature is less than 5 degrees - to the node **Cold”**.
 
 Let’s recall that API gives us response as a JSON object:
 
@@ -314,7 +314,6 @@ where **temp** is current temperature.
     - ```{{ }}``` - a format to address task parameters that are inside either nested objects or arrays;
     - `main` - first level of nesting (object name);
     - `temp` - a variable we want to address.
-    
     More information on how to work with nested objects can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
 2. Choose conditional operator greater than **(“>”)**
@@ -675,7 +674,7 @@ Now let's utilize the above knowledge for the weather process and store the key 
 
 **🎉 Congratulations! You have created your first state diagram as Config.** 
 
-#### Let's apply it in your GET Current Weather process.
+#### Let's apply it in your GET Current Weather process
 
 **To do this, we need to modify the GET Current Weather process:**
 
@@ -685,10 +684,8 @@ Now let's utilize the above knowledge for the weather process and store the key 
     - ```{{process_id}}``` - is the ID of your Config state diagram;
     - ```{{ref}}``` - is the reference of the task in the state diagram that is stored our configuration data;
     - ```{{parameter_name}}``` - is the name of the parameter to be read.
-
-    In our case of the tutorial author, the construction looks like this: 
-    ```{{conv[530236].ref[weather_api].secret_key}}```.
     
+        In our case of the tutorial author, the construction looks like this: ```{{conv[530236].ref[weather_api].secret_key}}```.
     ![](img/key_from_set_param.png) 
      
 4.  Instead of the explicitly specified the **APPID** value, you should add to the API Key node the ```{{secret_key}}``` variable that is dynamically substituted when the API is called, as well as the parameter ```{{city}}``` is substituted
