@@ -658,8 +658,8 @@ Now let's utilize the above knowledge for the weather process and store the key 
 
     ![](img/create_the_state_diagram_name_config.png)
     
-3. Remove the node **Inactive** users.
-4. Rename the node **Config**.
+3. Remove the node **Inactive users**.
+4. Rename the **Active users** node to **Config**.
 5. In the sidebar, select the **Advanced** option and remove the checkbox from the **Limit the time of the task in the node** line.
  
     ![](img/limit_the_time_of_the_task_in_the_node.png)
@@ -679,16 +679,16 @@ Now let's utilize the above knowledge for the weather process and store the key 
 **To do this, we need to modify the GET Current Weather process:**
 
 1. Add a **Set Parameter** node between the **Start** node and the **Call API** node.
+
 2. Name it **Config**.
+
 3. Add a new key-value with the following function to receive the task data from the state diagram: ```{{ conv[{{process_id}}].ref[{{ref}}].{{parameter_name}} }}```, where:
     - ```{{process_id}}``` - is the ID of your Config state diagram;
     - ```{{ref}}``` - is the reference of the task in the state diagram that is stored our configuration data;
-    - ```{{parameter_name}}``` - is the name of the parameter to be read.
-    
-        In our case of the tutorial author, the construction looks like this: ```{{conv[530236].ref[weather_api].secret_key}}```.
+    - ```{{parameter_name}}``` - is the name of the parameter to be read.    
+    In our case of the tutorial author, the construction looks like this: ```{{conv[530236].ref[weather_api].secret_key}}```.
     ![](img/key_from_set_param.png) 
-     
-4.  Instead of the explicitly specified the **APPID** value, you should add to the API Key node the ```{{secret_key}}``` variable that is dynamically substituted when the API is called, as well as the parameter ```{{city}}``` is substituted
+4.  Instead of the explicitly specifiy the **APPID** value, you should add to the **API Call** node the ```{{secret_key}}``` variable that will be dynamically passed to the API.
 
     ![](img/key_from_url.png)  
 
