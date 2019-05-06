@@ -14,7 +14,7 @@ For process debugging go to `Debug` mode and switch its status to `Debugged`
 * `Controls for debugging mode` - Repeat, Start/Stop, Step back, Step forward
 
 
-####New task
+#### New task
 
 In order to add parameters and send test task:
 

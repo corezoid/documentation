@@ -1,6 +1,6 @@
-# Rules of task processing stop
+# Infinite Loops Protection rules
 
-Processing will be stopped if task loop and will take place more than 50 times in the process that contains one of two following logics:
+Processing will be stopped if task loops and will be cycled over 50 times in the process that contains one of two following logics:
 
 ```
 Node_1 -> Node_2

@@ -1,6 +1,6 @@
 ## Process creation
 
-Unlike [state diagram](state_diagramm.md), process:
+Unlike [state diagram](state-diagram.md), process:
 -   has an access to **[the full set of logics](../nodes/README.md)**
 -   has a limit on the number of tasks in the process (except final nodes) - 100 000 tasks .
 

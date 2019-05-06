@@ -4,7 +4,7 @@
 
 ## Content:
 
-1. [Registation](#registation)
+1. [Registration](#registation)
 2. [The Process Browser](#the-process-browser)
 3. [How to create a new process](#process-creation)
 4. [Working with API Call, Condition and Set Parameter nodes](#working-with-api-call-condition-and-set-parameter-nodes)
@@ -17,7 +17,7 @@
 
 ---
 
-## Registation
+## Registration
 
 
 [Register](https://admin.corezoid.com/signup) to start working with Corezoid.
@@ -363,7 +363,7 @@ When this text was written it was +8.46 degrees in London and the task reached t
 ### Set Parameter
 
 
-**Set Parameter** logic allows you to add new and modify existing parameters in tasks. It also allows you to apply various functions to the parameters.
+The **Set Parameter** node allows you to add new and modify existing parameters in tasks. It also allows you to apply various functions to the parameters.
 
 You can find more on functions that can be applied to nodes [here](https://doc.corezoid.com/en/interface/functions/).
 
