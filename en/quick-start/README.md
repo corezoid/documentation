@@ -402,7 +402,7 @@ If you did everything correctly, the new parameter, ```currentTemp```, should ap
 
 ---  
 
-## Working with Call Process/Reply to Process Nodes
+## Working with Call Process and Reply to Process Nodes
 
 
 Corezoid allows you to make universal modular processes (subprocesses) that can be reused in the future by other processes or users.
