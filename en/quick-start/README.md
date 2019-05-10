@@ -72,7 +72,7 @@ A **Task** is a data object that a process receives for computing. Tasks may be 
 **By default, each new process consists of 2 nodes:**
 
 1. Blue - **starting node** -  receives all the incoming tasks.
-2. Red - **final node** - receives all the processed tasks.
+2. Green - **final node** - receives all the processed tasks.
 
 The green line connecting the nodes shows how the task will move through the process.
 
