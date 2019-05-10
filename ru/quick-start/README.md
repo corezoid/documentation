@@ -23,7 +23,7 @@
 
 Для начала работы с Corezoid сперва необходимо [зарегистрироваться](https://admin.corezoid.com/signup).  
   
-![](interface/img/quick_start/registration.png)
+![](img/registration.png)
 
 ---
 
@@ -31,7 +31,7 @@
 
 После регистрации вы попадаете в браузер процессов, который состоит из 4 компонентов:
 
-![](interface/img/quick_start/process_browser.png)
+![](img/process_browser.png)
 
   
 
@@ -51,16 +51,16 @@
 
 Для создания процесса нажмите в левом верхнем углу кнопку **“Create”** и выберите из выпадающего списка пункт **“Process”**.
 
- ![](interface/img/quick_start/create_process1.png)
+ ![](img/create_process1.png)
 
   
 В появившемся окне укажите произвольное название процесса и короткое описание (опционально), которое поможет понять предназначение и функциональность процесса. После этого нажмите кнопку “**OK**”.  
   
-![](interface/img/quick_start/create_process2.png)
+![](img/create_process2.png)
 
 Поздравляем! Вы создали свой первый процесс на платформе Corezoid :)
 
-![](interface/img/quick_start/create_process3.png)
+![](img/create_process3.png)
 
 ---
 
@@ -82,7 +82,7 @@
     
 Зеленая соединяющая узлы линия показывает направление движения заявки по процессу.
 
-  ![](interface/img/quick_start/process_editor.png)
+  ![](img/process_editor.png)
 
   
 **Сверху расположено меню управления процессом:**  
@@ -114,7 +114,7 @@
 
 Промежуточные изменения автоматически сохраняются каждые 10 секунд. К 20 последним изменениям можно применить кнопки Undo/Redo.
 
-  ![](interface/img/quick_start/edit_mode.gif)
+  ![](img/edit_mode.gif)
 
 ---
 
@@ -129,7 +129,7 @@
     
 2.  **Archive** - это архив заявок, которые находятся сейчас в узле. В этой вкладке вы можете видеть список всех заявок и содержимое этих заявок.  
       
-![](interface/img/quick_start/view_mode.gif)
+![](img/view_mode.gif)
 
 Также в этом режиме вы можете создавать новые заявки и смотреть как они обрабатываются вашим процессом.
 
@@ -145,7 +145,7 @@
 
 Пример заявки в процессе:
 
-![](interface/img/quick_start/tasks.png)
+![](img/tasks.png)
 
 1.  **ID** - уникальный идентификатор, по которому можно найти и модифицировать заявку в рамках всей системы Corezoid.
     
@@ -162,7 +162,7 @@
 ###  Создание новой заявки вручную
 
 
-![](interface/img/quick_start/create_new_task.png)
+![create-new-task](img/create_new_task.png)
 
 **Рассмотрим процесс создания новой заявки на примере скриншота, где:**  
   
@@ -209,7 +209,7 @@
 
 Для тестирования процесса в режиме реального времени перейдите в режим Debug.  
   
-![](interface/img/quick_start/debug_mode.gif)
+![debug-mode](img/debug_mode.gif)
 
 Перед Вами открылся интерфейс тестирования. В этом режиме вы можете работать как с заявками, которые уже поступают в процесс из внешних систем, так и эмулировать создание новых заявок аналогично режиму “View”.
 
@@ -227,7 +227,7 @@
 
 Для добавления нового узла наведите на линию, которая соединяет стартовый и финальный узлы, нажмите иконку “+” и в появившемся списке выберите логику **API Call**.
 
-![](interface/img/quick_start/apicall_and_condition.png)
+![](img/apicall_and_condition.png)
 
 
 ---
@@ -238,11 +238,11 @@
 Логика API Call позволяет вызывать API в форматах: JSON, XML, SOAP.
 При добавления логики API Call у вас появляется 4 узла: узел API Call + 3 узла, которые отвечают за обработку ошибок, возникающих при вызове API.
   
-![](interface/img/quick_start/apicall.png)
+![](img/apicall.png)
 
 Теперь давайте настроим параметры вызова API. Для этого кликните на узел **API Call** и в появившемся боковом меню вы увидите параметры вызова API:
 
-![](interface/img/quick_start/apicall2.png)
+![](img/apicall2.png)
 
 1.  **Add title** - поле для ввода названия узла. Мы настоятельно рекомендуем добавлять название всем узлам, чтобы пользователи могли без труда “прочитать” процесс и понимать, что в нем происходит без необходимости заходить в каждый узел и смотреть для чего используется та или иная логика. 
       
@@ -270,19 +270,19 @@
 
 2.  Создать новый API Key  
 
-    ![](interface/img/quick_start/api_openweather.png)
+    ![](img/api_openweather.png)
     
 Далее необходимо добавить следующий URL в узел **API Call**:  [http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID={APIKEY](http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=%7BAPIKEY)}, где {APIKEY} - ключ, который вы создали.
 
 И выбрать **Request method: GET**, т.к. мы хотим запросить данные у API.
 
-![](interface/img/quick_start/api_openweather_get.png)
+![](img/api_openweather_get.png)
 
 Далее переходим в режим View, создаем новую пустую заявку, нажав на кнопку **“+ New task”**, и жмем кнопку **“Add task”**. 
 
 После успешной обработки заявки, жмем на узел **“Final”** и справа появится боковое меню с описание параметров заявки, в которой содержится ответ API в формате JSON.
 
-![](interface/img/quick_start/api_openweather_json.png)
+![](img/api_openweather_json.png)
 
 **Поздравляем! Вы успешно вызвали ваш первый API с помощью Corezoid.**
 
@@ -300,7 +300,7 @@
 У вас должно получиться так, как на скриншоте ниже:
 
 
- ![](interface/img/quick_start/condition_node.png)
+ ![](img/condition_node.png)
 
 Теперь разберем элементы узла Condition:
 
@@ -355,10 +355,10 @@
 4.  Так как мы работаем с числами, выбираем тип значения “N”  
       
     У вас должна получиться следующая конструкция:  
-     ![](interface/img/quick_start/maintemp1.png)
+     ![](img/maintemp1.png)
 5.  Нажимаем на кнопку “+ Add condition”
 6.  Добавляем второе условие, которое состоит из 2 параметров:  
-    ![](interface/img/quick_start/maintemp2.png)
+    ![](img/maintemp2.png)
       
     Для добавления второго элемента, нажмите кнопку “+ Add parameter”
     
@@ -368,12 +368,12 @@
 Теперь давайте добавим финальные узлы, в которое будут маршрутизироваться заявки в зависимости от текущей температуры:
 
 1.  Нажмите на кнопку “+” возле каждого из условий и выберите узел “End: Success”  
-    ![](interface/img/quick_start/maintemp3.png) 
+    ![](img/maintemp3.png) 
 2.  Добавьте в поле “title” название узла “Warm”.
 3.  Повторите операцию со вторым условием, назвав узел “Normal”
 4.  Переименуйте узел “Final” на “Cold”
     
-![](interface/img/quick_start/maintemp4.png)
+![](img/maintemp4.png)
   
 Мы не добавляли третье условие, так как если ни одно из условий выше не будет выполнено, значит температура ниже 5 градусов и мы по безусловному переходу переведем заявку в узел “Cold”.
 
@@ -387,7 +387,7 @@
 
 На момент написания этого текста в Лондоне было +8.46 градусов и заявка ожидаемо попала в узел “Normal”, так как температура находится в диапазоне от +5 до +20.
 
-  ![](interface/img/quick_start/temp_json.png)
+  ![](img/temp_json.png)
 
 Поздравляем! Теперь вы умеете вызывать API и управлять заявками с помощью узла **Condition**.
 
@@ -416,17 +416,17 @@
 
 В результате у вас должно получиться так, как на скриншоте ниже:  
 
-![](interface/img/quick_start/currentTemp.png)  
+![](img/currentTemp.png)  
   
 
 Далее давайте изменим параметр **`{{main.temp}}`** на **currentTemp** в узле **Condition**:
 
-![](interface/img/quick_start/currentTemp_in_condition.png)
+![](img/currentTemp_in_condition.png)
 
   
 Теперь нажмите **Deploy**, перейдите в режим **View** и запустите пустую заявку, чтобы проверить корректность работы процесса.
 
-![](interface/img/quick_start/currentTemp_view_mode.png)
+![](img/currentTemp_view_mode.png)
 
 Если вы все сделали правильно, то у вас должен появиться новый параметр **currentTemp** в заявке и заявка должна пройти в один из узлов в соответствии с логикой узла **Condition**.
 
@@ -453,7 +453,7 @@ Corezoid позволяет создавать универсальные мод
 
 
 Узел **Call Process** отправляет заявку в подпроцесс и останавливает выполнение основного процесса до тех пор, пока не получит результат обработки заявки из подпроцесса.
-![](interface/img/quick_start/call_process.png)
+![](img/call_process.png)
 
 
 Узел **Call Process** состоит из следующих элементов:
@@ -468,7 +468,7 @@ Corezoid позволяет создавать универсальные мод
 
 
 Узел **Reply to Process** возвращает обработанную заявку в основной процесс, из которого был вызван подпроцесс.
-![](interface/img/quick_start/reply_to_process.png)
+![](img/reply_to_process.png)
 
   
 
@@ -517,11 +517,11 @@ Corezoid позволяет создавать универсальные мод
 2.  Добавьте узел **Call Process**
 3.  Выберите в боковом меню созданный ранее подпроцесс **GET Current Weather**.
 4.  Отметьте чекбокс **Send all parameters**  
-![](interface/img/quick_start/Send_all_parameters.png)
+![](img/Send_all_parameters.png)
 5.  Задеплойте процесс и перейдите в режим **View**
 6.  Отправьте новую пустую заявку в процесс
 7.  Кликните на финальный узел и посмотрите содержимое заявки  
-![](interface/img/quick_start/get_current_weather_view.png)
+![](img/get_current_weather_view.png)
       
 
 Если вы все верно выполнили, то вам должен вернуться набор параметров, указанный выше.
@@ -541,14 +541,14 @@ Corezoid позволяет создавать универсальные мод
 Для этого нам необходимо:
 
 1.  Изменить настройки узла **API Call**, заменив в поле URL API название города “London” на переменную **`{{city}}`**, значение которой мы будем передавать из основного процесса.  
-![](interface/img/quick_start/api_call_city.png)
+![](img/api_call_city.png)
 2.  Добавить в узле **Reply to Process** параметр **city: `{{city}}`**, для того, чтобы понимать в основном процессе погоду какого города вернул модульный подпроцесс.
 
 
 Дальше задеплойте подпроцесс, перейдите в основной процесс и создайте в режиме **View** новую заявку с параметром **city: Berlin**.  
   
 Если все выполнено верно, вам должна вернуться заявка с температурой в Берлине, как показано на скриншоте ниже:  
-![](interface/img/quick_start/city_berlin.png)
+![](img/city_berlin.png)
 
   
 
@@ -558,11 +558,11 @@ Corezoid позволяет создавать универсальные мод
 
 
 Для упрощения работы с модульными процессами мы рекомендуем описывать весь набор входящих и исходящих параметров в меню **Task parameters**.
-![](interface/img/quick_start/Task_parameters.png)
+![](img/Task_parameters.png)
 Подробнее о возможностях меню **Task parameters** вы можете прочитать [здесь](https://doc.corezoid.com/ru/interface/tasks/task_parameters.html).
 
 В случае с процессом **GET Current Weather**, будет уместно описать 1 обязательный входящий параметр: **city (string)**. 
-![](interface/img/quick_start/city_string.png)
+![](img/city_string.png)
 
 ---  
 
@@ -574,7 +574,7 @@ Corezoid позволяет создавать универсальные мод
 
 
 Узел **Copy Task** позволяет скопировать заявку из одного процесса в другой, не останавливая выполнение процесса из которого была скопирована заявка.
-![](interface/img/quick_start/copy_task.png)  
+![](img/copy_task.png)  
   
 Также обратите внимание, что в узле **Copy Task** появилось дополнительное поле **Reference** (что такое референс мы подробно рассматривали в разделе **Заявки**), которое позволяет явно задать референс заявки в другом процессе.  
   
@@ -593,7 +593,7 @@ Corezoid позволяет создавать универсальные мод
 Если вы хотите отправить заявку в подпроцесс для параллельной обработки и остановить выполнение основного процесса до получения результатов обработки или на определенный период времени, тогда вам необходимо после узла **Copy Task** добавить узел **Waiting for Callback**.
 
 Анатомия узла **Waiting for Callback:**
-![](interface/img/quick_start/waiting_for_callback.png)  
+![](img/waiting_for_callback.png)  
   
 
 1.  URL для модификации заявки, которая находится в узле **Waiting for Callback** из внешней системы.  
@@ -623,11 +623,11 @@ Corezoid позволяет создавать универсальные мод
 
 
 1.  В процессе **Main Process** заменить узел **Call Process** на 2 узла: **Copy Task + Waiting for Callback**.
-![](interface/img/quick_start/copy_task.png)  
+![](img/copy_task.png)  
 2.  В узле **Copy Task** выбрать вызов процесса **GET Current Weather**
     
 3.  В поле **Reference** указать конструкцию **`{{root.ref}}`**, которая будет копировать в подпроцесс заявку с референсом, который равен референсу заявки в основном процессе.  
-![](interface/img/quick_start/modify_task.png)
+![](img/modify_task.png)
       
 4.  В процессе **GET Current Weather** заменить узел **Reply to Process** на узел **Modify Task**
     
@@ -639,7 +639,7 @@ Corezoid позволяет создавать универсальные мод
 >ВАЖНО: После изменения процесса GET Current Weather, он перестал быть универсальным, т.к. в узле Modify Task мы явно указали в какой процесс возвращать заявку.  
 Если вы хотите сделать его универсальным, то необходимо добавить в поле Process переменную типа `{{callback_process_id}}`, которая будет содержать ID процесса, в который необходимо вернуть заявку. Эта переменная должна поступать в подпроцесс в теле заявки из основного процесса.
 
-![](interface/img/quick_start/callback_process_id.png)
+![](img/callback_process_id.png)
   
 
 ---
@@ -671,7 +671,7 @@ Corezoid позволяет создавать универсальные мод
 В терминах диаграммы состояний, описанная выше логика работает с 2 состояниями клиента (“активный” и “неактивный”) и запускает подпроцесс отправки уведомлений в случае отсутствия изменения состояния “активный” в течение 30 дней.  
   
 На практике, подобная логика будет иметь следующую довольно простую реализацию:
-![](interface/img/quick_start/state_diagram.png)
+![](img/state_diagram.png)
 
   
 
@@ -693,7 +693,7 @@ Corezoid позволяет создавать универсальные мод
 
 Например, Bot Platform 2.0 (наш инструмент для быстрого создания ботов во всех популярных мессенджерах) использует диаграммы состояний для хранения профилей пользователей; ключей от API мессенджеров; текстов, клавиатур и кнопк ботов; связи между командами и процессами; и т.д.
 
-![](interface/img/quick_start/state_diagram_from_bot_platform_2_0.png)
+![](img/state_diagram_from_bot_platform_2_0.png)
 
 Подробнее о функциях логики Set State вы можете прочитать [здесь](https://doc.corezoid.com/ru/interface/nodes/setstate.html).
 
@@ -708,17 +708,17 @@ Corezoid позволяет создавать универсальные мод
 
 1.  Создать новую диаграмму состояний аналогично созданию процесса: с помощью кнопки **Create** и выбора в выпадающем списке пункта **The state diagram**.
 2.  Назвать диаграмму состояний **Config**.
-![](interface/img/quick_start/create_the_state_diagram_name_config.png)
+![](img/create_the_state_diagram_name_config.png)
 3. Удалить узел **Inactive users**
 4. Переименовать узел в **Config**
 5. Выбрать в боковом меню **Additionally** и убрать чекбокс с пункта **Limit the time of the task in the node**
-![](interface/img/quick_start/limit_the_time_of_the_task_in_the_node.png)
+![](img/limit_the_time_of_the_task_in_the_node.png)
 6. Нажать кнопку **Deploy**
 7. Перейти в режим **View**
 8. Cоздать новую заявку с **REF: weather_api** и телом заявки ```secret_key: {{значение секретного ключа для доступа к API из панели управления OpenWeatherMap}}```
-![](interface/img/quick_start/weather_api.png)
+![](img/weather_api.png)
 9. Нажать **Add task**
-![](interface/img/quick_start/secret_key_weather_api.png)
+![](img/secret_key_weather_api.png)
 
 
 Поздравляем! Вы создали свою первую конфигурационную диаграмму состояний. Теперь давайте применим ее в нашем процессе **GET Current Weather**.  
@@ -732,9 +732,9 @@ Corezoid позволяет создавать универсальные мод
     **`{{ref}}`** - референсы заявки в диаграмме состояний;  
     **`{{parameter_name}}`** - название параметра, который необходимо вычитать.  
 В нашем случае автора туториала конструкция будет выглядеть следующим образом: **```{{conv[530236].ref[weather_api].secret_key}}```**.  
-![](interface/img/quick_start/key_from_set_param.png)  
+![](img/key_from_set_param.png)  
 2.  Добавить в узел **API Key** вместо явно указанного значения **APPID**, переменную **`{{secret_key}}`**, которая будет динамически подставляться при вызове API, как и параметр `{{city}}`.  
-![](interface/img/quick_start/key_from_url.png)  
+![](img/key_from_url.png)  
 
 Поздравляем! Вы научились создавать конфигурационные диаграммы состояний и использовать их вызова API.
 

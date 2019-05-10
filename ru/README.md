@@ -8,7 +8,7 @@ Corezoid позволяет создавать и выполнять ЛЮБЫЕ 
 ![API](api/img/API.png)
 
 ---
-[![btn](api/img/btn.png)](quick-start.md)
+[![btn](api/img/btn.png)](quick-start/README.md)
 
 поможет легко и быстро создать Ваш первый процесс, открыть к нему доступ для API и загрузить данные для обработки.
 
