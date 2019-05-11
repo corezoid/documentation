@@ -14,7 +14,7 @@ Business analysts no longer need software engineers to implement and support the
 
 Developers can easily implement complex solutions like event processing using automata-based programming with explicit state selection.
 
-Let's get [started](quick-start/README.md)
+[Let's get started](quick-start/README.md)
 
 
 ![API](api/img/API.png)
