@@ -13,7 +13,7 @@ After API call, the task will contain a new object with a name `{{param}}`, mean
 ![img](../ru/interface/img/releases/v4_image7.png)<br/>
 **Important!** The name of the parameter (**key**) will be formed according to those parameters of the task, that existed before the API call. Parameters, that were received after API call, will not be substituted automatically. If the specified parameter is missing from the task or it has an empty value before the API call, then the name of the parameter will also contain an empty value.<br/>
 3. In API Call node we’ve added a new format for the requests (Request format) – **Raw**. In the **Сode editor** tab, you can now specify as request body data in the following formats: string, number, array, object<br/>
-Example of the request payload with an array:<br/>
+Example of the request body with an array:<br/>
 ![img](../ru/interface/img/releases/v4_image1.png)<br/>
 Example of Corezoid API request with a dynamic substitution of the parameter name:<br/>
 ![img](../ru/interface/img/releases/v4_image6.png)<br/>
