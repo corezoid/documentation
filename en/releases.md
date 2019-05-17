@@ -28,9 +28,8 @@ Also in the **Code editor** we support the **conversion** of values to string, n
 `$.to_string()`<br/>
 In order to convert the string parameter `"str": "{\"obj\": {\"key\": \"value\"}}"` into object, the expression will be the following: `$.to_object({{str}})`
 4. We’ve added new features to **Task Parameters** menu:
-
-* bulk operations: move, copy, delete selected parameters;
-* automatic check for the presence of identical parameters names.
+    * bulk operations: move, copy, delete selected parameters;
+    * automatic check for the presence of identical parameters names.
 
 ![img](../ru/interface/img/releases/v4_image4.png)
 
