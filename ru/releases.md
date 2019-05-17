@@ -3,11 +3,11 @@
 ## v4.0 - 14 Мая 2019
 
 1. Сортировка папок в Workspace по умолчанию выполняется в алфавитном порядке:<br/>
-![img](../ru/interface/img/releases/v4_image8.png)
-2. В блоке [Customize response](https://doc.corezoid.com/ru/interface/nodes/api/#customize-response-parameters) parameters логики API Call реализована возможность динамически задавать key (имя) параметра.<br/>
+![img](../ru/interface/img/releases/v4_image8.png)<br/>
+2. В блоке [Customize response parameters](https://doc.corezoid.com/ru/interface/nodes/api/#customize-response-parameters) логики API Call реализована возможность динамически задавать **key** (имя) параметра.<br/>
 Пример: `{{param}}`<br/>
 ![img](../ru/interface/img/releases/v4_image3.png)<br/>
-После вызова API, заявка будет содержать новый объект с названием `{{param}}`, т.е. значение параметра `param:<br/>
+После вызова API, заявка будет содержать новый объект с названием `{{param}}`, т.е. значение параметра `param`:<br/>
 ![img](../ru/interface/img/releases/v4_image7.png)<br/>
 **Важно!** Название параметра (**key**) будет сформировано в соответствии с теми параметрами заявки, которые были до вызова API. Параметры, полученные после вызова API, не будут динамически подставлены. Если указанного параметра в заявке нет или он имеет пустое значение до вызова API, то название параметра также будет иметь пустое значение.<br/>
 3. В логике API Call добавлен новый формат запроса (Request format) - **Raw**.<br/>
@@ -18,7 +18,7 @@
 ![img](../ru/interface/img/releases/v4_image6.png)<br/>
 Теперь часть запроса в формате XML можно подставить с помощью динамического параметра, значение которого будет присвоено из тела заявки:<br/>
 ![img](../ru/interface/img/releases/v4_image5.png)<br/>
-где<br/>
+где<b/>
 `{ "program": "<program><loadname>APP1LMD1</loadname><pgmname>APP1PGM1</pgmname></program>" }`<br/>
 Также в **Code editor** поддерживается **конвертация** значений в строку/число/объект/массив с помощью конструкций:
 `$.to_object()`<br/>
@@ -26,7 +26,7 @@
 `$.to_array()`<br/>
 `$.to_string()`<br/>
 Для конвертации строкового параметра `"str": "{\"obj\": {\"key\": \"value\"}}"` в объект, конструкция будет выглядеть следующим образом: `$.to_object({{str}})`
-4. Новый функционал в меню Task Parameters:
+4. Новый функционал в меню **Task Parameters**:
 * массовые операции: перенос, копирование и удаление выбранных параметров;
 * автоматическая проверка наличия дублирующих названий параметров.
 

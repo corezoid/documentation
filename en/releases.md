@@ -1,7 +1,45 @@
 # Release Notes
 
+## v4.0  - May 14 2019
 
+1. Folders in the Workspace are now sorted in **alphabetical order** by default.<br/>
+![img](../ru/interface/img/releases/v4_image8.png)<br/>
+2. In [Customize response](https://doc.corezoid.com/en/interface/nodes/api/#customize-response-parameters) block of API Call node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
+Example: `{{param}}`<br/>
+![img](../ru/interface/img/releases/v4_image3.png)<br/>
+After API call, the task will contain a new object with a name `{{param}}`, meaning the value of `param parameter:<br/>
+![img](../ru/interface/img/releases/v4_image7.png)<br/>
+**Important!** The name of the parameter (**key**) will be formed according to those parameters of the task, that existed before the API call. Parameters, that were received after API call, will not be substituted automatically. If the specified parameter is missing from the task or it has an empty value before the API call, then the name of the parameter will also contain an empty value.<br/>
+3. In API Call node we’ve added a new format for the requests (Request format) – **Raw**. In the **Сode editor** tab, you can now specify as request body data in the following formats: string, number, array, object<br/>
+Example of the request payload with an array:<br/>
+![img](../ru/interface/img/releases/v4_image1.png)<br/>
+Example of Corezoid API request with a dynamic substitution of the parameter name:<br/>
+![img](../ru/interface/img/releases/v4_image6.png)<br/>
+Now a part of the request in XML format can be substituted with a help of dynamic parameter, the value of which will be taken from the body of the task:<br/>
+![img](../ru/interface/img/releases/v4_image5.png)<br/>
+where<br/>
+`{ "program": "<program><loadname>APP1LMD1</loadname><pgmname>APP1PGM1</pgmname></program>" }`<br/>
+Also in the **Code editor** we support the **conversion** of values to string, number, object, array using the following expressions:
+`$.to_object()`<br/>
+`$.to_number()`<br/>
+`$.to_array()`<br/>
+`$.to_string()`<br/>
+In order to convert the string parameter `"str": "{\"obj\": {\"key\": \"value\"}}"` into object, the expression will be the following: `$.to_object({{str}})`
+4. We’ve added new features to **Task Parameters** menu:
+* bulk operations: move, copy, delete selected parameters;
+* automatic check for the presence of identical parameters names.
 
+![img](../ru/interface/img/releases/v4_image4.png)
+
+**Fixes:**
+
+1. We’ve fixed the issue with a wrong API Call behavior. In a case, when API returned empty array, parameter `_conveyor_api_array_` wasn’t displayed properly in the task body.
+2. **Log out** function didn’t work properly in the Dashboard view mode.
+3. E-mail address to which we send a letter with instructions for password recovery wasn’t displayed properly.<br/>
+![img](../ru/interface/img/releases/v4_image2.png)
+4. We’ve fixed the bug with adding a new node using **"+"** control.
+5. We’ve fixed the bug with expiration of the direct link to the process, when users logged in without authorisation.
+6. Minor boring bugs fixed as well :)
 
 
 ## v3.5.1 - April 24 2019
