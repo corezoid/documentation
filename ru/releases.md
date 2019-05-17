@@ -2,9 +2,11 @@
 
 ## v4.0 - 14 Мая 2019
 
-1. Сортировка папок в Workspace по умолчанию выполняется в алфавитном порядке:<br/>
+**Новое:**
+
+1. Сортировка папок в Workspace по умолчанию выполняется в **алфавитном порядке**:<br/>
 ![img](../ru/interface/img/releases/v4_image8.png)<br/>
-2. В блоке [Customize response parameters](https://doc.corezoid.com/ru/interface/nodes/api/#customize-response-parameters) логики API Call реализована возможность динамически задавать **key** (имя) параметра.<br/>
+2. В блоке [Customize response parameters](https://doc.corezoid.com/ru/interface/nodes/api/#customize-response-parameters) логики **API Call** реализована возможность динамически задавать **key** (имя) параметра.<br/>
 Пример: `{{param}}`<br/>
 ![img](../ru/interface/img/releases/v4_image3.png)<br/>
 После вызова API, заявка будет содержать новый объект с названием `{{param}}`, т.е. значение параметра `param`:<br/>
@@ -27,8 +29,8 @@
 `$.to_string()`<br/>
 Для конвертации строкового параметра `"str": "{\"obj\": {\"key\": \"value\"}}"` в объект, конструкция будет выглядеть следующим образом: `$.to_object({{str}})`
 4. Новый функционал в меню **Task Parameters**:
-* массовые операции: перенос, копирование и удаление выбранных параметров;
-* автоматическая проверка наличия дублирующих названий параметров.
+- массовые операции: перенос, копирование и удаление выбранных параметров;
+- автоматическая проверка наличия дублирующих названий параметров.
 
 ![img](../ru/interface/img/releases/v4_image4.png)
 

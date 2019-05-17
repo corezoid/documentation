@@ -2,12 +2,14 @@
 
 ## v4.0  - May 14 2019
 
+**New:**
+
 1. Folders in the Workspace are now sorted in **alphabetical order** by default.<br/>
 ![img](../ru/interface/img/releases/v4_image8.png)<br/>
-2. In [Customize response](https://doc.corezoid.com/en/interface/nodes/api/#customize-response-parameters) block of API Call node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
+2. In [Customize response](https://doc.corezoid.com/en/interface/nodes/api/#customize-response-parameters) block of **API Call** node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
 Example: `{{param}}`<br/>
 ![img](../ru/interface/img/releases/v4_image3.png)<br/>
-After API call, the task will contain a new object with a name `{{param}}`, meaning the value of `param parameter:<br/>
+After API call, the task will contain a new object with a name `{{param}}`, meaning the value of `param` parameter:<br/>
 ![img](../ru/interface/img/releases/v4_image7.png)<br/>
 **Important!** The name of the parameter (**key**) will be formed according to those parameters of the task, that existed before the API call. Parameters, that were received after API call, will not be substituted automatically. If the specified parameter is missing from the task or it has an empty value before the API call, then the name of the parameter will also contain an empty value.<br/>
 3. In API Call node we’ve added a new format for the requests (Request format) – **Raw**. In the **Сode editor** tab, you can now specify as request body data in the following formats: string, number, array, object<br/>
