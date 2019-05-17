@@ -6,7 +6,7 @@
 
 1. Folders in the Workspace are now sorted in **alphabetical order** by default.<br/>
 ![img](../ru/interface/img/releases/v4_image8.png)<br/>
-2. In [Customize response](https://doc.corezoid.com/en/interface/nodes/api/#customize-the-response-parameters) block of **API Call** node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
+2. In [Customize response parameters](https://doc.corezoid.com/en/interface/nodes/api/#customize-the-response-parameters) block of **API Call** node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
 Example: `{{param}}`<br/>
 ![img](../ru/interface/img/releases/v4_image3.png)<br/>
 After API call, the task will contain a new object with a name `{{param}}`, meaning the value of `param` parameter:<br/>
