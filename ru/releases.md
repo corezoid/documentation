@@ -5,8 +5,7 @@
 1. Сортировка папок в Workspace по умолчанию выполняется в алфавитном порядке:<br/>
 ![img](../ru/interface/img/releases/v4_image8.png)
 2. В блоке [Customize response](https://doc.corezoid.com/ru/interface/nodes/api/#customize-response-parameters) parameters логики API Call реализована возможность динамически задавать key (имя) параметра.<br/>
-Примеры:<br/>
-`{{param}}`<br/>
+Пример: `{{param}}`<br/>
 ![img](../ru/interface/img/releases/v4_image3.png)<br/>
 После вызова API, заявка будет содержать новый объект с названием `{{param}}`, т.е. значение параметра `param:<br/>
 ![img](../ru/interface/img/releases/v4_image7.png)<br/>
@@ -20,8 +19,8 @@
 Теперь часть запроса в формате XML можно подставить с помощью динамического параметра, значение которого будет присвоено из тела заявки:<br/>
 ![img](../ru/interface/img/releases/v4_image5.png)<br/>
 где<br/>
-{ "program": "<program><loadname>APP1LMD1</loadname><pgmname>APP1PGM1</pgmname></program>" }`<br/>
-Также в **Code editor** поддерживается конвертация значений в строку/число/объект/массив с помощью конструкций:`
+`{ "program": "<program><loadname>APP1LMD1</loadname><pgmname>APP1PGM1</pgmname></program>" }`<br/>
+Также в **Code editor** поддерживается **конвертация** значений в строку/число/объект/массив с помощью конструкций:
 `$.to_object()`<br/>
 `$.to_number()`<br/>
 `$.to_array()`<br/>
