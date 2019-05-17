@@ -6,7 +6,7 @@
 
 1. Folders in the Workspace are now sorted in **alphabetical order** by default.<br/>
 ![img](../ru/interface/img/releases/v4_image8.png)<br/>
-2. In [Customize response](https://doc.corezoid.com/en/interface/nodes/api/#customize-response-parameters) block of **API Call** node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
+2. In [Customize response](https://doc.corezoid.com/en/interface/nodes/api/#customize-the-response-parameters) block of **API Call** node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
 Example: `{{param}}`<br/>
 ![img](../ru/interface/img/releases/v4_image3.png)<br/>
 After API call, the task will contain a new object with a name `{{param}}`, meaning the value of `param` parameter:<br/>
@@ -21,13 +21,14 @@ Now a part of the request in XML format can be substituted with a help of dynami
 ![img](../ru/interface/img/releases/v4_image5.png)<br/>
 where<br/>
 `{ "program": "<program><loadname>APP1LMD1</loadname><pgmname>APP1PGM1</pgmname></program>" }`<br/>
-Also in the **Code editor** we support the **conversion** of values to string, number, object, array using the following expressions:
+Also in the **Code editor** we support the **conversion** of values to string, number, object, array using the following expressions:<br/>
 `$.to_object()`<br/>
 `$.to_number()`<br/>
 `$.to_array()`<br/>
 `$.to_string()`<br/>
 In order to convert the string parameter `"str": "{\"obj\": {\"key\": \"value\"}}"` into object, the expression will be the following: `$.to_object({{str}})`
 4. We’ve added new features to **Task Parameters** menu:
+
 * bulk operations: move, copy, delete selected parameters;
 * automatic check for the presence of identical parameters names.
 
