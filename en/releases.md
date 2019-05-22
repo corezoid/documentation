@@ -3,6 +3,7 @@
 ## v4.1 - 22 May 2019
 
 **New:**
+
 1. We added the possibility to specify [data type](https://doc.corezoid.com/en/interface/tasks/task_parameters.html#parameter-type)  for every parameter, when you do [task import](https://doc.corezoid.com/en/interface/tasks/import_from_csv.html) from CSV file:<br/>
 ![img](../ru/interface/img/releases/v4_1_image2.png)<br/>
 2. In the **Task parameters** section we’ve added the button, that allows to move parameter from one tab to another:<br/>
@@ -18,6 +19,7 @@ data.sha512 = CryptoJS.SHA512("test").toString();
 ```
 
 **Fixes:**
+
 1. We've fixed the bug, that allowed to move parameters from one tab to another without using the **Save** button.
 2. We’ve fixed the error with the proper display of the Task parameters tab in **Safari** browser.
 3. We’ve fixed the error with an empty list of nodes in the **Get from Queue logic**, if there are more than 30 nodes in the selected process.

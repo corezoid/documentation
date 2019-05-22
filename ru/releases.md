@@ -3,6 +3,7 @@
 ## v4.1 - 22 Мая 2019
 
 **Новое:**
+
 1. При [импорте заявок](https://doc.corezoid.com/ru/interface/tasks/import_from_csv.html) из CSV файла добавлена возможность указать [тип данных](https://doc.corezoid.com/ru/interface/tasks/task_parameters.html#type-тип-параметра) для каждого параметра:<br/>
 ![img](../ru/interface/img/releases/v4_1_image2.png)<br/>
 2. В окне **Task parameters** добавлена кнопка для перемещения параметра из одной вкладки в другую:<br/>
@@ -18,6 +19,7 @@ data.sha512 = CryptoJS.SHA512("test").toString();
 ```
 
 **Исправлено:**
+
 1. Перенос параметров в другую вкладку без дополнительного нажатия кнопки кнопки **Save**.
 2. Некорректное отображение верстки окна Task parameters в браузере **Safari**.
 3. Пустой выпадающий список узлов в логике **Get from Queue**, если в выбранном процессе их более 30.
