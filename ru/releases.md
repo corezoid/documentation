@@ -8,8 +8,10 @@
 ![img](../ru/interface/img/releases/v4_1_image2.png)<br/>
 2. В окне **Task parameters** добавлена кнопка для перемещения параметра из одной вкладки в другую:<br/>
 ![img](../ru/interface/img/releases/v4_1_image1.png)<br/>
-3. В логике **Code** добавлена поддержка библиотек `moment-timezone.js` и `sha512.js`.<br/>
+3. В логике **Code** добавлена поддержка библиотек `moment-timezone.js` и `sha512.js`.
+
 Примеры:
+
 ```
 require("libs/moment-timezone.js");
 data.date = moment().tz('Europe/Kiev').format("DD-MM-YYYY HH:mm:ss");

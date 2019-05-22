@@ -5,11 +5,13 @@
 **New:**
 
 1. We added the possibility to specify [data type](https://doc.corezoid.com/en/interface/tasks/task_parameters.html#parameter-type)  for every parameter, when you do [task import](https://doc.corezoid.com/en/interface/tasks/import_from_csv.html) from CSV file:<br/>
-![img](../ru/interface/img/releases/v4_1_image2.png)<br/>
+![img](../ru/interface/img/releases/v4_1_image2.png)
 2. In the **Task parameters** section we’ve added the button, that allows to move parameter from one tab to another:<br/>
 ![img](../ru/interface/img/releases/v4_1_image1.png)<br/>
-3. In the **Code** logic we’ve added th support of libraries `moment-timezone.js` and `sha512.js`.<br/>
+3. In the **Code** logic we’ve added th support of libraries `moment-timezone.js` and `sha512.js`.
+
 Examples:
+
 ```
 require("libs/moment-timezone.js");
 data.date = moment().tz('Europe/Kiev').format("DD-MM-YYYY HH:mm:ss");
