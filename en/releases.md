@@ -25,6 +25,7 @@ data.sha512 = CryptoJS.SHA512("test").toString();
 3. We’ve fixed the error with an empty list of nodes in the **Get from Queue logic**, if there are more than 30 nodes in the selected process.
 
 
+
 ## v4.0  - May 14 2019
 
 **New:**
