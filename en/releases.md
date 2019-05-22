@@ -23,8 +23,8 @@ data.sha512 = CryptoJS.SHA512("test").toString();
 **Fixes:**
 
 1. We've fixed the bug, that allowed to move parameters from one tab to another without using the **Save** button.
-2. We’ve fixed the error with the proper display of the Task parameters tab in **Safari** browser.
-3. We’ve fixed the error with an empty list of nodes in the **Get from Queue logic**, if there are more than 30 nodes in the selected process.
+2. Weve fixed the error with the proper display of the Task parameters tab in **Safari** browser.
+3. We've fixed the error with an empty list of nodes in the **Get from Queue logic**, if there are more than 30 nodes in the selected process.
 
 
 
