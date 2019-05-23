@@ -1,6 +1,6 @@
 # Set State logic
 
-Addition of logic is possible only in the process with **[State diagram](../process_and_state/state_diagramm.md)** state
+Addition of logic is possible only in the process with **[State diagram](../process_and_state/state-diagram.md)** state
 
 Allows to:
 * Divide incoming stream of data to different the states
