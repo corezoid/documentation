@@ -64,14 +64,14 @@
 1.1. В процессе [Router](https://doc.corezoid.com/ru/plugins/bot_platform/v2/objects-description.html) добавляем узел **Set Parameter** между узлами “**GET last_command & process_id**” и “**Check Command**”. Настраиваем получение параметра **phone** из диаграммы **User Profile** с помощью функции [CONV](https://doc.corezoid.com/ru/interface/functions/getParamFromApp.html).
 
 1.2. Если номер телефона не удалось получить, записываем значение `phone: “”`.
-![img](img/router_auth_step_1.png.png)
+![img](img/auth_router_1.png)
 
   
 
 2.1. В узле “**Check Command**” добавляем проверку наличия номера телефона с помощью конструкции: `phone: “”`.  
 2.2. В случае, если проверка сработала и значение параметра `phone: “”`(пустое значение), направляем заявку в узел **Set Parameter** и присваиваем параметру command значение /auth: `command: /auth`  
 2.3. Направляем заявку в узел “**GET process id by state**” в котором по названию команды будет определен **process_id** и заявка отправится в необходимый процесс.
-![img](img/router_auth_step_2.png.png)
+![img](img/auth_router_2.png)
   
   
   
@@ -80,7 +80,7 @@
 3.1. Добавляем еще один узел **Condition**, между узлами “**Delete callback**” и “**text_id = main menu**” и аналичную проверку наличия номера телефона, с помощью конструкции: `phone: “”`.  
 3.2. В случае, если проверка сработала и значение параметра `phone: “”`(пустое значение), направляем заявку в узел **Set Parameter** и присваиваем параметру command значение /auth: `command: /auth`  
 3.3. Направляем заявку в узел “**GET process id by state**” в котором по названию команды будет определен **process_id** и заявка отправится в необходимый процесс.
-![img](img/router_auth_step_3.png)
+![img](img/auth_router_3.png)
   
   
 В результате, мы настроили проверку: авторизован пользователь или нет.  
