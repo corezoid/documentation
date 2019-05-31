@@ -12,7 +12,7 @@ Authorization : Bearer {{ACCESS_TOKEN}}
 
 In order to get `ACCESS_TOKEN` you need to do the following: 
 
-**1)**  Copy [`Google OAuth 2.0`] folder (https://admin.corezoid.com/folder/conv/105609) from `Examples` to your surroundings.
+**1)**  Copy [Google OAuth 2.0](https://admin.corezoid.com/folder/conv/105609) folder from `Examples` to your environment.
 
 ![](../img/google/copy_folder.gif)
 

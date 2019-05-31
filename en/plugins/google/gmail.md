@@ -9,7 +9,7 @@ In order to read Gmail messages, clone folder [Gmail](https://admin.corezoid.com
 
 [**System process**](https://admin.corezoid.com/editor/105962/163610)
 
-Generates regular signal to [Reading] process (https://admin.corezoid.com/editor/105962/163613) to get unread messages.
+Generates regular signal to [Reading process](https://admin.corezoid.com/editor/105962/163613) to get unread messages.
 
 In the example - once in 10 min. (value is set in `Wait` node).
 
@@ -28,7 +28,7 @@ Forms parameters for notifications about new message:
 * `from` - sender
 * `attachments` - links to download attachments
 
-Transmits data in [Mark messages as READ] process(https://admin.corezoid.com/editor/105962/163611) to mark message as read.
+Transmits data in [Mark messages as READ process](https://admin.corezoid.com/editor/105962/163611) to mark message as read.
 
 
 [**Mark messages as READ**](https://admin.corezoid.com/editor/105962/163611)

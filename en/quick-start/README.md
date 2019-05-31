@@ -180,11 +180,14 @@ In order to view any handled task, click on the Final node. In the sidebar windo
 
 To test a process in real time switch to the **Debug** tab.
   
-![](img/debug_mode.gif)
+![debug-mode](img/debug_mode.gif)
 
 The testing interface opens up. This mode allows to work with existing tasks from external systems as well as emulate the creation/addition of new tasks like you would in the “View” mode.
 
 If a task got into a red cross node, you can see the error description and figure out why this happened by clicking on it.
+
+> After you finish working in Debug mode, you must also change the state of the process from "Debug" to "Active" in the upper left corner.
+  ![change-process-state-debug-active](img/change-process-state-debug-active.png) 
 
 
 >**Advice:**
@@ -397,6 +400,14 @@ Press **Deploy**, switch to **View** mode and launch an empty task to check if i
 ![](img/currentTemp_view_mode.png)
 
 If you did everything correctly, the new parameter, ```currentTemp```, should appear in the task info. The task should still follow the rules of **Condition** logic.
+
+Since our first process in Corezoid is about getting the current temperature, let's rename it to **GET Current Weather**.
+
+To do this, in the upper left corner, click on the process name and enter the new name.
+
+![](img/rename-process.png)
+
+> IMPORTANT! Further in the tutorial we will refer to the process with the name **GET Current Weather**. That's why you need to rename it correctly now, so that you won't get confused in the future.
 
 **🎉 Congratulations! One more Corezoid node has been conquered!**
 
