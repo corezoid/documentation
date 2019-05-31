@@ -187,7 +187,8 @@ The testing interface opens up. This mode allows to work with existing tasks fro
 If a task got into a red cross node, you can see the error description and figure out why this happened by clicking on it.
 
 > After you finish working in Debug mode, you must also change the state of the process from "Debug" to "Active" in the upper left corner.
-  ![change-process-state-debug-active](img/change-process-state-debug-active.png) 
+
+![change-process-state-debug-active](img/change-process-state-debug-active.png) 
 
 
 >**Advice:**
