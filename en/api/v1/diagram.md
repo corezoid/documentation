@@ -1,17 +1,18 @@
 # State diagrams/processes
 
-Using the API Corezoid you can create, modify, delete process which you have access.
+Using API Corezoid you can create, modify, delete process (if your API key has access rights).
 
-* [Creation a process](#creation)
-* [Process start/stop](#start)
-* [Refreshing desrcription of a process](#refresh)
-* [Removing a process](#delete)
+* [Process creation](#process-creation)
+* [Process status change](#process-status-change)
+* [Process renaming](#process-renaming)
+* [Process removing](#process-removing)
 
-### Creation a process {#creation}
+### Process creation
 
 Let us create a process. To launch a process put it in a "actived" status.
 
-Request
+**Request**
+
 ```json
 {
   "ops": [
@@ -34,6 +35,7 @@ Possible values of `status` parameter:
 *   blocked
 
 Response in case of successful operation execution:
+
 ```json
 {
   "request_proc": "ok",
@@ -47,7 +49,7 @@ Response in case of successful operation execution:
 }
 ```
 
-### Process start/stop {#start}
+### Process status change
 
 To stop a process put it in a "blocked" status.
 
@@ -81,7 +83,8 @@ Response in case of successful execution of operation:
 
 To launch a process put it in a "actived" status.
 
-Request:
+**Request**
+
 ```json
 {
   "ops": [
@@ -95,7 +98,8 @@ Request:
 }
 ```
 
-Response in case of successful execution of operation:
+**Response** in case of successful execution of operation:
+
 ```json
 {
   "request_proc": "ok",
@@ -109,11 +113,12 @@ Response in case of successful execution of operation:
 }
 ```
 
-### Refreshing desrcription of a process {#refresh}
+### Process renaming
 
-Let us rename a process.
+Changes process title
 
-Request:
+**Request**
+
 ```json
 {
   "ops": [
@@ -132,7 +137,8 @@ In case of "modify" type operation changes concern only specified object paramet
 
 Any system elements may be edited in the same way.
 
-Response in case of successful execution of operation:
+**Response** in case of successful execution of operation:
+
 ```json
 {
   "request_proc": "ok",
@@ -146,11 +152,12 @@ Response in case of successful execution of operation:
 }
 ```
 
-### Removing a process {#delete}
+### Process removing
 
-Let us try to remove a process with another identifier.
+Remove process (move to Trash).
 
-Request
+**Request**
+
 ```json
 {
   "ops": [
@@ -163,7 +170,8 @@ Request
 }
 ```
 
-Response if process is not found:
+**Response** if process is not found:
+
 ```json
 {
   "request_proc": "ok",

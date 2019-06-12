@@ -1,17 +1,18 @@
 # Process logic
 
-* [Adding logic](#add)
-* [Managing logic](#managing)
-* [Removing logic](#remove)
+* [Adding logic](#adding-logic)
+* [Managing logic](#managing-logic)
+* [Removing logic](#removing-logic)
 
 
-### Adding logic {#add}
+## Adding logic
 
 Add logic to "Processing node" (node_id="n10221"):
-*   when number of tasks in the node is over 1000, create escalation (simoultaneously) in "Escalation mode" (node_id="n10233").
+*   when number of tasks in the node is over 1000, create escalation (simultaneously) in "Escalation mode" (node_id="n10233").
 *   time logic - 10 minutes (600 seconds). When task stays in the node more than specified time, limit is moved to "Final node, error" (node_id="n10234").
 
-Request:
+**Request**
+
 ```json
 {
   "ops": [
@@ -39,7 +40,8 @@ Request:
 }
 ```
 
-Response in case of successful execution of operation:
+**Response** in case of successful execution of operation:
+
 ```json
 {
   "request_proc": "ok",
@@ -52,7 +54,7 @@ Response in case of successful execution of operation:
   ]
 }
 ```
-### RPC
+### Call Process
 
 ```json
 {
@@ -64,7 +66,7 @@ Response in case of successful execution of operation:
   "err_node_id": ""
 }
 ```
-### RPC reply
+### Reply to Process
 
 Two settings:
 ```json
@@ -91,7 +93,7 @@ Two settings:
 }
 ```
 
-### Managing logic {#managing}
+## Managing logic
 
 "Processing node" (node_id="n10221").
 
@@ -100,7 +102,8 @@ Let us add to "Processing node" (node_id="n10221"):
 2.  If 'res' parameter equals to "0" - go to "Final node, success" (node_id="n10222").
 3.  Otherwise - go to "Final node, error" (node_id="n10234").
 
-Request:
+**Request**
+
 ```json
 {
   "ops": [
@@ -134,7 +137,8 @@ Request:
 }
 ```
 
-Response in case of successful execution of operation:
+**Response** in case of successful execution of operation:
+
 ```json
 {
   "request_proc": "ok",
@@ -148,13 +152,14 @@ Response in case of successful execution of operation:
 }
 ```
 
-### Removing logic {#remove}
+## Removing logic
 
 Removal is made by deleting a node from JSON and sending request with the following parameters:
 *   `type` = `modify`
 *   `obj` = `node`
 
-Request before removal:
+**Request** before removal:
+
 ```json
 {
   "ops": [
@@ -190,7 +195,8 @@ Request before removal:
 }
 ```
 
-Request after logic removal, ready for sending:
+**Request** after logic removal, ready for sending:
+
 ```json
 {
   "ops": [

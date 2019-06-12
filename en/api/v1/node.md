@@ -1,14 +1,15 @@
 # Nodes in the processes
 
-* [Adding a node](#add)
-* [Getting list of nodes](#get)
-* [Removing a node](#remove)
+* [Adding nodes](#adding-nodes)
+* [Getting the list of nodes](#getting-the-list-of-nodes)
+* [Node removing](#node-removing)
 
-### Adding a node {#add}
+## Adding nodes
 
 Let us create several nodes in one process.
 
-Request:
+**Request**
+
 ```json
 {
   "ops": [
@@ -58,7 +59,8 @@ Request:
 *   2 - final
 *   3 - escalation
 
-Response in case of successful execution of operation:
+**Response** in case of successful execution of operation:
+
 ```json
 {
   "request_proc": "ok",
@@ -92,9 +94,10 @@ Response in case of successful execution of operation:
 }
 ```
 
-### Getting list of nodes {#get}
+## Getting the list of nodes
 
-**Request:**
+**Request**
+
 ```json
 {
     "ops":[
@@ -108,6 +111,7 @@ Response in case of successful execution of operation:
 ```
 
 **Response in case of successful execution of operation:**
+
 ```json
 {
    "request_proc":"ok",
@@ -216,9 +220,10 @@ Response in case of successful execution of operation:
 }
 ```
 
-### Removing of a node {#remove}
+## Node removing
 
-Request
+**Request**
+
 ```json
 {
   "ops": [
@@ -232,7 +237,8 @@ Request
 }
 ```
 
-Response if process is not found:
+**Response** if process is not found:
+
 ```json
 {
   "request_proc": "ok",

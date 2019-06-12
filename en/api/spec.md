@@ -7,7 +7,7 @@ https://api.corezoid.com/api/1/json/{API_LOGIN}/{GMT_UNIXTIME}/{SIGNATURE}
 Where IDs in the curly brackets denote the following parameters:
 
 *   `{API_LOGIN}` - [authorization login](../interface/users_groups.md) to API, you can receive it from service, reqired parameter. 
-*   `{GMT_UNIXTIME}` - request time, unix time format in seconds (epoch time), by Greenwich (GMT+0), integer required parameter.
+*   `{GMT_UNIXTIME}` - request time, unix time format in seconds by Greenwich (GMT+0), integer required parameter.
 *   `{SIGNATURE}` - request signature, required parameter, letter case is not important, calculated using the formula:
 `hex( sha1({GMT_UNIXTIME} + {API_SECRET} + {CONTENT} + {API_SECRET}) )`, where
     *   `hex()` - function which which leads to the binary data in hexadecimal format

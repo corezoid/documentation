@@ -6,12 +6,12 @@ https://api.corezoid.com/api/1/json/{API_LOGIN}/{GMT_UNIXTIME}/{SIGNATURE}
 
 Where IDs in the curly brackets denote the following parameters:
 
-*   `{API_LOGIN}` - [authorization login](../interface/users_groups.md) to API, you can receive it from service, reqired parameter. 
-*   `{GMT_UNIXTIME}` - request time, unix time format in seconds (epoch time), by Greenwich (GMT+0), integer required parameter.
+*   `{API_LOGIN}` - [authorization login](../interface/users_groups.md) to API, you can receive it from service, required parameter.
+*   `{GMT_UNIXTIME}` - request time, unix time format in seconds by Greenwich (GMT+0), integer required parameter.
 *   `{SIGNATURE}` - request signature, required parameter, letter case is not important, calculated using the formula:
 `hex( sha1({GMT_UNIXTIME} + {API_SECRET} + {CONTENT} + {API_SECRET}) )`, where
-    *   `hex()` - function which which leads to the binary data in hexadecimal format
-    *   `sha1()` - standart hash-function SHA-1, must return binary data 
+    *   `hex()` - function which convert binary data into hexadecimal format
+    *   `sha1()` - standard hash-function SHA-1, must return binary data
     *   `+` -  text string concatenation
     *   `{API_SECRET}` - a secret key which is issued together with login `{API_LOGIN}`
     *   `{CONTENT}` - request body
@@ -22,9 +22,10 @@ Text code is `utf-8`. It completely matches with standard and is sent together w
 *   For "json" protocol format:
 `Content-type: application/json; charset=utf8`
 
-## Request/reply format
+Request contains operations list (array ops).
 
-Request is sent in form of operations list:
+**Request**
+
 ```json
 {
   "ops": [
@@ -45,7 +46,7 @@ Request is sent in form of operations list:
 *   obj - object type which is being operated on.
 *   obj_id - object ID which is being operated on.
 
-Reply is sent in form of operations list, appropriate to request operations:
+**Response** is a list of operations results:
 ```json
 {
   "request_proc": "ok",
@@ -66,7 +67,7 @@ Reply is sent in form of operations list, appropriate to request operations:
 *   request_proc - global status of whole package processing, if "ok" - package is alright otherwise there's a mistake.
 *   proc - operation processing status, if "ok" - successful execution otherwise there's a mistake (or there're special statuses of delayed operations).
 
-Reply when error executes through the whole package:
+Response in case of error for the whole package:
 ```json
 {
   "request_proc": "format_error",
@@ -76,4 +77,4 @@ Reply when error executes through the whole package:
 }
 ```
 
-In this case the operation list in the reply is empty because any from operations requests were not executed.
+In this case the operation list is empty because no operations were executed.

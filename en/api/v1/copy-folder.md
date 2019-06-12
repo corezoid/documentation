@@ -38,4 +38,4 @@ For example,
 
 >Additionally -> Sign the request by secret key
 
-![](img/secret_key.png)
+![](../img/secret_key.png)

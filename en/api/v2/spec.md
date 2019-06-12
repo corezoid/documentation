@@ -6,7 +6,6 @@ Before you can start using Corezoid API you need to create `API key` and get **a
 
 ![](../img/create_api_key.gif)
 
-
 **URL**
 
 ```
