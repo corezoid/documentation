@@ -1,12 +1,14 @@
-# Uploading and modify data
+# Creating and modifying data
 
- * [Create - adding new requests to a process](#сreate)
- * [Modify - Change of request in process by means of callback](#modify)
+ * [Create](#сreate)
+ * [Modify](#modify)
 
 
-## Create - adding new requests to a process {#сreate}
+## Create
 
-*   [Basic description](#basic)
+Adding new tasks to a Corezoid process.
+
+*   [Basic description](#basic-description)
 *   Examples:
     *   [Erlang](#erlang)
     *   [Java](#java)
@@ -14,15 +16,16 @@
     *   [BASH](#bash)
     *   [PYTHON](#python)
 
-## Basic description {#basic}
+## Basic description
 
-Let us add (create) three tasks in "Test" process (process ID 1234) from api_test user (uses ID 13000).
+Let us add (create) three tasks to "Test" process (process ID 1234) from API user (user ID 13000).
 
 > By default, all new tasks fall into the starting node called "Login"(node_id="n10221").
 
-Example of URL to which requests will be sent to: https://api.corezoid.com/api/1/json/13000/{GMT_UNIXTIME}/{SIGNATURE}
+URL example for making request: https://api.corezoid.com/api/1/json/13000/{GMT_UNIXTIME}/{SIGNATURE}
 
-**Request:**
+**Request**
+
 ```json
  {
     "ops":[
@@ -62,7 +65,7 @@ Example of URL to which requests will be sent to: https://api.corezoid.com/api/1
 
 `ref` - external (for process) task identifier, optional parameter. Used in case of reverse interaction with a system that created request.
 
-**Response in case of successful operation:**
+**Response** in case of successful operation:
 
 ```json
 {
@@ -323,7 +326,9 @@ def modify_task(ref, data):
 ```
 
 
-## Modify - Change of request in process by means of callback {#modify}
+## Modify
+
+Modifying task by it's reference (sending callback).
 
 Request with reference `130605ref1` sent for processing to http://my.api.com/getData via [api](external_api.md) method. Processing of request on api.my.com resource is made asynchronously, therefore after processing process receives callback with results.
 **Example of callback to a process:**
