@@ -50,7 +50,7 @@
        * [Математические](interface/functions/math.md)
 * [Дашборды](interface/dashboard.md)
 * [Управление доступами](interface/users_groups.md)
-* [Corezoid API](api/api.md)
+* [Corezoid API](api/README.md)
    * [API v1](api/v1/README.md)
        * [Описание протокола](api/v1/spec.md)
        * [Загрузка и обновление данных](api/v1/upload-modify.md)
