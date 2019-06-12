@@ -35,7 +35,7 @@ https://api.corezoid.com/api/2/json/{API_LOGIN}/{GMT_UNIXTIME}/{SIGNATURE}
 
 *   **{SIGNATURE}** - подпись запроса.
 
-Подпись запроса Cчитается по формуле:
+Подпись запроса расчитывается по формуле:
 
 `hex( sha1({GMT_UNIXTIME} + {API_SECRET} + {CONTENT} + {API_SECRET}) )`, где
 

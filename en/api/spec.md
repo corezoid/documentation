@@ -43,7 +43,7 @@ Request is sent in form of operations list:
 
 *   type - operations type.
 *   obj - object type which is being operated on.
-*   obj_id - object ID which is being oerated on.
+*   obj_id - object ID which is being operated on.
 
 Reply is sent in form of operations list, appropriate to request operations:
 ```json
@@ -63,10 +63,10 @@ Reply is sent in form of operations list, appropriate to request operations:
   ]
 }
 ```
-*   request_proc - global status of whole packadge processing, if "ok" - packadge is alright otherwise there's a mistake. 
+*   request_proc - global status of whole package processing, if "ok" - package is alright otherwise there's a mistake.
 *   proc - operation processing status, if "ok" - successful execution otherwise there's a mistake (or there're special statuses of delayed operations).
 
-Reply when error executes through the whole packadge:
+Reply when error executes through the whole package:
 ```json
 {
   "request_proc": "format_error",
