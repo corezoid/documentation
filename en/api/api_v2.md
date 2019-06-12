@@ -18,7 +18,7 @@ Before you can start using Corezoid API you need to create `API key` and get **a
 https://api.corezoid.com/api/2/json/{API_LOGIN}/{GMT_UNIXTIME}/{SIGNATURE}
 ```
 
-* **{API_LOGIN}** - authorization login for your `API key`
+* **{API_LOGIN}** - authorization login of your `API key`
 
 * **{GMT_UNIXTIME}** - request time, a Unix timestamp (epoch time), by Greenwich (GMT+0), integer required parameter
 
@@ -28,10 +28,10 @@ The signature is a concatenated string generated from the following parts:
 
 `hex( sha1({GMT_UNIXTIME} + {API_SECRET} + {CONTENT} + {API_SECRET}) )`, where
 
-* `hex()` - convert binary type to hexadecimal form
+* `hex()` - convert binary data to hexadecimal form
 * `sha1()` - standart hash-function SHA-1, must return binary data
 * `+` -  text string concatenation
-* `{API_SECRET}` - a secret key which is issued together with login `{API_LOGIN}`
+* `{API_SECRET}` - a secret key of your `API key`
 * `{CONTENT}` - request body
 
 The whole request is http-body, it also described earlier in the signature formula as the `{CONTENT}`.
