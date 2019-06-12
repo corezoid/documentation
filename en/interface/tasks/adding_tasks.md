@@ -1,9 +1,10 @@
 # Adding tasks to the process
   
+**Available tasks upload methods:**
   
-* [API Corezoid](https://doc.corezoid.com/en/api/upload_modify.html#create)
-* [Direct url](direct_url.md) for loading data into the process
-* [manual adding task](new_task.md)
-* [import from file](import_from_csv.md)
+* [Corezoid API](../../api/upload_modify.md)
+* [Direct URL](direct_url.md)
+* [Manual](new_task.md)
+* [Import from the file](import_from_csv.md)
 
 

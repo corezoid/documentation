@@ -8,6 +8,9 @@
 6.  [AES](#aes)
 7.  [DES](#des)
 8.  [3DES](#3des)
+9.  [Moment-timezone](#moment-timezone)
+10. [Sha512](#sha512)
+
 
 ## Работа с датой/временем {#moment}
 
@@ -192,3 +195,23 @@ data.decrypted = CryptoJS.TripleDES.decrypt(data.encrypted, data.password).toStr
 > параметры "data.encrypted" и "data.password" использованы для примера
 
 Результатом вызова функции будет новый параметр заявки `decrypted`, содержащий расшифрованное значение параметра "encrypted" по алгоритму 3DES.
+
+
+
+## Moment-timezone
+
+
+```js
+ require("libs/moment-timezone.js");
+ data.date = moment().tz('Europe/Kiev').format("DD-MM-YYYY HH:mm:ss");
+```
+
+
+## Sha512
+
+
+```js
+ require("libs/sha512.js"); 
+ data.sha512 = CryptoJS.SHA512("test").toString();
+```
+

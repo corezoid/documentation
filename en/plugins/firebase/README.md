@@ -4,10 +4,10 @@
 
 Firebase allows to save and get data via API, actually providing the database with API to users.
 
-1.  [Getting test Database](#получение-тестовой-бд)
-2.  [URL structure](#структура-url)
-3.  [Addition of entries (PUT)](#добавление-записи-put)
-4.  [Getting entries (GET](#получение-записей-get)
+1.  [Getting test Database](#getting-test-database)
+2.  [URL structure](#url-structure)
+3.  [Addition of entries (PUT)](#addition-of-entries-(put))
+4.  [Getting entries (GET)](#getting-entries-(get))
 
 ## Getting test Database
 

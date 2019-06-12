@@ -1,7 +1,8 @@
 # Summary
 
 * [Введение](README.md)
-* [Глоссарий](int_glossary.md)
+* [Быстрый старт](quick-start/README.md)
+* [Глоссарий](glossary.md)
 * [Процессы и состояния](interface/process_and_state/processes.md)
    * [Диаграмма состояний](interface/process_and_state/state_diagramm.md)
    * [Процесс](interface/process_and_state/create_process.md)
@@ -17,6 +18,7 @@
        * [POST](interface/nodes/api/post.md)
        * [PUT / DELETE / HEAD / PATCH](interface/nodes/api/put__delete__head.md)
        * [Коды ошибок](interface/nodes/api/errors.md)
+   * [Логика GIT Call](interface/nodes/git_call.md)
    * [Логика Waiting for Callback](interface/nodes/callback.md)
    * [Логика Code](interface/nodes/code.md)
        * [Библиотеки JavaScript](interface/nodes/function_code.md)
@@ -137,6 +139,12 @@
    * [АЗС "Авиас"](plugins/azs_avias/README.md)
        * [Получение курсов топлива](plugins/azs_avias/rates_avias.md)
        * [Получение адресов заправок](plugins/azs_avias/address_avias.md)
-* [Bot platform](plugins/bot_platform/README.md)
+* [Bot Platform](plugins/bot_platform/README.md)
+    * [v1.0](plugins/bot_platform/v1/README.md)
+    * [v2.0](plugins/bot_platform/v2/README.md)
+       * [Как создать бота с помощью Bot Platform](plugins/bot_platform/v2/get-started.md)
+       * [Базовый функционал Bot Platform](plugins/bot_platform/v2/basic-functionality.md)
+       * [Объекты папки Bot Platform 2.0](plugins/bot_platform/v2/objects-description.md)
+       * [Расширение функций бота](plugins/bot_platform/v2/add-new-functionality.md)
+       * [Авторизация пользователей по номеру телефона](plugins/bot_platform/v2/authorization.md)
 * [История изменений](releases.md)
-

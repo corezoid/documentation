@@ -1,5 +1,161 @@
 # Release Notes
 
+## v4.1 - 22 May 2019
+
+**New:**
+
+1. We added the possibility to specify [data type](https://doc.corezoid.com/en/interface/tasks/task_parameters.html#parameter-type)  for every parameter, when you do [task import](https://doc.corezoid.com/en/interface/tasks/import_from_csv.html) from CSV file:<br/>
+![img](../ru/interface/img/releases/v4_1_image2.png)
+2. In the **Task parameters** section we’ve added the button, that allows to move parameter from one tab to another:<br/>
+![img](../ru/interface/img/releases/v4_1_image1.png)<br/>
+3. In the **Code** logic we’ve added th support of libraries `moment-timezone.js` and `sha512.js`.
+
+Examples:
+
+```
+require("libs/moment-timezone.js");
+data.date = moment().tz('Europe/Kiev').format("DD-MM-YYYY HH:mm:ss");
+
+require("libs/sha512.js");
+data.sha512 = CryptoJS.SHA512("test").toString();
+```
+
+**Fixes:**
+
+1. We’ve fixed the bug, that allowed to move parameters from one tab to another without using the **Save** button.
+2. We’ve fixed the error with the proper display of the Task parameters tab in **Safari** browser.
+3. We’ve fixed the error with an empty list of nodes in the **Get from Queue** logic, if there are more than 30 nodes in the selected process.
+
+
+
+## v4.0  - May 14 2019
+
+**New:**
+
+1. Folders in the Workspace are now sorted in **alphabetical order** by default.<br/>
+![img](../ru/interface/img/releases/v4_image8.png)<br/>
+2. In [Customize response parameters](https://doc.corezoid.com/en/interface/nodes/api/#customize-the-response-parameters) block of **API Call** node we’ve added the possibility to specify **key** (name) of the parameter in a dynamic way.<br/>
+Example: `{{param}}`<br/>
+![img](../ru/interface/img/releases/v4_image3.png)<br/>
+After API call, the task will contain a new object with a name `{{param}}`, meaning the value of `param` parameter:<br/>
+![img](../ru/interface/img/releases/v4_image7.png)<br/>
+**Important!** The name of the parameter (**key**) will be formed according to those parameters of the task, that existed before the API call. Parameters, that were received after API call, will not be substituted automatically. If the specified parameter is missing from the task or it has an empty value before the API call, then the name of the parameter will also contain an empty value.<br/>
+3. In API Call node we’ve added a new format for the requests (Request format) – **Raw**. In the **Сode editor** tab, you can now specify as request body data in the following formats: string, number, array, object<br/>
+Example of the request body with an array:<br/>
+![img](../ru/interface/img/releases/v4_image1.png)<br/>
+Example of Corezoid API request with a dynamic substitution of the parameter name:<br/>
+![img](../ru/interface/img/releases/v4_image6.png)<br/>
+Now a part of the request in XML format can be substituted with a help of dynamic parameter, the value of which will be taken from the body of the task:<br/>
+![img](../ru/interface/img/releases/v4_image5.png)<br/>
+where<br/>
+`{ "program": "<program><loadname>APP1LMD1</loadname><pgmname>APP1PGM1</pgmname></program>" }`<br/>
+Also in the **Code editor** we support the **conversion** of values to string, number, object, array using the following expressions:<br/>
+`$.to_object()`<br/>
+`$.to_number()`<br/>
+`$.to_array()`<br/>
+`$.to_string()`<br/>
+In order to convert the string parameter `"str": "{\"obj\": {\"key\": \"value\"}}"` into object, the expression will be the following: `$.to_object({{str}})`
+4. We’ve added new features to **Task Parameters** menu:
+    * bulk operations: move, copy, delete selected parameters;
+    * automatic check for the presence of identical parameters names.
+
+![img](../ru/interface/img/releases/v4_image4.png)
+
+**Fixes:**
+
+1. We’ve fixed the issue with a wrong API Call behavior. In a case, when API returned empty array, parameter `_conveyor_api_array_` wasn’t displayed properly in the task body.
+2. **Log out** function didn’t work properly in the Dashboard view mode.
+3. E-mail address to which we send a letter with instructions for password recovery wasn’t displayed properly.<br/>
+![img](../ru/interface/img/releases/v4_image2.png)
+4. We’ve fixed the bug with adding a new node using **"+"** control.
+5. We’ve fixed the bug with expiration of the direct link to the process, when users logged in without authorisation.
+6. Minor boring bugs fixed as well :)
+
+
+## v3.5.1 - April 24 2019
+
+**New:**
+
+1. New design of the registration landing page and single sign-on for all accounts of **Middleware** software. This new approach will allow Corezoid users to get access to all Middleware products depending on the business needs.<br/>
+![img](../en/interface/img/releases/v3_5_1_p1.png)
+2. We have added visualization to the process of a new password validation.<br/>
+![img](../en/interface/img/releases/v3_5_1_p2.png)
+3. We have added text highlighting to display long names of folders and processes:<br/>
+![img](../en/interface/img/releases/v3_5_1_p3.png)
+4. For those clients, who are using Corezoid dedicated environments, we created the feature of transferring objects from user to user globally within the system.
+5. We have added a new version of the **Bot Platform (v 2.0)** – a set of universal Corezoid processes, that let manage bots in the most popular messengers:
+   * Facebook Messenger;
+   * Viber;
+   * Telegram.
+
+We recommend all users to switch to a new version of the Bot Platform. Starting from 01.06.2019 we plan to cease the support of the old Bot Platform v. 1.0.<br/>
+You can create universal business-processes, that can be accessed in all the messengers, instead of designing business-logic separately for every messenger:<br/>
+![img](../en/interface/img/releases/v3_5_1_p4.png)
+
+
+**Fixes:**
+
+1. Sorting data and moving metrics when selecting the **Table chart** view mode in **Dashboard** menu.
+2. We've fixed the bug with rounding the value of the float number (floating point number). Rounding of float number will be done up to 6 symbols after comma.
+3. We've fixed the bugs with with **moment.js** in Usercode.
+
+
+## v3.5 - April 03 2019
+
+**New Features**
+
+1.  We improved processes search experience, when users search by part of the process name. Now instead of 20 items you can see 30 processes names in the drop-down list. If there’s more than 30 variants of processes names in the search results, user will be recommended to repeat the search better specifying the name of the process.
+![img](interface/img/releases/p1.png)
+2.  **Google reCaptcha** was added to the authorisation page and displayed when user enters invalid password for 5 times:
+
+![img](interface/img/releases/p2.png)
+  
+
+**Fixes:**
+
+1.  We have fixed the issue with the speed of upload of large files.We accelerated the creation of processes from a file. Now json folder structure loads much faster.
+
+2.  We’ve fixed the issue with access sharing for the group owner. When members of the group share objects, the access is granted for the group owner as well.
+    
+3.  We’ve fixed the issue with debug mode, when users view the history of the task in the final node after successfully executing the request (TypeError: Cannot read property `toString` of null)
+
+4.  We’ve fixed the issue with a display of “Throw exception” input field. Now when users widen **Reply to Process** field, the field “Throw exception” widens as well:
+![img](interface/img/releases/p3.png)
+5.  We’ve updated the display of the **Git Call** data in terminal. Now terminal saves the state of the latest build. When user makes any changes into dependencies, the “build” indicator will be active until user starts assembling the build. The rebuild function was also added to rewrite a dependency if it was updated in Git.
+    
+6.  We’ve fixed the bug with tasks upload in the `View mode` of the node.
+
+## 23.01.2019
+
+**New Features:**
+
+1. Added new logic GIT Call. Now you could build additional logic for tasks processing with using external libraries. More information about using GIT Call you could read in documentation.
+Example with using [moment library](https://github.com/moment/moment/) from GitHub:
+![img](interface/img/releases/git_call.png)
+2. Now **CONV** function allows you to get any inclusions of the task parameters from State Diagram, also array elements. Example: `{{conv[12345].ref[template].message.attachment.payload.buttons[0]}}`
+3. Added UUID и Crypto support in Erlang language in logic **Code**.
+
+**Fixes:**
+
+1. Increased input field for error message (check-box Throw exception) in logic **Reply to Process**.
+2. Bug with connecting accounts Corezoid and Sender after creating company in Sender.
+3. Bug with reading tasks from the deleted state diagram.
+4. Bug with checking rights for **Copy task**/**Modify task**/**Call Process** after moving object from/to shared folder.
+5. Incorrect work of logic **Condition** when checking conditions for an empty object or array.
+
+
+## 13.12.2018
+
+**New Features:**
+- Added file upload master. Now you can observe status of download:
+
+![img](interface/img/releases/upload_master.gif)
+
+**Fixes:**
+- Fixed validation of email with using letters in different registers. While adding email with letters in different registers - email would be reduced to lower case.
+- Fixed error in incorrect download tasks in **csv** file from processes.
+
+
 ## 04.10.2018
 
 **New Features:**
