@@ -1,6 +1,7 @@
 # API v2
 
 *   [Protocol description](#protocol-description)
+*   [Operations with tasks](v2/tasks.md)
 *   [Object creation](#object-creation)
 
 ## Protocol description
