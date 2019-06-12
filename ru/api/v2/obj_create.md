@@ -1,10 +1,11 @@
-# Создание объектов (процесс, папка, дашборд)
+# Создание объектов
 
-## Запрос
+**Запрос**
 ```json
 {
   "ops": [
     {
+      "id": "{{request_id}}",
       "title": "{{title}}",
       "description": "{{description}}",
       "folder_id": "{{folder_id}}",
@@ -21,23 +22,23 @@
 ```
 
 | parameter | accept type | description | required |
-| -- | -- | -- | -- |
-| `title` | string | Название объекта | `+` |
-| `description` | string  / null | Текстовое описание объекта | `+` |
-| `folder_id` | string / number | Идентификатор папки, в которой будет создан объект | `-` |
-| `company_id` | string  / null | Идентификатор компании, в которой будет создан объект (если нет компании, параметр не передается или имеет значение null) | `-` |
-| `obj` | string | Тип объекта. Принимаются значения `conv / folder / dashboard` | `+` |
-| `conv_type` | string | Принимаются значения `process` - процесс / `state` - диаграмма состояний | `+` только для "obj": "conv" |
-| `status` | string | Статус процесса. Принимает значения `actived / paused / debugged` | `+` |
+| --- | --- | --- | --- |
+| request_id | string | id запроса | - |
+| title | string | Название объекта | + |
+| description | string  / null | Текстовое описание объекта | + |
+| folder_id | string / number | Идентификатор папки, в которой будет создан объект | - |
+| company_id | string  / null | Идентификатор компании, в которой будет создан объект (если нет компании, параметр не передается или имеет значение null) | - |
+| obj | string | Тип объекта. Принимаются значения `conv / folder / dashboard` | + |
+| conv_type | string | Принимаются значения `process` - процесс / `state` - диаграмма состояний | `+` только для "obj": "conv" |
+| status | string | Статус процесса. Принимает значения `actived / paused / debugged` | + |
 
-### Пример запроса
-
-создания активного процесса с названием "Corezoid" в папке 11456 компании i7856235891
+**Пример запроса** создания активного процесса с названием "Corezoid" в папке 11456 компании i7856235891
 
 ```json
 {
   "ops": [
     {
+      "id": "147",
       "title": "Corezoid",
       "description": null,
       "folder_id": 11456,
@@ -53,13 +54,13 @@
 }
 ```
 
-## Ответ
+**Ответ**
 ```json
 {
   "request_proc": "ok",
   "ops": [
     {
-      "id": "",
+      "id": "147",
       "proc": "ok",
       "obj": "conv",
       "obj_id": 24545,
@@ -71,8 +72,9 @@
 ```
 
 | parameter | description |
-| -- | -- |
-| `obj` | Тип созданного объекта `conv / folder / dashboard` |
-| `obj_id` | Идентификатор созданного объекта |
-| `folder_id` | Идентификатор папки, в которой создан объект |
-| `hash` | Ключ объекта для формирования "Direct url for tasks upload" |
+| --- | --- |
+| id | id запроса |
+| obj | Тип созданного объекта `conv / folder / dashboard` |
+| obj_id | Идентификатор созданного объекта |
+| folder_id | Идентификатор папки, в которой создан объект |
+| hash | Ключ объекта для формирования "Direct url for tasks upload" |

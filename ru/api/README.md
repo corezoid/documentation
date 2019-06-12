@@ -1,9 +1,4 @@
-# API v1
+# Corezoid API
 
-*   [Описание протокола Corezoid](spec.md)
-*   [Загрузка и обновление данных](upload_modify.md)
-*   [Управление диаграммами состояний/процессов](diagram.md)
-*   [Управление узлами в диаграммах](node.md)
-*   [Управление логикой в узлах](logic.md)
-*   [Получение статистики](statistic.md)
-*   [Копирование папки в компанию](kopirovanie_papki_v_kompaniyu.md)
+*   [API v1](v1/README.md)
+*   [API v2](v2/README.md)
