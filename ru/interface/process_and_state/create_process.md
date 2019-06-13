@@ -16,7 +16,7 @@
 
 Нажмите кнопку **Generate connection data** для формирования логина и секретного ключа.
 
-`ID Process`, `Login`, `Secret key` используются для исключительно безопасного подключения описанного в разделе ["Create - новая заявка"](../../api/upload_modify.md)
+`ID Process`, `Login`, `Secret key` используются для исключительно безопасного подключения описанного в разделе ["Create - новая заявка"](../../api/v1/upload-modify.md)
 
 Кнопки `Copy webhook via JSON`, `Copy webhook via XML`, `Copy webhook via NVP` копируют в буфер обмена прямые ссылки для загрузки данных в процесс в разных форматах.
 

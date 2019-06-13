@@ -105,7 +105,7 @@ For example,
 
 http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&conv_signature={{conv_signature}}&conv_time={{conv_time}}&conv_id={{conv_id}}
 
-`conv_signature` - key generated in the node with API logic. It is a unique value and is formed according to "[Protocol descroption](../../../api/spec.md)" section.
+`conv_signature` - key generated in the node with API logic. It is a unique value and is formed according to "[Protocol descroption](../../../api/v1/spec.md)" section.
 
 `conv_time` - request time (unixtime) in seconds (epoch time), Greenwich (GMT+0), integer, required parameter.
 
@@ -123,7 +123,7 @@ Enable this flag to add to the task a runtime of HTTP request to API in millisec
 
 ![](../../img/create/api_call_sign_request.png)
 
-Enable this flag if there is a key to sign the API request formed as [signature](../../../api/spec.md).
+Enable this flag if there is a key to sign the API request formed as [signature](../../../api/v1/spec.md).
 
 
 #### Sign the request by certificate

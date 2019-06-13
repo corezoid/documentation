@@ -25,7 +25,7 @@ or
 
 `conv_signature`, `conv_time` and `conv_id` parameters can be added to URL and used for verification of access to caled API.
 
-`conv_signature` is forming according to [formula](../../../api/spec.md), where `API_SECRET` - is a key that was generated in the node with API logic.
+`conv_signature` is forming according to [formula](../../../api/v1/spec.md), where `API_SECRET` - is a key that was generated in the node with API logic.
 
 **Request body**
 ```json
@@ -136,7 +136,7 @@ or
 
 `conv_signature`, `conv_time` and `conv_id` parameters may be added to URL and used for verification of access to called API.
 
-`conv_signature` is formed according to [formula](../../../api/spec.md), where `API_SECRET` - is a key which was generated in node with API logic
+`conv_signature` is formed according to [formula](../../../api/v1/spec.md), where `API_SECRET` - is a key which was generated in node with API logic
 
 **Request body**
 ```xml
@@ -189,7 +189,7 @@ or
 
 `conv_signature`, `conv_time` and `conv_id` parameters may be added to URL and used for verification of access to called API
 
-`conv_signature` is formed according to [formula](../../../api/spec.md), where `API_SECRET` - is a key which was generated in node with API logic
+`conv_signature` is formed according to [formula](../../../api/v1/spec.md), where `API_SECRET` - is a key which was generated in node with API logic
 
 **Request body**
 ```

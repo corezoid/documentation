@@ -1,6 +1,6 @@
 # Uploading date from file
 
-[Uploading data through API](../api/upload_modify.md)
+[Uploading data through API](../api/v1/upload-modify.md)
 
 ----
 

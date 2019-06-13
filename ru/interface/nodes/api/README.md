@@ -107,7 +107,7 @@
 
 http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&conv_signature={{conv_signature}}&conv_time={{conv_time}}&conv_id={{conv_id}}
 
-`conv_signature` - ключ, который сгенерирован в узле с логикой API. Является уникальным значением и формируется по правилам, опсанным в разделе "[Описание протокола](../../../api/spec.md)".
+`conv_signature` - ключ, который сгенерирован в узле с логикой API. Является уникальным значением и формируется по правилам, опсанным в разделе "[Описание протокола](../../../api/v1/spec.md)".
 
 `conv_time` - время запроса, в формате unix time в секундах (epoch time), по Гринвичу (GMT+0), целое число, обязательный параметр.
 
@@ -126,7 +126,7 @@ http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&conv_signat
 
 ![](../../img/create/api_call_sign_request.png)
 
-Включение флага добавляет ключ, которым будет подписан запрос к API при формировании [сигнатуры](../../../api/spec.md).
+Включение флага добавляет ключ, которым будет подписан запрос к API при формировании [сигнатуры](../../../api/v1/spec.md).
 
 
 #### Sign the request by certificate

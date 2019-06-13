@@ -17,7 +17,7 @@ or
 
 `conv_signature`, `conv_time` and `conv_id` can be added to URL and used for verification of access to  API.
 
-`conv_signature` is formed according to [formula](../../../api/spec.md), where `API_SECRET` - is a key which is generated in the node with API logic.
+`conv_signature` is formed according to [formula](../../../api/v1/spec.md), where `API_SECRET` - is a key which is generated in the node with API logic.
 
 **Request body**
 ```json

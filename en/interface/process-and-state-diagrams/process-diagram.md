@@ -15,7 +15,7 @@ The newly created process contains 2 nodes - start and final.
 Click on the start node to open panel with process info.
 
 Press button **Generate connection data**.
-`ID Process`, `Login`, `Secret key` are used exclusively for the secure connection as described in section ["Create - new request"](../../api/upload_modify.md)
+`ID Process`, `Login`, `Secret key` are used exclusively for the secure connection as described in section ["Create - new request"](../../api/v1/upload-modify.md)
 
 Buttons `Copy webhook via JSON`, `Copy webhook via XML`, `Copy webhook via NVP` copy direct URL of process to clipboard to upload data into process in different formats.
 

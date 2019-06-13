@@ -1,6 +1,6 @@
 # Data uploading from file
 
-[Data uploading through API](../../api/upload_modify.md)
+[Data uploading through API](../../api/v1/upload-modify.md)
 
 ![import_task](../img/dashboard/import_task_1.png)
 

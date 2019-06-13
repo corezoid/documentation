@@ -12,7 +12,7 @@ Data for example:
 
 Parameters `conv_signature`, `conv_time` and `conv_id` are automatically added to URL and can be used for access verification.
 
-`conv_signature` is formed according to [formula](../../../api/spec.md), where `API_SECRET` -  is a key which is generated in the node with API logic.
+`conv_signature` is formed according to [formula](../../../api/v1/spec.md), where `API_SECRET` -  is a key which is generated in the node with API logic.
 
 **Request body**
 
