@@ -6,17 +6,17 @@
 
   - [Процесс Main](#процесс-main)
 
-  - [Event](#event)
+  - [Event](#описание-типов-event)
 
   - [Процесс Router](#процесс-router)
 
   - [Процесс Send Message](#процесс-send-message)
 
-  - [Папка Config](#папка-config)
+  - [Папка Configs](#папка-configs)
 
     - [Tokens](#tokens)
 
-    - [Command](#command)
+    - [Command](#commands)
 
     - [Attachments](#attachments)
 
@@ -28,11 +28,12 @@
 
 Процессы **Viber Receiver**, **Telegram Receiver**, **Facebook Receiver** находятся в папках для каждого мессенджера **Folders > Bot (v2.0) > Messengers > {{Название мессенджера}}**.
 
-![bot-platform-receivers](img/bot-platform-receivers.png)
+![](img/bot-platform-receivers.png)
 
 С этих Процессов начинается работа каждого бота. [Webhook](https://en.wikipedia.org/wiki/Webhook) бота подключается к одноименному процессу **Receiver** на этапе создания Bot Platform. 
 
 Логика процесса **Receiver**:
+
 -  Принимает события (отправка сообщений, файлов, клики по кнопкам, переходы по ссылкам и др.) от пользователей.
 - Приводит полученные данные к единому стандартному формату:
 	- `channel` - канал, из которого пришло сообщение. Доступные варианты:  telegram, facebook, viber.
@@ -62,9 +63,9 @@
 
     ![enter-webhook](img/enter-webhook.png) 
 
-5. Укажите в этом поле _**token**_ доступа к новому боту и нажмите **ОК**.
+5. Укажите в этом поле **token** доступа к новому боту и нажмите **ОК**.
 
-6. Актуализируйте token в [диаграмме Tokens](#tokens). **REF** Заявки должен называться _**token**_. 
+6. Актуализируйте token в [диаграмме Tokens](#tokens). **REF** Заявки должен называться **token**. 
 
   
 Нажмите кнопку **Connect to messenger**, выберите мессенджер и укажите новый токен для подключения webhook к процессу. Также необходимо обязательно актуализировать токены в [диаграмме Tokens](#tokens). REF заявки должен называться “token”.
