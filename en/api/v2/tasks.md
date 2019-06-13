@@ -34,7 +34,7 @@
 | obj | string | Type of object | + | task |
 | data | JSON Object | Object with key-value pairs describing the necessary parameters | + | ** Number of parameters is not limited |
 | ref | string / number / null | *** External identifier of the task | - | Any characters can be used, the length is limited to the range from 1 to 255 characters and the "ref" parameter  must be unique within all active objects of this type |
-| id | string / number | *** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
+| id | string / number | **** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
 \* See license agreement
 
@@ -87,7 +87,7 @@ Creating a request with one parameter (key "test_id", value 123) in the process 
 | --- | --- |
 | request_proc | The overall processing status of all transactions from the request |
 | ops | Parameter in which JSON objects with operations are transmitted |
-| id | Parameter to identify the operation in the Ops array |
+| id | Parameter to identify the operation in the ops array |
 | proc | The processing status of a specific operation |
 | ref | External identifier of the task |
 | obj_id | Identifier of the created object (task) |
@@ -194,7 +194,7 @@ Creating a request with one parameter (key "test_id", value 123) in the process 
 | obj | string | Type of object | + | task |
 | data | JSON Object | Object with key-value pairs describing the necessary parameters | + | ** Number of parameters is not limited |
 | ref | string / number / null | External identifier of the task | + | Any characters can be used, the length is limited to the range from 1 to 255 characters and the "ref" parameter  must be unique within all active objects of this type |
-| id | string / number | *** Parameter to identify the operation in the Ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
+| id | string / number | *** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
 \* See license agreement
 
@@ -357,7 +357,7 @@ Modification of the task with one parameter (the "user_id" key and the value 777
 | obj | string | Type of object | + | task |
 | obj_id | string | Identifier of the object (task) in the system | + | Identifier of an existing object |
 | ref | string / number / null | External identifier of the task | - | Any characters can be used, the length is limited to the range from 1 to 255 characters and the "ref" parameter  must be unique within all active objects of this type |
-| id | string / number | ** Parameter to identify the operation in the Ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
+| id | string / number | ** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
 \* See license agreement
 
@@ -480,7 +480,7 @@ Viewing task in the process with the identifier - 12345, the reference - 1559655
 | obj | string | Type of object | + | task |
 | obj_id | string | Identifier of the object (task) in the system | + | Identifier of an existing object |
 | node_id | string | Identifier of the node where the task is located  | + | Identifier of an existing node |
-| id | string / number | ** Parameter to identify the operation in the Ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
+| id | string / number | ** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
 \* See license agreement
 
@@ -529,7 +529,7 @@ Deleting task with an object identifier - 5cf7c0bb094bab1d7a006c1e from a node w
 | --- | --- |
 | request_proc | The overall processing status of all transactions from the request |
 | ops | Parameter in which JSON objects with operations are transmitted |
-| id | Parameter to identify the operation in the Ops array |
+| id | Parameter to identify the operation in the ops array |
 | proc | The processing status of a specific operation |
 | obj | Type of object - task |
 | obj_id | Identifier of the created object (task) |
