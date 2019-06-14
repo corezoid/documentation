@@ -28,9 +28,9 @@
 
 ### Commands
 
-Каждый бот состоит из совокупности функций. В парадигме Bot Platform 2.0, каждая функция - это отдельный процесс, который вызывается с помощью команды. Формат команды имеет конструкцию: **/ {{название команды}}**. 
+Каждый бот состоит из совокупности функций. В парадигме Bot Platform 2.0, каждая функция - это отдельный процесс, который вызывается с помощью команды. Формат команды имеет конструкцию: **`/ {{название команды}}`**. 
 
-Вызов необходимого процесса происходит с помощью стандартного процесса **Router**, который обращается в диаграмму состояний **Commands** для получения связки данных ```команда: process_id```, где **process_id** - ID процесса, который необходимо вызвать.
+Вызов необходимого процесса происходит с помощью стандартного процесса **Router**, который обращается в диаграмму состояний **Commands** для получения связки данных `команда: process_id`, где **process_id** - ID процесса, который необходимо вызвать.
 
 
 Согласно этой конструкции, команда для запуска функции (процесса) авторизации будет называться **/auth**.  
@@ -80,9 +80,9 @@
 
 | Мессенджер | Параметр | Пример кнопки |
 |---|---|---|
-| Viber |"ActionType":"share-phone"|{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}|
-|Telegram |"request_contact":true|{"request_contact": true,"text": "{{t'sharePhone}}"}|
-|Facebook Messenger|"content_type":"user_phone_number"|{"content_type": "user_phone_number"}|
+| Viber |"ActionType":"share-phone"|`{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}`|
+|Telegram |"request_contact":true|`{"request_contact": true,"text": "{{t'sharePhone}}"}`|
+|Facebook Messenger|"content_type":"user_phone_number"|`{"content_type": "user_phone_number"}`|
 
  
 Для того, чтобы воспользоваться этой возможностью мессенджеров, Вам необходимо добавить в диаграмму состояний **Attachments** шаблон приложения, в котором будут две кнопки:

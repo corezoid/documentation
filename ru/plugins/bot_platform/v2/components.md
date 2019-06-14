@@ -27,7 +27,7 @@
 
 ## Процессы Viber/Telegram/Facebook Receiver
 
-Процессы **Viber Receiver**, **Telegram Receiver**, **Facebook Receiver** находятся в папках для каждого мессенджера **`Folders > Bot (v2.0) > Messengers > {{Название мессенджера}}`**.
+Процессы **Viber Receiver**, **Telegram Receiver**, **Facebook Receiver** находятся в папках для каждого мессенджера `Folders > Bot (v2.0) > Messengers > {{Название мессенджера}}`.
 
 ![](img/bot-platform-receivers.png)
 
@@ -48,11 +48,11 @@
 
 Если Вы хотите к уже существующей Bot Platform подвязать другого бота, необходимо вручную подключить его webhook к соответствующему процессу **Receiver**.
 
-1. Нажмите на соответствующий Процесс **{{Название мессенджера}} Receiver** и затем нажмите кнопку **View details**.
+1. Нажмите на соответствующий Процесс **`{{Название мессенджера}} Receiver`** и затем нажмите кнопку **View details**.
    
     ![corezoid-view-details](img/corezoid-view-details.png)
    
-2. В открывшейся слева области **{{Название мессенджера}} Receiver** перейдите на вкладку **Webhook**.
+2. В открывшейся слева области **`{{Название мессенджера}} Receiver`** перейдите на вкладку **Webhook**.
 
     ![telegram-receiver](img/telegram-receiver.png)
 
