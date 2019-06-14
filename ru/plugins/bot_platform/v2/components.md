@@ -1,36 +1,5 @@
 # Компоненты Bot Platform 2.0
 
-Папка **Folders > Bot (v2.0)** содержит все необходимые базовые Процессы для работы **Bot Platform**, которые сгруппированы по папкам.
-
-  - [Процессы Viber/Telegram/Facebook Receiver](#процессы-viber/telegram/facebook-receiver)
-
-  - [Процесс Main](#процесс-main)
-
-  - [Event](#описание-типов-event)
-
-  - [Процесс Router](#процесс-router)
-
-  - [Процесс Send Message](#процесс-send-message)
-
-  - [Папка Configs](#папка-configs)
-
-    - [Tokens](#tokens)
-
-    - [Command](#commands)
-
-    - [Attachments](#attachments)
-
-  - [Пример](#пример)
-
-![bot-platform-components](img/bot-platform-components.png)
-
-## Процессы Viber/Telegram/Facebook Receiver
-
-Процессы **Viber Receiver**, **Telegram Receiver**, **Facebook Receiver** находятся в папках для каждого мессенджера **Folders > Bot (v2.0) > Messengers > {{Название мессенджера}}**.
-
-![](img/bot-platform-receivers.png)
-
-С этих Процессов начинается работа каждого бота. [Webhook](https://en.wikipedia.org/wiki/Webhook) бота подключается к одноименному процессу **Receiver** на этапе создания Bot Platform. 
 
 Логика процесса **Receiver**:
 
