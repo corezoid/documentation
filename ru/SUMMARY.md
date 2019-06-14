@@ -154,7 +154,7 @@
     * [v2.0](plugins/bot_platform/v2/README.md)
        * [Как создать бота с помощью Bot Platform](plugins/bot_platform/v2/get-started.md)
        * [Базовый функционал Bot Platform](plugins/bot_platform/v2/basic-functionality.md)
-       * [Объекты папки Bot Platform 2.0](plugins/bot_platform/v2/components.md)
+       * [Компоненты Bot Platform 2.0](plugins/bot_platform/v2/components.md)
        * [Расширение функций бота](plugins/bot_platform/v2/add-new-functionality.md)
        * [Авторизация пользователей по номеру телефона](plugins/bot_platform/v2/authorization.md)
 * [История изменений](releases.md)

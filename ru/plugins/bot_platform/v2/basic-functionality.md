@@ -35,9 +35,7 @@
 
 Операторы в Sender рассмотрены в главе [Создание новой компании в Sender](get-started.md#шаг-2.-создание-компании-в-sender).
 
-
 ![corezoid-sender-receiver-process](img/corezoid-sender-receiver-process.png)
-
 
 
 ## Опрос NPS
@@ -48,5 +46,6 @@
 
 ![nps](img/nps.png)
 
+---
 
-Следующий раздел: [Объекты папки Bot Platform 2.0](components.md)
+Следующий раздел: [Компоненты Bot Platform 2.0](components.md)
