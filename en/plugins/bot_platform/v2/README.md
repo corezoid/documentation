@@ -1,7 +1,7 @@
 # Bot Platform 2.0
 
 
-# Содержание
+# Content
 
 - [Creating a New Bot via Bot Platform](get-started.md)
 - [Built-in Features of Bot Platform](basic-functionality.md)
