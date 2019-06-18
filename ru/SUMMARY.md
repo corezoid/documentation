@@ -59,7 +59,7 @@
        * [Управление логикой в узлах](api/v1/logic.md)
        * [Получение статистики](api/v1/statistic.md)
        * [Копирование папки в компанию](api/v1/copy-folder.md)
-   * [API v2](api/v2/README_v2.md)
+   * [API v2](api/v2/README.md)
        * [Описание протокола](api/v2/spec.md)
        * [Операции с заявками](api/v2/tasks.md)
        * [Создание объектов](api/v2/obj-create.md)

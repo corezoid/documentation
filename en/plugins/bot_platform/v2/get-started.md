@@ -2,7 +2,7 @@
 
 A bot in Corezoid is a separate project, which is created from scratch following a simple procedure:
 
-- [Step 1. Creating bots in messengers](#step-1.-creating-bots-in-messengers)
+- [Step 1. Creating bots in messengers](#step-1-creating-bots-in-messengers)
 
   - [Telegram](#telegram)
 
@@ -12,13 +12,13 @@ A bot in Corezoid is a separate project, which is created from scratch following
   
   - Apple Business Chat (iMessage) - coming soon
   
-- [Step 2. Creating a Company in Sender](#step-2.-creating-a-new-company-in-sender)
+- [Step 2. Creating a Company in Sender](#step-2-creating-a-new-company-in-sender)
 
-- [Step 3. Connnecting bots to Bot Platform](#step-3.-connecting-bot-to-bot-platform-at-corezoid)
+- [Step 3. Connnecting bots to Bot Platform](#step-3-connecting-bot-to-bot-platform-at-corezoid)
 
 You can connect Bot Platform with new or earlier created messenger bots.
 
-
+---
 
 ## Step 1. Creating bots in messengers
 
@@ -99,7 +99,7 @@ A token is a key for accessing your bot. Anyone who possesses this key can contr
 15. Save this token.
 
 
-
+---
 
 ## Step 2. Creating a New Company in Sender
 
@@ -209,6 +209,8 @@ You can use Roles to delimitate access within your colleagues in the scope of on
 
 You can find more information about Sender in its [documentation](https://doc.sender.mobi/index.html).
 
+
+---
 
 ## Step 3. Connecting Bot to Bot Platform at Corezoid
 

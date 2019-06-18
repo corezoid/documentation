@@ -40,7 +40,7 @@ The **Sender Action** node with the following parameters: **Actions > Category: 
 Answers from Operators are received with the help of the Sender Receiver process located at **Folders > Bot (v2.0) > Messengers > Sender**. During the Bot Platform creating, this process is automatically connected to the **Receiving messages from Bot Platform Sender** event.
 
 
-Operators in Sender are discussed in the [Creating a New Company in Sender](get-started.md#step-2.-creating-a-new-company-in-sender) section.
+Operators in Sender are discussed in the [Creating a New Company in Sender](get-started.md#step-2-creating-a-new-company-in-sender) section.
 
 ![corezoid-sender-receiver-process](img/corezoid-sender-receiver-process.png)
 
