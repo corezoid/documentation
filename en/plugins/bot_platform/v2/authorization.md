@@ -68,14 +68,14 @@ The **/end** command is used to complete the process and to return to the main m
 
 ![img](img/auth_7_1.png)
 
-
+---
 
 ## Extending the Router Process
 
 When the authorization process is ready, we need to set up validation whether the user is authorized in the bot:
   
 
-1.1. In the [Router](https://doc.corezoid.com/en/plugins/bot_platform/v2/objects-description.html) Process add the **Set Parameter** node between the **"GET last_command & process_id"** and **"Check Command"** nodes. Then, use the [CONV](https://doc.corezoid.com/en/interface/functions/getParamFromApp.html) function to set up receiving the `phone` parameter from the **User Profile** state diagram. 
+1.1. In the [Router](components.md) Process add the **Set Parameter** node between the **"GET last_command & process_id"** and **"Check Command"** nodes. Then, use the [CONV](https://doc.corezoid.com/en/interface/functions/getParamFromApp.html) function to set up receiving the `phone` parameter from the **User Profile** state diagram. 
 
 1.2. If the phone number receiving procedure failed, record the `phone: “”` value.
 
@@ -109,5 +109,3 @@ For users not authorized, only authorization is accessible.
 ---
 
 **🎊 Congratulations! You've successfully exnteded your bot with authorization functionality!**
-
-In case of having any questins please do not hesitate to contact us: [support@corezoi.com](emailto:support@corezod.com)

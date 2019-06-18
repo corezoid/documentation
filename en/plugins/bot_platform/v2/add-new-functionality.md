@@ -76,9 +76,9 @@ The messengers provide an ability to receive a phone number if a user clicks the
 
 | Messenger | Parameter | Button example |
 |---|---|---|
-| Viber |"ActionType":"share-phone"|```{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}```|
-|Telegram |"request_contact":true|```{"request_contact": true,"text": "{{t'sharePhone}}"}```|
-|Facebook Messenger|"content_type":"user_phone_number"|```{"content_type": "user_phone_number"}```|
+| Viber |"ActionType":"share-phone"|{"Columns": 6,"Rows": 1,"BgColor": "#F3F3F3","Text": "{{t'sharePhone}}","ActionType": "share-phone","ActionBody": "phone"}|
+|Telegram |"request_contact":true|{"request_contact": true,"text": "{{t'sharePhone}}"}|
+|Facebook Messenger|"content_type":"user_phone_number"|{"content_type": "user_phone_number"}|
 
  
 To use this ability, you need to add to the **Attachments** state diagram a template of an attachment with two buttons:
