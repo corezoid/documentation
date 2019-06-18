@@ -2,13 +2,15 @@
 
 A bot in Corezoid is a separate project, which is created from scratch following a simple procedure:
 
-- [Step 1. Creating bots in messengers.](#step-1.-creating-bots-in-messengers)
+- [Step 1. Creating bots in messengers](#step-1.-creating-bots-in-messengers)
 
   - [Telegram](#telegram)
 
   - [Viber](#viber)
 
   - [Facebook Messenger](#facebook-messenger)
+  
+  - Apple Business Chat (iMessage) - coming soon
   
 - [Step 2. Creating a Company in Sender](#step-2.-creating-a-new-company-in-sender)
 

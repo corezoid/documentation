@@ -5,6 +5,7 @@ When the setting up process is completed, let’s fill the **/auth** process wit
 ![img](img/auth_logic.png)
 
   
+## The /auth Process
 
 **1. Sending a message to a user**
 
@@ -68,6 +69,9 @@ The **/end** command is used to complete the process and to return to the main m
 ![img](img/auth_7_1.png)
 
 
+
+## Extending the Router Process
+
 When the authorization process is ready, we need to set up validation whether the user is authorized in the bot:
   
 
@@ -102,4 +106,8 @@ For users not authorized, only authorization is accessible.
 
 > **Note!** For authorization validation logic, it is possible to use an additional parameter instead of **phone**, for example, `auth: true/false`.
 
-**Congratulations! You've successfully exnteded your bot!**
+---
+
+**🎊 Congratulations! You've successfully exnteded your bot with authorization functionality!**
+
+In case of having any questins please do not hesitate to contact us: [support@corezoi.com](emailto:support@corezod.com)
