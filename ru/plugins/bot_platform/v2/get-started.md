@@ -253,7 +253,7 @@ Sender служит рабочим местом оператора для обр
 
 6. Перейдите в диалоговое окно **New Page Subscription** на Facebook и вставьте скопированный Webhook URL в поле **Callback URL**.
 
-7. Отметьте флажками [события](https://developers.facebook.com/docs/messenger-platform/webhook), которые необходимо получать в процесс. Рекомендуется отметить:  `messages, messaging_postbacks и messaging_optins`.
+7. Отметьте флажками [события](https://developers.facebook.com/docs/messenger-platform/webhook), которые необходимо получать в процесс. Рекомендуется отметить:  `messages, messaging_postbacks` и `messaging_optins`.
 
     ![facebook-webhooks](img/facebook-webhooks.png)
 
@@ -273,5 +273,7 @@ Sender служит рабочим местом оператора для обр
 
 
 Теперь все мессенджеры подключены к процессам и готовы к тестированию. 
+
+---
 
 Откройте Вашего бота в месседжере и перейдите к следующему разделу: [Базовый функционал Bot Platform](basic-functionality.md)
