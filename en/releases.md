@@ -9,7 +9,7 @@ For example, from the string with JSON data<br>
 "obj":"{\"key\":\"value\"}" //String
 }
 ```
-it won’t be possible to get the value of the parameter key (`{{obj.key}}`) or process this parameter.<br>
+it won’t be possible to get the value of the parameter `key` (`{{obj.key}}`) or process this parameter.<br>
 2. In v 4.4 (scheduled for August 2019) we stop the support of the request of Corezoid API for copying objects:<br>
 https://admin.corezoid.com/api/2/json
 ```
