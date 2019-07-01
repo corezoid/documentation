@@ -1,5 +1,6 @@
 # Release Notes
 
+
 **Attention!** We plan some changes:
 
 1. In v 4.3 (scheduled for July 2019) string with JSON-data won’t be accepted as JSON-object, if you call object properties, while working with data.<br>
