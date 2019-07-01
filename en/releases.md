@@ -6,7 +6,7 @@
 For example, from the string with JSON data<br>
 ```
 {
-"obj":"{\"key\":\"value\"}" //тип String
+"obj":"{\"key\":\"value\"}" //String
 }
 ```
 it won’t be possible to get the value of the parameter key (`{{obj.key}}`) or process this parameter.<br>
@@ -27,7 +27,7 @@ https://admin.corezoid.com/api/2/json
 Please, replace the URL to the following:<br>
 https://admin.corezoid.com/api/2/copy
 
-## v 4.2 - 01 July 2019
+## v 4.2 - 02 July 2019
 
 **New:**
 
@@ -46,10 +46,10 @@ https://admin.corezoid.com/api/2/copy
 
 1. Issue with the incorrect display of the object added to **Favorites** section after moving to another folder.
 2. Mismatch of data on the dashboard after selection of **Previous month** and **Custom Range** (same period).
-3. Incorrect work of **Sign In\Sign Up** on Corezoid Marketplace.
+3. Incorrect work of **Sign In\Sign Up** on [Corezoid Marketplace](https://market.corezoid.com/).
 4. We have added information about application, that requests access to the account:<br>
-![img](../interface/img/releases/v4_2_image5.png)
-
+![img](interface/img/releases/v4_2_image5.png)
+5. And other minor boring bugs :)
 
 
 ## v4.1 - 22 May 2019
