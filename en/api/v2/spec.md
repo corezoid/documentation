@@ -1,6 +1,6 @@
 ## Protocol description
 
-Before you can start using Corezoid API you need to create `API key` and get **an authorization login** and **secret key**.
+Before you can start using Corezoid API you need to create an `API key` and get **an authorization login** and **secret key**.
 
 `Users & Groups -> Create -> API key -> enter name -> OK`
 
@@ -23,7 +23,7 @@ The signature is a concatenated string generated from the following parts:
 `hex( sha1({GMT_UNIXTIME} + {API_SECRET} + {CONTENT} + {API_SECRET}) )`, where
 
 * `hex()` - convert binary data to hexadecimal form
-* `sha1()` - standart hash-function SHA-1, must return binary data
+* `sha1()` - standard hash-function SHA-1, must return binary data
 * `+` -  text string concatenation
 * `{API_SECRET}` - a secret key of your `API key`
 * `{CONTENT}` - request body
@@ -31,12 +31,14 @@ The signature is a concatenated string generated from the following parts:
 The whole request is http-body, it also described earlier in the signature formula as the `{CONTENT}`.
 
 All text is expected to be encoded as **UTF-8**.
+
 API request requires setting HTTP header:
+
 `Content-type: application/json; charset=utf8`
 
 **Request**
 
-Request body contains a list of operations (**ops**):
+The request body contains a list of operations (**ops**):
 
 ```json
 {

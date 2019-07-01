@@ -1,5 +1,58 @@
 # Release Notes
 
+**Attention!** We plan some changes:
+
+1. In v 4.3 (scheduled for July 2019) string with JSON-data won’t be accepted as JSON-object, if you call object properties, while working with data.<br>
+For example, from the string with JSON data
+```
+{
+"obj":"{\"key\":\"value\"}" //тип String
+}
+```
+
+it won’t be possible to get the value of the parameter key (`{{obj.key}}`) or process this parameter.<br>
+2. In v 4.4 (scheduled for August 2019) we stop the support of the request of Corezoid API for copying objects:<br>
+https://admin.corezoid.com/api/2/json
+
+{
+  "ops": [
+      "type": "create",
+      "obj": "obj_copy",
+      "obj_type": "folder",
+      "obj_id": {{copy_folder_id}},
+      "folder_id": {{to_folder_id}},
+      "title": "{{folder_new_name}}",
+      "company_id": "{{company_id}}"
+}
+
+Please, replace the URL to the following:<br>
+https://admin.corezoid.com/api/2/copy
+
+## v 4.2 - 01 July 2019
+
+**New:**
+
+1. We optimized download and upload of the objects from file (Create → From file).
+2. We improved the work of **Upload master**:<br>
+    * display of the result of objects upload from the file:<br>
+    ![img](../interface/img/releases/v4_2_image3.png)<br>
+    * detailed report on the upload errors: **Show details**<br>
+    ![img](../interface/img/releases/v4_2_image1.png)<br>
+    * option to interrupt upload:<br>
+    ![img](../interface/img/releases/v4_2_image4.png)<br>
+3. We have added the feature of exporting tasks for the specified period to **CSV** file:<br>
+    ![img](../interface/img/releases/v4_2_image2.png)<br>
+
+**Fixes:**
+
+1. Issue with the incorrect display of the object added to **Favorites** section after moving to another folder.
+2. Mismatch of data on the dashboard after selection of **Previous month** and **Custom Range** (same period).
+3. Incorrect work of **Sign In\Sign Up** on Corezoid Marketplace.
+4. We have added information about application, that requests access to the account:<br>
+![img](../interface/img/releases/v4_2_image5.png)
+
+
+
 ## v4.1 - 22 May 2019
 
 **New:**
