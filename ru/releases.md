@@ -37,7 +37,7 @@ https://admin.corezoid.com/api/2/copy
     * отображение результата загрузки объектов из файла:<br>
     ![img](interface/img/releases/v4_2_image3.png)<br>
     * детальный отчет об ошибках загрузки - **Show details**:<br>
-    ![img](interface/img/releases/v4_image1.png)<br>
+    ![img](interface/img/releases/v4_2_image1.png)<br>
     * возможность прервать загрузку:<br>
     ![img](interface/img/releases/v4_2_image4.png)<br>
 3. Добавлена возможность выгрузки заявок в **CSV** файл за указанный период:<br>
