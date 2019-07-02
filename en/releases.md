@@ -37,7 +37,7 @@ https://admin.corezoid.com/api/2/copy
     * display of the result of objects upload from the file:<br>
     ![img](interface/img/releases/v4_2_image3.png)<br>
     * detailed report on the upload errors: **Show details**<br>
-    ![img](interface/img/releases/v4_image1.png)<br>
+    ![img](interface/img/releases/v4_2_image1.png)<br>
     * option to interrupt upload:<br>
     ![img](interface/img/releases/v4_2_image4.png)<br>
 3. We have added the feature of exporting tasks for the specified period to **CSV** file:<br>
