@@ -666,7 +666,7 @@ User will receive email and report with tasks which are not imported.
 - The escalation node of logic `Modify Task`now contains new condition for `"duplicate_callback"`
 - Node (or set of nodes) now can be minimized/maximized using **hotkey** "ctrl+m" ( cmd+m")
 - Logic `Waiting for callback` now contains new option `Synchronous` (`is_sync = true`) for checking modified task. Enable this option is checking - whether current node is appropriated to the specified CallbackURL (not in other node with another callback)
-- When you create `BotPlatform` a link to [documentation](https://doc.corezoid.com/en/plugins/bot_platform/) is shown.
+- When you create `BotPlatform` a link to [documentation](https://doc.corezoid.com/en/bot-platform/) is shown.
 
 
   

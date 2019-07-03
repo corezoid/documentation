@@ -61,7 +61,7 @@
 Теперь, когда процесс Авторизации готов, настроим проверку, авторизован или нет пользователь в боте:  
   
 
-1.1. В процессе [Router](https://doc.corezoid.com/ru/plugins/bot_platform/v2/objects-description.html) добавляем узел **Set Parameter** между узлами “**GET last_command & process_id**” и “**Check Command**”. Настраиваем получение параметра **phone** из диаграммы **User Profile** с помощью функции [CONV](https://doc.corezoid.com/ru/interface/functions/getParamFromApp.html).
+1.1. В процессе [Router](https://doc.corezoid.com/ru/bot-platform/v2/objects-description.html) добавляем узел **Set Parameter** между узлами “**GET last_command & process_id**” и “**Check Command**”. Настраиваем получение параметра **phone** из диаграммы **User Profile** с помощью функции [CONV](https://doc.corezoid.com/ru/interface/functions/getParamFromApp.html).
 
 1.2. Если номер телефона не удалось получить, записываем значение `phone: “”`.
 ![img](img/auth_router_1.png)
