@@ -42,11 +42,11 @@ Example:<br>
 ```
 {"ops":"[{\"type\":\"list\",\"obj\":\"conv\",\"obj_id\":\"126979\",\"get_counter\":false}]"}
 ```
-<br>2. Error in object positioning when the process is moved using **Move to…** feature with a creation of a new folder.
-<br>3. Error in recovery of nodes after using **Undo** function multiple times.
-<br>4. Display of the message **Undeployed version loaded** after copying or uploading from file.<br>
+2. Error in object positioning when the process is moved using **Move to…** feature with a creation of a new folder.
+3. Error in recovery of nodes after using **Undo** function multiple times.
+4. Display of the message **Undeployed version loaded** after copying or uploading from file.<br>
 ![img](../ru/interface/img/releases/v4.2.1_image2.png)
-<br>5. And other boring bugs fixed :)
+5. And other boring bugs fixed :)
 
 
 ## v 4.2 - 02 July 2019
