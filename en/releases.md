@@ -3,7 +3,7 @@
 
 **Attention!** We plan some changes:
 
-1. In v 4.3 (scheduled for July 2019) string with JSON-data won’t be accepted as JSON-object, if you call object properties, while working with data.<br>
+1. In v 4.3 (scheduled for 07 August 2019) string with JSON-data won’t be accepted as JSON-object, if you call object properties, while working with data.<br>
 For example, from the string with JSON data<br>
 ```
 {
@@ -27,6 +27,27 @@ https://admin.corezoid.com/api/2/json
 ```
 Please, replace the URL to the following:<br>
 https://admin.corezoid.com/api/2/copy
+
+## v 4.2.1 -  09 July 2019
+
+**New:**
+
+1. We added check-box to setup notification rules in **Sharing settings** section. Notifications are ***switched on*** by default. In order to switch off e-mail notifications about changes in the access to Corezoid objects, please use the check-box “Send notification about updates by email”.<br>
+![img](../ru/interface/img/releases/v4.2.1_image1.png)<br>
+
+**Fixes:**
+
+1. Screening of special symbols in JSON object in **API Call** when request format is changed from Default to Raw with parameters type Array and Object.<br>
+Example:<br>
+```
+{"ops":"[{\"type\":\"list\",\"obj\":\"conv\",\"obj_id\":\"126979\",\"get_counter\":false}]"}
+```
+2. Error in object positioning when the process is moved using **Move to…** feature with a creation of a new folder.
+3. Error in recovery of nodes after using **Undo** function multiple times.
+4. Display of the message **Undeployed version loaded** after copying or uploading from file.<br>
+![img](../ru/interface/img/releases/v4.2.1_image2.png)
+5. And other boring bugs fixed :)
+
 
 ## v 4.2 - 02 July 2019
 
