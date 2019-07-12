@@ -34,7 +34,7 @@ https://admin.corezoid.com/api/2/copy
 
 **New:**
 
-1. We added Facebook and GitHub authorization as an option:
+1. We added **Facebook** and **GitHub** authorization as an option:
 
 ![img](interface/img/releases/v4_2_2_image.png)
 
