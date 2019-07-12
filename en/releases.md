@@ -28,7 +28,18 @@ https://admin.corezoid.com/api/2/json
 Please, replace the URL to the following:<br>
 https://admin.corezoid.com/api/2/copy
 
-## v 4.2.1 -  09 July 2019
+
+
+## v4.2.2 - 16 July 2019
+
+**New:**
+
+1. We added Facebook and GitHub authorization as an option:
+
+![img](interface/img/releases/v4_2_2_image.png)
+
+
+## v4.2.1 -  09 July 2019
 
 **New:**
 
@@ -49,7 +60,7 @@ Example:<br>
 And other boring bugs fixed :)
 
 
-## v 4.2 - 02 July 2019
+## v4.2 - 02 July 2019
 
 **New:**
 

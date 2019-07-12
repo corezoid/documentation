@@ -11,8 +11,9 @@
 }
 ```
 нельзя будет получить значение параметра `key` (`{{obj.key}}`) или обработать его.<br>
-2. В v 4.4 (ориентировочно - август 2019) будет прекращена поддержка запроса Corezoid API для копирования объектов:<br>
-https://admin.corezoid.com/api/2/json
+2. В v 4.4 (ориентировочно - 28 августа 2019) будет изменен URL запроса к Corezoid API для копирования объектов:<br>
+Старый URL: https://admin.corezoid.com/api/2/json <br>
+Новый URL: https://admin.corezoid.com/api/2/copy <br>
 ```
 {
   "ops": [
@@ -25,10 +26,16 @@ https://admin.corezoid.com/api/2/json
       "company_id": "{{company_id}}"
 }
 ```
-Необходимо заменить URL на следующий:<br>
-https://admin.corezoid.com/api/2/copy
 
-## v 4.2.1 - 09 Июля 2019
+## v4.2.2 - 16 Июля 2019
+
+**Новое:**
+
+1. Добавлена возможность авторизации с помощью **Facebook** и **GitHub**:
+
+![img](interface/img/releases/v4_2_2_image.png)
+
+## v4.2.1 - 09 Июля 2019
 
 **Новое:**
 
