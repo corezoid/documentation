@@ -57,7 +57,7 @@ https://sync-api.corezoid.com/api/1/json/{{API_LOGIN}}/{{GMT_UNIXTIME}}/{{SIGNAT
 
 Request time should be Unix time: number of seconds elapsed from the Unix epoch at the GMT+0 Time Zone.
 
-Request signature is created according to the [standard Corezoid API protocol](https://doc.corezoid.com/ru/api/v1/spec.html).
+Request signature is created according to the [standard Corezoid API protocol](https://doc.corezoid.com/en/api/v1/spec.html).
 
 You need [grant access](https://doc.corezoid.com/en/interface/users_groups.html#providing-access-to-the-object) to **Task management** to an **API key** which login and password are used in a request.
 
