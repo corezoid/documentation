@@ -39,6 +39,7 @@ When sending a request via **Sync API**, a Task gets automatically the `__callba
 `"__callback_url": "https://sync-api.corezoid.com/api/1/plugins/callback/{{request_id}}"`
 
 To configure synchronous response, you need to:
+
 1. Add the [**API Call**](https://doc.corezoid.com/ru/interface/nodes/api/) node at a Process step which should send a requested output to a caller service.
 2. Provide the `{{__callback_url}}`.
 3. Specify parameters which will be sent to the caller service.
@@ -49,7 +50,7 @@ To configure synchronous response, you need to:
 
 ### URL
 
-https://sync-api.corezoid.com/api/1/json/{{API_LOGIN}}/{{GMT_UNIXTIME}}/{{SIGNATURE}}
+`https://sync-api.corezoid.com/api/1/json/{{API_LOGIN}}/{{GMT_UNIXTIME}}/{{SIGNATURE}}`
 
 * {{API_LOGIN}} - [authorization login](https://doc.corezoid.com/en/interface/users_groups.html#api-keys)
 * {{GMT_UNIXTIME}} - request time

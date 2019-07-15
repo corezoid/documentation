@@ -39,6 +39,7 @@ _**Рассмотрим пример**_:
 `"__callback_url": "https://sync-api.corezoid.com/api/1/plugins/callback/{{request_id}}"`
 
 Для отправки синхронного ответа необходимо:
+
 1. На том шаге процесса, где вы хотите отправить результат обработки заявки обратно в вызывающий сервис, необходимо добавить узел [**API Call**](https://doc.corezoid.com/ru/interface/nodes/api/).
 2. В поле URL указать значение `{{__callback_url}}`.
 3. Заполнить параметры, которые будут отправлены в вызывающий сервис:
@@ -49,7 +50,7 @@ _**Рассмотрим пример**_:
 
 ### URL
 
-https://sync-api.corezoid.com/api/1/json/{{API_LOGIN}}/{{GMT_UNIXTIME}}/{{SIGNATURE}}
+`https://sync-api.corezoid.com/api/1/json/{{API_LOGIN}}/{{GMT_UNIXTIME}}/{{SIGNATURE}}`
 
 * {{API_LOGIN}} - [логин авторизации](https://doc.corezoid.com/ru/interface/users_groups.html#api-keys)
 * {{GMT_UNIXTIME}} - время запроса, в формате unixtime в секундах (epoch time), по Гринвичу (GMT+0).
