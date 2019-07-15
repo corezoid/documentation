@@ -8,3 +8,6 @@
 * [Import from the file](import_from_csv.md)
 
 
+https://doc.corezoid.com/ru/api/v1/upload-modify.html
+
+
