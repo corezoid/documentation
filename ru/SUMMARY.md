@@ -70,6 +70,7 @@
        * [Получение объектов](api/v2/obj-scheme.md)
        * [Выгрузка объектов](api/v2/obj-scheme-async.md)
        * [Восстановление объекта](api/v2/restore.md)
+   * [Sync API](api/sync-api.md)
 * [Примеры](plugins/README.md)
    * [Brightpearl & Shopify](plugins/brightpearl_&_shopify/README.md)
    * [VISA API](plugins/visa/README.md)
