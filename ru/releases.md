@@ -28,7 +28,7 @@ https://admin.corezoid.com/api/2/json
 Необходимо заменить URL на следующий:<br>
 https://admin.corezoid.com/api/2/copy
 
-## v 4.2 - 02 июля 2019
+## v4.2 - 02 июля 2019
 
 **Новое:**
 

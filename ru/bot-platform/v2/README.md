@@ -23,7 +23,7 @@
 Поддерживаемые мессенджеры:
 - Facebook Messenger
 - Viber
-- Telegram.
+- Telegram
 
 
 
