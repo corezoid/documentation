@@ -6,7 +6,7 @@ https://api.corezoid.com/api/1/json/{API_LOGIN}/{GMT_UNIXTIME}/{SIGNATURE}
 
 Где идентификаторы в фигурных скобках обозначают следующие параметры:
 
-*   `{API_LOGIN}` - [логин авторизации](../interface/users_groups.md) к API, получаете от сервиса, обязательный параметр.
+*   `{API_LOGIN}` - [логин авторизации](https://doc.corezoid.com/ru/interface/users_groups.html#api-keys) к API, получаете от сервиса, обязательный параметр.
 *   `{GMT_UNIXTIME}` - время запроса, в формате unix time в секундах (epoch time), по Гринвичу (GMT+0), целое число, обязательный параметр.
 *   `{SIGNATURE}` - подпись запроса, обязательный параметр, регистр букв не важен, считается по формуле:
 `hex( sha1({GMT_UNIXTIME} + {API_SECRET} + {CONTENT} + {API_SECRET}) )`, где

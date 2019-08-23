@@ -36,13 +36,13 @@
 | ref | string / number / null | *** External identifier of the task | - | Any characters can be used, the length is limited to the range from 1 to 255 characters and the "ref" parameter  must be unique within all active objects of this type |
 | id | string / number | **** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
-\* See license agreement
+*See license agreement
 
-\** Task is limited only by the size specified in the configuration file
+**Task is limited only by the size specified in the configuration file
 
-\*** Required to modify task
+***Required to modify task
 
-\**** The parameter is used in any queries to identify the operation in the ops array
+****The parameter is used in any queries to identify the operation in the ops array
 
 ### Sample request with the creation of a task
 
@@ -196,11 +196,11 @@ Creating a request with one parameter (key "test_id", value 123) in the process 
 | ref | string / number / null | External identifier of the task | + | Any characters can be used, the length is limited to the range from 1 to 255 characters and the "ref" parameter  must be unique within all active objects of this type |
 | id | string / number | *** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
-\* See license agreement
+*See license agreement
 
-\** Task is limited only by the size specified in the configuration file
+**Task is limited only by the size specified in the configuration file
 
-\*** The parameter is used in any queries to identify the operation in the ops array
+***The parameter is used in any queries to identify the operation in the ops array
 
 ### Sample request with one modified task
 
@@ -359,9 +359,9 @@ Modification of the task with one parameter (the "user_id" key and the value 777
 | ref | string / number / null | External identifier of the task | - | Any characters can be used, the length is limited to the range from 1 to 255 characters and the "ref" parameter  must be unique within all active objects of this type |
 | id | string / number | ** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
-\* See license agreement
+*See license agreement
 
-\** The parameter is used in any queries to identify the operation in the ops array
+**The parameter is used in any queries to identify the operation in the ops array
 
 ### Sample request to show one task
 
@@ -482,9 +482,9 @@ Viewing task in the process with the identifier - 12345, the reference - 1559655
 | node_id | string | Identifier of the node where the task is located  | + | Identifier of an existing node |
 | id | string / number | ** Parameter to identify the operation in the ops array | - | Any characters can be used, the length is limited by the size of the HTTP request |
 
-\* See license agreement
+*See license agreement
 
-\** The parameter is used in any queries to identify the operation in the ops array
+**The parameter is used in any queries to identify the operation in the ops array
 
 ### Sample request to delete one task
 
@@ -522,7 +522,7 @@ Deleting task with an object identifier - 5cf7c0bb094bab1d7a006c1e from a node w
 }
 ```
 
-\* Actual deletion of the task can be performed from 100 to 500 ms
+*Actual deletion of the task can be performed from 100 to 500 ms
 
 
 | parameter | description |

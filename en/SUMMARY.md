@@ -63,6 +63,7 @@
        * [Protocol description](api/v2/spec.md)
        * [Operations with tasks](api/v2/tasks.md)
        * [Object creation](api/v2/obj-create.md)
+   * [Sync API](api/sync-api.md)
 * [Examples](plugins/README.md)
    * [VISA API](plugins/visa/README.md)
        * [Getting access](plugins/visa/access.md)
