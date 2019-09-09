@@ -131,7 +131,6 @@ After you have created a Corezoid process with an **API Call** node, you can set
     https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&access_type=offline&scope={{scope}}&client_id={{client_id}}
     ```
     where:
-
     - `{{client_id}}` - is a client id obtained at step 2.
     - `{{scope}}` -  is the Google API you would like to gain access to. For example, for Gmail it would be `https://mail.google.com/`.
     
@@ -296,14 +295,12 @@ and set the following values in the **API Call** node settings:
     - `expires_in` - **ACCESS_TOKEN** expiration time.
     
     ![](./img/save-token-to-storage.png)
-
     
 After the entire project consisting of 1 process and 1 state diagram is assembled, you can work with active **ACCESS_TOKEN**.
 
 To do this, repeat point of getting **CODE** and create a new request for **ACCESS_TOKEN** generation in the **Create/Refresh Token** process, thereby launching a process of the token storage and refreshing in the **Token Storage** state diagram.
 
 If **ACCESS_TOKEN** is created successfully, your request will be in the **Active token** state. Click it to look through the contents of the request that contains `access_token` as one of its parameters.
-
 
 ![](./img/token-storage-state-diagram.png)
 
@@ -317,7 +314,7 @@ You can use the **ACCESS_TOKEN** obtained in all the processes of your company t
  
 where:
  
- `DIAGRAM_ID` -  ID of the **Token Storage** state diagram. 
+`DIAGRAM_ID` -  ID of the **Token Storage** state diagram. 
 
 **To obtain the `DIAGRAM_ID` proceed as follows:**
 
