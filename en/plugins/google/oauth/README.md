@@ -127,24 +127,21 @@ After you have created a Corezoid process with an **API Call** node, you can set
     ![](./img/get-google-credentials.gif)
 
 3. Enter parameters in **URL** and call it in the browser:
+    
     ```
     https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&access_type=offline&scope={{scope}}&client_id={{client_id}}
     ```
     where:
     - `{{client_id}}` - is a client id obtained at step 2.
-    - `{{scope}}` -  is the Google API you would like to gain access to. For example, for Gmail it would be `https://mail.google.com/`.
-    
-    List of available Google APIs: [https://developers.google.com/identity/protocols/googlescopes](https://developers.google.com/identity/protocols/googlescopes)
+    - `{{scope}}` -  is the Google API you would like to gain access to. For example, for Gmail it would be `https://mail.google.com/`. List of available Google APIs: [https://developers.google.com/identity/protocols/googlescopes](https://developers.google.com/identity/protocols/googlescopes)
 
 4. In the appeared window, select an account you would like to gain access to.  
-
     4.1. Click the **Allow** button in the following window.  
-
     ![](./img/grant-test-permissions.png)
 
     4.2. Copy CODE, appearing on the page. You will need it at the next step.
 
-5. Go to the Create/Refresh Token process, and click the New task button in the View mode.
+5. Go to the **Create/Refresh Token** process, and click the New task button in the View mode.
     
     5.1. Fill in the fields below in the **Task** window and click the **Add task** button:
     - `Reference` - assign a name to the key you are going to get. <br/>For example, if this is a key to “gmail”, enter `Reference` as `gmail` in the field.

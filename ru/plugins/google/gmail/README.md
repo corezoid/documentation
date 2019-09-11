@@ -18,7 +18,7 @@
    
 На рисунке ниже Вы можете видеть взаимодействие процессов Corezoid с **Gmail API**.
    
-   ![img](en/plugins/google/gmail/img/../../../../../img/basic-scheme.png)  
+   ![img](../../../../en/plugins/google/gmail/img/basic-scheme.png)  
     
   Прежде чем вы начнете, убедитесь, что у Вас есть действующий почтовый ящик @gmail или Google-аккаунт. Если почтового ящика @gmail или Google-аккаунта у Вас нет, то вы можете завести его по ссылке [http://gmail.com](http://gmail.com).  
    
@@ -37,7 +37,7 @@
 
 2. Теперь зайдите в созданную папку **Gmail** и создайте процесс **Reading**. Он будет вызывать **Gmail API** для получения списка непрочитанных писем.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-reading-process.png)  
+    ![img](../../../../en/plugins/google/gmail/img/create-reading-process.png)  
   
 3. Добавьте в процессе **Reading** узел **API Call** c именем **Get UNREAD message IDs**  
 
@@ -61,11 +61,11 @@
     
     В переменную **{{token}}** Вы будете передавать **ACCESS_TOKEN** из диаграммы состояний **Token Storage**, из туториала [Google OAuth 2.0](Google OAuth 2.0)  
 
-    ![img](en/plugins/google/gmail/img/../../../../../img/google-api-auth.png)  
+    ![img](../../../../en/plugins/google/gmail/img/google-api-auth.png)  
   
     3.3. Для обработки ответа **Gmail API** об отсутствии непрочитанных писем добавьте узел **Condition** c именем **Is UNREAD?**, который будет переводить заявку в финальный узел, если в почтовом ящике закончились непрочитанные сообщения. Для этого добавьте условие```resultSizeEstimate == 0```
   
-   ![img](en/plugins/google/gmail/img/../../../../../img/check-result-size.png)  
+   ![img](../../../../en/plugins/google/gmail/img/check-result-size.png)  
   
     3.4. Для получения ID непрочитанных писем перейдите в режим **VIEW** и создайте заявку с двумя параметрами: **email** и **token**.   
  
@@ -82,7 +82,7 @@
      ]  
     ```
 
-    ![img](en/plugins/google/gmail/img/../../../../../img/show-unread-messages.png) 
+    ![img](../../../../en/plugins/google/gmail/img/show-unread-messages.png) 
   
 Процесс для получения ID непрочитанных писем у Вас готов!  
   
@@ -90,7 +90,7 @@
   
 1. Создайте процесс **Message Info** для получения информации о непрочитанном письме по его ID через **Gmail API**.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-message-info-process.png)  
+    ![img](../../../../en/plugins/google/gmail/img/create-message-info-process.png)  
   
     1.1. Для этого в процессе **Message Info** создайте узел **API Call** с именем **Getting Info**, в котором Вы будете вызывать **Gmail API**.   
   
@@ -116,9 +116,8 @@
     }  
       ```
 
-    ![img](en/plugins/google/gmail/img/../../../../../img/google-auth-to-get-message-info.png)  
+    ![img](../../../../en/plugins/google/gmail/img/google-auth-to-get-message-info.png)  
   
-
 2. После того, как Вы настроили вызов **Gmail API**, можете отправить заявку для получения инфорамции о непрочитанном письме.  
 
     2.1 В режиме **View** нажмите кнопку **New Task**  
@@ -129,7 +128,7 @@
     - **token** - токен вызова Gmail API.  
     - **email** - укажите email, по которому Вы получили ID непрочитанных писем.  
       
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-new-task.png)  
+    ![img](../../../../en/plugins/google/gmail/img/create-new-task.png)  
   
     Если **Gmail API** вернет успешный ответ, то заявка с деталями письма появится в узле **Final**.  
   
@@ -137,7 +136,7 @@
     
     2.4. Кликните на узел **Final**. В появившемся окне Вы можете изучить структуру параметров письма.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-info-by-message-id.png)  
+    ![img](../../../../en/plugins/google/gmail/img/get-info-by-message-id.png)  
   
 ### Изменение статуса письма на “Прочитано”  
   
@@ -170,11 +169,13 @@
     }  
     ```
 
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-unread-messages-api-call.png)  
+    ![img](../../../../en/plugins/google/gmail/img/get-unread-messages-api-call.png)  
     
     При поступлении заявки с ID сообщения в процесс **Message Info** Вы будете получать детали письма и менять статус письма на “Прочитанное”.  
     
- ### Обработка непрочитанных писем
+
+
+### Обработка непрочитанных писем
 
 1. Для того, чтобы каждый раз не создавать вручную заявки для получения деталей письма, Вам необходимо подключить процесс **Message Info** к процессу **Reading**. Это позволит сразу после получения списка непрочитанных писем в процессе **Reading** запускать процесс **Message info** для получения информации о письме.
 
@@ -198,7 +199,7 @@
     }   
     ```
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-message-info.png)  
+    ![img](../../../../en/plugins/google/gmail/img/get-message-info.png)  
     
 2. Как Вы уже видели в разделе [Получение списка непрочитанных писем](#получение-списка-непрочитанных-писем), заявка со списком писем приходит из Gmail API в виде массива.
  
@@ -217,7 +218,7 @@
     data.message_id = data.messages[data.index].id;
     ```
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/setup-code-node.png)
+    ![img](../../../../en/plugins/google/gmail/img/setup-code-node.png)
     
     Когда Вы закончите перебор всех писем, заявка автоматически перейдет в узел **Final**. 
     
@@ -232,7 +233,7 @@
     
     2.2. Подключите узел **Condition** к узлу **Code**, как на изображении ниже.  
       
-    ![img](en/plugins/google/gmail/img/../../../../../img/cycle.png)  
+    ![img](../../../../en/plugins/google/gmail/img/cycle.png)  
   
     Теперь у Вас готов процесс с функциями:  
     - Получение списка с ID непрочитанных писем  
@@ -243,13 +244,14 @@
   
 1. Если на Вашем email-адресе появятся новые неотвеченные письма, то в процесс Corezoid они поступят только в том случае, если Вы вручную создадите заявку в процессе **Reading**. При этом нужно каждый раз указывать **email** для вычитки и **ACCESS_TOKEN**. Для автоматизации выгрузки непрочитанных писем создайте процесс с именем **Init**.  
 
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-init-process.png)  
+    ![img](../../../../en/plugins/google/gmail/img/create-init-process.png)  
   
 2. В процессе **Init** создайте узел **Set Parametеr** c названием **Set email & token** и добавьте в нем два параметра: **email** и **token**.  
 
     2.1. В параметре **email** передавайте адрес почтового ящика для вычитки.  
 
     2.2. В параметре **token** укажите путь к параметру заявки процесса, в котором хранится **ACCESS_TOKEN**.  
+    
     Пример:  
     ```
     {  
@@ -258,11 +260,13 @@
     }
     ```
     где:
-    - **DIAGRAM_ID** - ID диаграммы состояний **Token Storage**.  
-    - **REFERENCE** - референс заявки, в которой находится активный **ACCESS_TOKEN** 
-    - **access_token** - параметр заявки, в котором хранится активный **ACCESS_TOKEN**  
+    - **DIAGRAM_ID** - ID диаграммы состояний **Token Storage**.
       
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-credentials.png)  
+    - **REFERENCE** - референс заявки, в которой находится активный **ACCESS_TOKEN**
+     
+    - **access_token** - параметр заявки, в котором хранится активный **ACCESS_TOKEN**  
+    
+    ![img](../../../../en/plugins/google/gmail/img/get-credentials.png)  
   
 3. Для вызова **Gmail API** все символы кроме латинского алфавита, десятичных цифр и - _ . ! ~ * ' ( ). из email-адреса должны быть преобразованы в юникод UTF-8 для более компактной передачи данных. Это позволяет серверу с **Gmail API** избегать получение некорректных запросов от пользователей.  
 
@@ -276,7 +280,7 @@
     
     Тем самым создается новый параметр с именем **encoded_email**, в котором символ “@” будет заменен на “%40”. Это позволит беспрепятственно отправить запрос в **Gmail API**.  
       
-    ![img](en/plugins/google/gmail/img/../../../../../img/encode-email.png)  
+    ![img](../../../../en/plugins/google/gmail/img/encode-email.png)  
       
     После того, как в заявке получен **ACCESS_TOKEN** и преобразован **email**, эти данные нужно передать в процесс вызова **Gmail API**.  
   
@@ -295,7 +299,7 @@
         "token": "{{token}}"  
     }  
     ```
-    ![img](en/plugins/google/gmail/img/../../../../../img/call-reading-process.png)      
+    ![img](../../../../en/plugins/google/gmail/img/call-reading-process.png)      
 
 5. Настройте с какой периодичностью Вы планируете вызывать процесс **Reading** для получения непрочитанных писем. Для этого добавьте нам нужно будет добавить 2 узла, которые будут отвечать за циклический вызов процесса. 
 
@@ -303,11 +307,11 @@
  
     На рисунке ниже Вы можете видеть как взаимодействует логика для циклического движения заявки по процессу. 
 
-    ![img](en/plugins/google/gmail/img/../../../../../img/read-wait-logic.png)  
+    ![img](../../../../en/plugins/google/gmail/img/read-wait-logic.png)  
   
     5.2. В узле Wait нажмите на ***Additionally*** и поставьте галочку напротив **Limit the time of the task in the node**. В появившемся поле для ввода задайте значение таймера, например, поставьте 10 минут.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/add-delay-node.png)  
+    ![img](../../../../en/plugins/google/gmail/img/add-delay-node.png)  
   
     5.3. Для циклического движения заявки в процессе каждые 10 минут, подключите в узле **Сopy task** отправку копии заявки в этот же **Init**. Рекурсивный подход позволит увидеть в финальном узле общее кол-во запросов на вычитку почты за выбранный период времени.  
   
@@ -323,7 +327,7 @@
     }  
     ```
      
-    ![img](en/plugins/google/gmail/img/../../../../../img/init-recursion.png)  
+    ![img](../../../../en/plugins/google/gmail/img/init-recursion.png)  
   
     Процесс **Init** для отправки сигнала на вычитку почты готов.   
   

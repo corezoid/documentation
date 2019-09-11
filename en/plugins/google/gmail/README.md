@@ -18,7 +18,7 @@ This tutorial will help you learn how to use **Gmail API** to get unanswered ema
    
 The figure below shows interaction of Corezoid processes and **Gmail API.**  
   
-  ![img](en/plugins/google/gmail/img/../../../../../img/basic-scheme.png) 
+  ![img](./img/basic-scheme.png) 
   
   Before you start, make sure you have a valid @gmail mailbox or Google account. If you don’t have an @gmail mailbox or Google account, you can create one at [http://gmail.com](http://gmail.com).  
   
@@ -29,12 +29,12 @@ Like other Google APIs, to call the **Gmail API** you need to log in using ACCES
 ### How to view a list of unread emails  
 1. Before you start building a process of receiving unread messages, create a **Gmail** folder for your convenience.
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-gmail-folder.png)  
+    ![img](./img/create-gmail-folder.png)  
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/enter-gmail-folder.png)   
+    ![img](./img/enter-gmail-folder.png)   
   
 2. Enter the **Gmail** folder you have created and create **Reading** process. It will call the **Gmail API** to get a list of unread emails.
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-reading-process.png)    
+    ![img](./img/create-reading-process.png)    
 
 3. Add an **API Call** node in the **Reading** process and name it **Get UNREAD message IDs**
 
@@ -56,11 +56,11 @@ Like other Google APIs, to call the **Gmail API** you need to log in using ACCES
      ```
      It is the **{{token}}** variable where you will transfer **ACCESS_TOKEN** from the **Token Storage** state diagram from the [Google OAuth 2.0](../ouath/README.md). 
      
-     ![img](en/plugins/google/gmail/img/../../../../../img/google-api-auth.png)
+     ![img](./img/google-api-auth.png)
  
     3.4. To process **Gmail API** response about the absence of unread messages, add a **Condition** node named **Is UNREAD?** which will transfer a request to the final node if there are no unread messages in the mailbox. To do this, add a ```resultSizeEstimate == 0``` condition. 
      
-    ![img](en/plugins/google/gmail/img/../../../../../img/check-result-size.png)  
+    ![img](./img/check-result-size.png)  
   
     3.5. To get IDs of unread messages, go to the VIEW mode and create a request with two parameters: **email** and **token.**   
   
@@ -76,7 +76,7 @@ Like other Google APIs, to call the **Gmail API** you need to log in using ACCES
         { "id": "16c24fa189a65201", "threadId": "16c24fa189a65201" }
     ]  
      ```
-    ![img](en/plugins/google/gmail/img/../../../../../img/show-unread-messages.png)
+    ![img](./img/show-unread-messages.png)
   
 The process to get unread message IDs is ready!  
   
@@ -84,7 +84,7 @@ The process to get unread message IDs is ready!
   
 1. Сreate **Message Info** process to get information by ID of an unread message via **Gmail API**.
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-message-info-process.png)
+    ![img](./img/create-message-info-process.png)
 
     1.1. To do this, in the **Message Info** process create an **API Call** node named **Getting Info** in which you will call **Gmail API** as well as transfer an email address for reading in the **{{email}}** variable and send an unread message ID in the **{{message_id}}** variable.  
   
@@ -107,7 +107,7 @@ The process to get unread message IDs is ready!
     }  
     ```
  
-    ![img](en/plugins/google/gmail/img/../../../../../img/google-auth-to-get-message-info.png)  
+    ![img](./img/google-auth-to-get-message-info.png)  
   
 2. After you set up **Gmail API**, you may send a request for getting message details.   
   
@@ -119,7 +119,7 @@ The process to get unread message IDs is ready!
     - **token –** token for Gmail API call.  
     - **email –** enter the email which you have used to get unread message IDs.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-new-task.png) 
+    ![img](./img/create-new-task.png) 
   
     If **Gmail API** returns a successful response, the request with message details will appear in the **Final** node.   
   
@@ -127,7 +127,7 @@ The process to get unread message IDs is ready!
   
     2.4. Click the **Final** node. In the appeared window, you can see the structure of the message parameters.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-info-by-message-id.png)  
+    ![img](./img/get-info-by-message-id.png)  
   
 ### How to change a message status to “Read”   
 1. To check the message as read after information about it is received, add **API Call** node next to the **Getting Info** node in the **Message Info** process.  
@@ -157,7 +157,7 @@ The process to get unread message IDs is ready!
         "Authorization": "Bearer {{token}}"  
     }  
     ```
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-message-info.png)  
+    ![img](./img/get-message-info.png)  
   
     When a request with message ID is received in the **Message Info** process, you will receive the message details and change its status to “Read.”.     
     
@@ -185,7 +185,7 @@ The process to get unread message IDs is ready!
     }  
     ```
 
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-message-info.png)  
+    ![img](./img/get-message-info.png)  
   
 2. As you have already seen in [How to view a list of unread emails](#how-to-view-a-list-of-unread-emails) section, a request with a list of messages is received from Gmail API as an array.   
 
@@ -205,7 +205,7 @@ The process to get unread message IDs is ready!
    
     When you finish iteration of all messages, the request will be automatically passed to the **Final** node.
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/setup-code-node.png)
+    ![img](./img/setup-code-node.png)
     
     2.1. In order to ensure that the request be passed to the **Final** node after the iteration of messages is finished, add a **Condition** node named **Messages** ended? with a condition of ```{{index}} == {{length_list}}```
      
@@ -218,7 +218,7 @@ The process to get unread message IDs is ready!
   
     2.2. Attach the **Condition** node to the **Code** node as shown in the figure below.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/cycle.png)  
+    ![img](./img/cycle.png)  
   
 Now you have a ready-to-use process with the following functions:  
 - Getting a list of unread message IDs   
@@ -229,7 +229,7 @@ Now you have a ready-to-use process with the following functions:
   
 1. If you have new unanswered messages in your email-address, they will be passed to Corezoid process only if you manually create a request in the **Reading** process. This requires specifying an email for reading and **ACCESS_TOKEN** each time you do it. In order to ensure automatic loading of unread messages, create a process named **Init**.  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-init-process.png)  
+    ![img](./img/create-init-process.png)  
   
 2. In the **Init** process, create a **Set Parameter** node named **Set email & token** and add two parameters, ***email*** and ***token***, in this node.   
     
@@ -249,7 +249,7 @@ Now you have a ready-to-use process with the following functions:
     - ***REFERENCE*** – reference of the request containing active **ACCESS_TOKEN**  
     - ***access_token*** – request parameter where active **ACCESS_TOKEN** is stored  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/get-credentials.png)  
+    ![img](./img/get-credentials.png)  
   
 3. For **Gmail API** call, all characters except the Latin alphabet, decimal digits and - _ . ! ~ * ' ( ). from an email-address must be converted to UTF-8 Unicode for more compact data transfer. This helps a server with **Gmail API** to avoid receiving incorrect requests from users.  
   
@@ -262,7 +262,7 @@ Now you have a ready-to-use process with the following functions:
  
     Thus a new parameter named ***encoded_email*** is created in which the character “@” will be replaced with “%40”. This will allow seamless forwarding of requests to **Gmail API.**  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/encode-email.png)  
+    ![img](./img/encode-email.png)  
   
     After **ACCESS_TOKEN** is obtained and email is converted in the request, these data should be forwarded to the **Gmail API** call process.  
   
@@ -281,7 +281,7 @@ Now you have a ready-to-use process with the following functions:
     }  
     ```
        
-    ![img](en/plugins/google/gmail/img/../../../../../img/call-reading-process.png)  
+    ![img](./img/call-reading-process.png)  
  
 5. Set a planned call frequency for the **Reading** process to receive unread messages. 
 
@@ -289,11 +289,11 @@ Now you have a ready-to-use process with the following functions:
     
     In the figure below, you can see the interaction of logics for cyclic motion of the request within the process.    
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/read-wait-logic.png)
+    ![img](./img/read-wait-logic.png)
   
     5.2. In the **Wait** node, click ***Additionally*** and set up a checkmark next to the ***Limit the time of the task in the node***. In the appeared input field, assign a value for the timer, for example, 10 minutes.
       
-    ![img](en/plugins/google/gmail/img/../../../../../img/add-delay-node.png)
+    ![img](./img/add-delay-node.png)
   
     5.2. To ensure cyclic motion of the request within the process each 10 minutes, enable forwarding the copy of the request to the same **Init** in the **Copy task** node. The recursive approach will permit to look through the total number of requests for mail reading for a selected period of time in the final node.  
   
@@ -309,7 +309,7 @@ Now you have a ready-to-use process with the following functions:
     }  
     ```
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/init-recursion.png)  
+    ![img](./img/init-recursion.png)  
       
     The **Init** process to send a signal for mail reading is ready.   
   

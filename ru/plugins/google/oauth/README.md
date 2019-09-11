@@ -124,16 +124,12 @@
     ![](../../../../en/plugins/google/oauth/img/get-google-credentials.gif)
 
 3. В URL подставьте параметры и вызовите его в браузере:
-
     ```
     https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&access_type=offline&scope={{scope}}&client_id={{client_id}}
     ```
     где:
-
     - `{{client_id}}` - это id клиента, полученный на шаге 2
-    - `{{scope}}` - API Google к которому Вы хотите получить доступ. Например для Gmail это “https://mail.google.com/”. 
-
-    Список доступных Google API: [https://developers.google.com/identity/protocols/googlescopes](https://developers.google.com/identity/protocols/googlescopes)
+    - `{{scope}}` - API Google к которому Вы хотите получить доступ. Например для Gmail это “https://mail.google.com/”. Список доступных Google API: [https://developers.google.com/identity/protocols/googlescopes](https://developers.google.com/identity/protocols/googlescopes)
    
 4. В появившемся окне выберите, к какому аккаунту Вы хотите получить доступ. 
 
@@ -242,7 +238,6 @@
     
     ![](../../../../en/plugins/google/oauth/img/waiting-for-refreshed-token.png)
       
-
 2. Cогласно протокола Google OAuth, cрок действия токена составляет 1 час, поэтому необходимо настроить цикл обновления токена в заданное время. 
 
     Для этого в узле **Active token** нажмите на **Limit the time of the task in the node** и установите таймер 1 hour.
