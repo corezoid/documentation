@@ -119,7 +119,7 @@ After you have created a Corezoid process with an **API Call** node, you can set
 ## Google API call setup
 
 1. Go to a **Credentials** section in [console.developers.google.com](console.developers.google.com).
-
+List of available Google APIs
     ![](./img/get-google-credentials.png)
 
 2. Create **Client ID** and **Client Secret**.

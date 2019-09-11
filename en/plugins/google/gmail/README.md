@@ -236,7 +236,7 @@ Now you have a ready-to-use process with the following functions:
     2.1. In the ***email*** parameter, transfer the address of a mailbox for reading.  
 
     2.2. In the ***token*** parameter, enter a path to the process request parameter where **ACCESS_TOKEN** is stored.  
-  
+    
     Example:  
     ```
     {  
@@ -247,11 +247,10 @@ Now you have a ready-to-use process with the following functions:
     where: 
     - ***DIAGRAM_ID*** – ID of the **Token Storage** state diagram.   
     - ***REFERENCE*** – reference of the request containing active **ACCESS_TOKEN**  
-    - ***access_token*** – request parameter where active **ACCESS_TOKEN** is stored  
-  
+    - ***access_token*** – request parameter where active **ACCESS_TOKEN** is stored.
     ![img](./img/get-credentials.png)  
-  
-3. For **Gmail API** call, all characters except the Latin alphabet, decimal digits and - _ . ! ~ * ' ( ). from an email-address must be converted to UTF-8 Unicode for more compact data transfer. This helps a server with **Gmail API** to avoid receiving incorrect requests from users.  
+    
+3. For **Gmail API** call, all characters except the Latin alphabet, decimal digits and `- _ . ! ~ * ' ( ).` from an email-address must be converted to UTF-8 Unicode for more compact data transfer. This helps a server with **Gmail API** to avoid receiving incorrect requests from users.  
   
     To do this, you may use an **encodeURIComponent** method from JavaScript for encoding of characters in UTF-8.
 
