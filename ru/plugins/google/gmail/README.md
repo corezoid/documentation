@@ -31,9 +31,9 @@
   
 1. Перед тем, как мы начнем строить процесс получения списка непрочитанных писем, для удобства работы создайте папку с именем **Gmail**  
   
-    ![img](en/plugins/google/gmail/img/../../../../../img/create-gmail-folder.png)  
+    ![img](../../../../en/plugins/google/gmail/img/create-gmail-folder.png)  
     
-    ![img](en/plugins/google/gmail/img/../../../../../img/enter-gmail-folder.png)  
+    ![img](../../../../en/plugins/google/gmail/img/enter-gmail-folder.png)  
 
 2. Теперь зайдите в созданную папку **Gmail** и создайте процесс **Reading**. Он будет вызывать **Gmail API** для получения списка непрочитанных писем.  
   
