@@ -70,7 +70,7 @@
 
     ![img](../../../../en/plugins/google/sheets/img/google-sheets-name.png)
 
-2. В строке `var sheet = ss.getSheetByName("sheet_name");` вместо `sheet_name` вставьте имя скопированного листа.
+    1.10. В строке `var sheet = ss.getSheetByName("sheet_name");` вместо `sheet_name` вставьте имя скопированного листа.
 
 Вы должны получить скрипт вида:
 
@@ -142,7 +142,7 @@
         "id": "1",
         "name": "Taras",
         "phone": "380671234567"
-    }********
+    }
     ```
      
      ![img](../../../../en/plugins/google/sheets/img/api-call-settings.png)

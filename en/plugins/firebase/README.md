@@ -61,7 +61,7 @@ Before you start, let’s create a project in **Firebase**
     - client's first name
     - client’s last name. 
 
-    2.4. Start with entering the name for your database. 
+    2.6. Start with entering the name for your database. 
     
     When the name of the database is added, **API Firebase** URL query will change to `https://test-xxx.firebaseio.com/{{name_DB}}`
     
@@ -69,15 +69,15 @@ Before you start, let’s create a project in **Firebase**
  
    ![img](img/add-values-to-firebase.png)
 
-    2.5. We recommend you to add the name of the table (collection) of objects you will save, for example, **clients**, as the next element in the **URL**, as follows:
+    2.7. We recommend you to add the name of the table (collection) of objects you will save, for example, **clients**, as the next element in the **URL**, as follows:
     
     ```
     https://test-xxx.firebaseio.com/testdb/clients
     ```
 
-    2.6. To store information about a client, create an index with number **1**. Each client in the DB will have his own unique number of the table to store his first and last names.
+    2.8. To store information about a client, create an index with number **1**. Each client in the DB will have his own unique number of the table to store his first and last names.
  
-    2.7. Enter **first name** and **last name** parameters of the client to index **1**.
+    2.9. Enter **first name** and **last name** parameters of the client to index **1**.
     
     As a result, you will get a tree-like structure for storage of client’s first and last names, as shown in the figure below:
 
@@ -102,41 +102,32 @@ Before you start, let’s create a project in **Firebase**
      ![img](img/add-api-call-node.png)
 
     3.1. After you have added the node, click it and fill in the ***URL*** field
-
     ```
-    URL: {{url}}/testdb/clients.json?auth={{key}}
+    {{url}}/testdb/clients.json?auth={{key}}
     ```
- 
     Set up the following values in the **API Call** node settings:
- 
+
     ```   
     Request format: Default
     Request method: GET
     Content-Type: Application/Json
-    ```  
-    
+    ```
     where:
-
     - **url**: you obtained at step 2.3 of [How to obtain a key to the API Firebase](#how-to-obtain-a-key-to-the-api-firebase) section.
-
     - **testdb**: the name of the catalogue assigned by you at step 2.3 of [How to obtain a key to the API Firebase](#how-to-obtain-a-key-to-the-api-firebase) section.
-    
     - **clients**: the name of the table assigned by you at step 2.3 of [How to obtain a key to the API Firebase](#how-to-obtain-a-key-to-the-api-firebase) section.
-    
     - **key**: DB access key you obtained at step 2.2 of [How to obtain a key to the API Firebase](#how-to-obtain-a-key-to-the-api-firebase) section.
-    
     Example of URL: 
     ```
     https://test-xxxx.firebaseio.com/testdb/clients.json?auth={{key}}
     ```
-    
     ![img](img/setup-api-call-node.png)
 
 4. To ensure automatic insertion of the ***Firebase API Secret Key*** when **API Firebase** is called, add a **Set Parameter** node with the name **key** after the start node.
 
     4.1. In the **Parameters** section of the **Set Parameter** node, add the ***key*** parameter having the ***Firebase API Secret Key*** value obtained at step 2.2 of [How to obtain a key to the API Firebase](#how-to-obtain-a-key-to-the-api-firebase) section.
 
-     ![img](img/set-api-key.png)
+    ![img](img/set-api-key.png)
 
     To make sure the **API Call** node is set correctly, call **API Firebase** and you will get a response with information from the database.
     

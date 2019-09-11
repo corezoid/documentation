@@ -70,7 +70,7 @@ Let us set up a **Google Sheets** table for data receipt from Corezoid.
 
     ![img](img/google-sheets-name.png)
 
-2. In the `var sheet = ss.getSheetByName("sheet_name");` line, insert the name of the sheet you have copied instead of the `sheet_name`.
+    1.10. In the `var sheet = ss.getSheetByName("sheet_name");` line, insert the name of the sheet you have copied instead of the `sheet_name`.
 
 You should get a script as follows:
 
@@ -152,7 +152,6 @@ Congratulations! Your first **Google AppScripts** is ready for entering data int
 
 To make sure you have set up the **API Call** node coccectly, make a **Google AppScript** call which will be followed by the reply about data transfer to **Google Sheets**.
 
- 
 3. To do this, go to the **View** mode
     
     3.1. Click the **New task** button.
