@@ -150,7 +150,7 @@ Congratulations! Your first **Google AppScripts** is ready for entering data int
 
     The names of the parameters must be the same as those specified in the script and match the names of the columns in the Google table.
 
-To make sure you have set up the **API Call** node coccectly, make a **Google AppScript** call which will be followed by the reply about data transfer to **Google Sheets**.
+    To make sure you have set up the **API Call** node coccectly, make a **Google AppScript** call which will be followed by the reply about data transfer to **Google Sheets**.
 
 3. To do this, go to the **View** mode
     
