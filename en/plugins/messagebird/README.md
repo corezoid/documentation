@@ -72,7 +72,7 @@ Before we start, let us register at the **MessageBird** service to get **API** k
     - recipients are the recipients’ phone numbers
     - body is the text of SMS
     
-   ![img](img/api-call-settings.png)  
+    ![img](img/api-call-settings.png)  
    
     3.2. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***
     
@@ -152,6 +152,7 @@ Before we start, let us register at the **MessageBird** service to get **API** k
     Your process is ready for making **API** calls to send SMS and check the delivery status of your SMS. Let us now make this process unified so that it can be reused within other business processes. To do this, we need to use a **Reply to Process** node that will return a result of **MessageBird API call** to the calling process. 
  
 ### How to create the unified process
+
 1. In the unified process, add the **Reply to Process** logic before each final node to inform you about success or failure to perform the process.
 
     Let us start with error processing. Add the **Reply to Process** node between the **Condition** node for processing errors from an API call and the **final node** where all failed API calls are forwarded. An example is shown in the screenshot below:

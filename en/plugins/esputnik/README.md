@@ -26,7 +26,6 @@ Before we start, let us register at the **eSputnik** service.
     3.1. Go to your mailbox, find a message from **eSputnik** and click the link to activate your account.
 
     ![img](./img/activate-email.png)
-
     After you click the **ACTIVATE** button, you will be forwarded to the **eSputnik** web site to fill in the information about your activities.
 
     3.2. In the appeared form, fill in your personal information and click the **Activate** button.
@@ -190,6 +189,7 @@ Add the following parameter in the **Parameters** section:
         "Authorization": "Basic {{token}}"
     }
     ```
+    
 2. Add a **Condition** node named **What’s status?** for processing email delivery status replies
  
     2.1. Create a final node named **delivered**

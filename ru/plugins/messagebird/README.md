@@ -57,8 +57,7 @@
     Request method: POST
     Content-Type: Application/X-Www-Form-Urlencoded
     ```
-    
-   В разделе ***Parameters*** добавьте:
+    В разделе ***Parameters*** добавьте:
    
     ```  
     {
@@ -67,38 +66,38 @@
         "body": "{{text}}"
     }
     ```
-   где:
-   - originator - номер мобильного телефона отправителя (для теста можете указать Ваш номер)
-   - recipients - номера телефона получателя
-   - body - текст SMS
-   ![img](../../../en/plugins/messagebird/img/api-call-settings.png)  
+    где:
+    - originator - номер мобильного телефона отправителя (для теста можете указать Ваш номер)
+    - recipients - номера телефона получателя
+    - body - текст SMS
+    ![img](../../../en/plugins/messagebird/img/api-call-settings.png)  
    
     3.2. В разделе  ***Additionally*** поставьте чекбокс напротив ***Header parameters***
    
-    3.3. Для авторизации с помощью ключа из [п.1.4.](#1.4.) добавьте: 
+    3.3. Для авторизации с помощью ключа из шага 1.4 раздела [Получение ключа](#получение-ключа-к-api) добавьте: 
     ``` 
     {
         "Authorization": "AccessKey {{key}}"
     }
     ```
-     ![img](../../../en/plugins/messagebird/img/messagebird-api-auth.png)
+    ![img](../../../en/plugins/messagebird/img/messagebird-api-auth.png)
 
     3.4. Для того, чтобы параметры автоматически подставлялись при ручном создании заявки для отправки SMS, нажмите на иконку **Task parameters**
      
-     ![img](../../../en/plugins/messagebird/img/task-parameters-menu.png)
+    ![img](../../../en/plugins/messagebird/img/task-parameters-menu.png)
 
     3.5. В появившемся окне добавьте 3 параметра: ***“key”, “recipients”, “text”***.
     
-     ![img](../../../en/plugins/messagebird/img/add-task-parameters.png) 
+    ![img](../../../en/plugins/messagebird/img/add-task-parameters.png) 
 
-    Настроенный Вами **API Call** из п.3 готов для отправки SMS.
+    Настроенный Вами **API Call** из п. 3 раздела [Получение ключа](#получение-ключа-к-api) готов для отправки SMS.
     
 4. Для отправки SMS в процессе **Send & check SMS** перейдите в режим View 
 
     4.1. Нажмите кнопку **New task** 
     
     4.2. В окне **Task** заполните указанные ниже поля и нажмите **Add task**:
-    - **key** - ключ, который Вы получили на [шаге 1.4](1.4)
+    - **key** - ключ, который Вы получили на шаге 1.4 раздела [Получение ключа](#получение-ключа-к-api)
     - **recipients** - ваш номер мобильного телефона
     - **text** - текст SMS
 
@@ -142,9 +141,9 @@
     
     3.3. В окне **Task** заполните указанные ниже поля и нажмите **Add task**:
     
-    - **key** - ключ, который Вы получили на [шаге 1.4.](#1.4.)
-    - **recipients** - ваш номер мобильного телефона
-    - **text** - текст SMS
+    - `key` - ключ, который Вы получили на шаге 1.4 раздела [Получение ключа](#получение-ключа-к-api)
+    - `recipients` - ваш номер мобильного телефона
+    - `text` - текст SMS
     
     3.4. Нажмите на узел **Final**, в котором Вы увидите содержимое заявки с ответом о статусе доставки в параметре ***status***.
 

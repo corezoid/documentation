@@ -24,11 +24,10 @@
     3.1. Перейдите в Ваш почтовый ящик, найдите письмо от **eSputnik** и перейдите по ссылке для активации аккаунта.
     
     ![img](../../../en/plugins/esputnik/img/activate-email.png)
-
     После нажатия кнопки **ACTIVATE** Вы будете переведены на сайт **eSputnik** для заполнения информации о вашей деятельности.
     
     3.2. В появившейся форме заполните персональную информацию и нажмите кнопку **Activate**
-
+    
     ![img](../../../en/plugins/esputnik/img/personal-information.png)
     ![img](../../../en/plugins/esputnik/img/activate-form.png)
 
@@ -193,6 +192,7 @@
         "Authorization": "Basic {{token}}"
     }
     ```
+    
 2. Для обработки ответов о статусе доставки email-сообщения добавьте узел **Condition** c названием **What’s status?**
  
     2.1. Создайте финальный узел и назовите его **delivered**
