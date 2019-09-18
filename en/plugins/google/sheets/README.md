@@ -32,7 +32,7 @@ Let us set up a **Google Sheets** table for data receipt from Corezoid.
     1.4. In the appeared script editor window, insert the following code:
     
     ```  
-    function doPost(request) {
+    function doGet(request) {
     
        var row = [];
        row.push(request.parameter.column1); // Value for the 1st column
@@ -53,7 +53,7 @@ Let us set up a **Google Sheets** table for data receipt from Corezoid.
     ``` 
     
     1.5. To be able to fill in the created columns of your table, change the names of parameters `column1`, `column2`, `column3`, etc. to the names of your parameters: `id`, `name`, `phone` to get a script as illustrated below.
-
+    
     ![img](img/google-appscript-example.png)
 
     1.6. Assign a name to the script, for example, **Сustomer base**
