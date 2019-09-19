@@ -116,13 +116,14 @@ Before we start, let us register at the **eSputnik** service.
     
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***.
     
+    ![img](./img/auth-params.png)
+    
     3.8. For authorization using the token, add the following: 
     ```
     {
         "Authorization": "Basic {{token}}"
     }
     ``` 
-    ![img](./img/auth-params.png)
 
 4. In order to ensure that the parameters are filled in automatically each time when you send a request manually, click the **Task parameters** icon and add 5 parameters: `plainText`, `emails`, `from`, `subject`, `htmlText`.
 
