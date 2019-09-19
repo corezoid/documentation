@@ -66,7 +66,9 @@
     ![img](../../../en/plugins/esputnik/img/create-send-email-process.png)
 
 3. Ключом для вызова **API eSputnik** является логин и пароль входа в аккаунт. Чтобы при каждом вызове **API** не вводить логин и пароль, добавьте узел **Set Parameter** и назовите его **eSputnik Credentials**.
+    
     ![img](../../../en/plugins/esputnik/img/add-set-parameter-node.png)
+    
     3.1. После того, как Вы добавили узел, кликните на него и добавьте параметры в разделе **Parameters**:
     - `login` - логин входа на [esputnik.com](https://esputnik.com)
     - `password` - пароль входа на [esputnik.com](https://esputnik.com)
