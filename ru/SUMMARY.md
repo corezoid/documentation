@@ -138,7 +138,6 @@
        * [Автоматический прозвон входящих лидов](plugins/internet-shop/auto_call_lead.md)
    * [Работа с очередью заявок в обработке заказов такси](plugins/example_queue_get_task/README.md)
 * [Bot Platform](bot-platform/README.md)
-    * [v1.0](bot-platform/v1/README.md)
     * [v2.0](bot-platform/v2/README.md)
        * [Как создать бота с помощью Bot Platform](bot-platform/v2/get-started.md)
        * [Базовый функционал Bot Platform](bot-platform/v2/basic-functionality.md)

@@ -1,16 +1,19 @@
 # Примеры процессов
 
-Мы собрали все доступные примеры использования Corezoid.
+Мы собрали самые популярные примеры использования Corezoid.
 
-С помощью примеров Вы сможете реализовать интеграцию между сервисами
+Эти примеры помогут Вам освоить Corezoid и научиться интегрироваться с различными внешними сервисами через API.
 
 
-*   <img src="img/visa/logo.png" height="30"> [Финансовые API VISA](visa/README.md)
+[Интеграция с сервисами Google](google/README.md)
 
-*   <img src="img/google/google_logo.png" height="35"> [Примеры интеграции с сервисами Google](google/README.md)
+[Как пользоваться Firebase - облачная база данных с API](firebase/README.md)
 
-*   <img src="img/Brightpearl/shopify.png" height="40"> [Shopify & Brightpearl - Пример онлайн расчета срока доставки товара](brightpearl_&_shopify/README.md)
+[Как отправить SMS с помощью MessageBird API](messagebird/README.md)
 
-*   <img src="img/twilio_logo.png" height="40"> [Отправка SMS](twilio/README.md)
+[Как отправить email с помощью eSputnik API](esputnik/README.md)
 
-*   <img src="img/firebase/firebase_logo.png" height="30"> [База данных с готовым API](firebase/README.md)
+[Как работать с очередями заявок в Corezoid](queue/README.md)
+
+[Финансовые API от VISA](visa/README.md)
+
