@@ -83,6 +83,7 @@
     ```
     ![img](../../../en/plugins/esputnik/img/set-token.png)
     3.3.  После узла **Get token** добавьте узел **API Call**, который будет вызывать **API eSputnik** для отправки email-сообщения.
+    
     3.4. После того, как вы добавили узел **API Call**, кликните на него и заполните поле ***URL***:
     ```
     https://esputnik.com/api/v1/message/email
