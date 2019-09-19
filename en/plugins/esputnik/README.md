@@ -26,6 +26,7 @@ Before we start, let us register at the **eSputnik** service.
     3.1. Go to your mailbox, find a message from **eSputnik** and click the link to activate your account.
 
     ![img](./img/activate-email.png)
+    
     After you click the **ACTIVATE** button, you will be forwarded to the **eSputnik** web site to fill in the information about your activities.
 
     3.2. In the appeared form, fill in your personal information and click the **Activate** button.
@@ -72,11 +73,9 @@ Before we start, let us register at the **eSputnik** service.
      ![img](./img/add-set-parameter-node.png)
 
     3.1. After you have added the node, click it and add the following parameters in the **Parameters** section:
-     
     - `login`: login to sign in at [esputnik.com](https://esputnik.com)
     - `password`: password to sign in at [esputnik.com](https://esputnik.com)
-
-     ![img](./img/set-credentials.png)
+    ![img](./img/set-credentials.png)
 
     3.2. To call the **eSputnik API**, we will use [token](https://esputnik.com/api/example_v1_auth_token_POST.html). It is generated using **login** and **password** encoded in [Base64](https://ru.wikipedia.org/wiki/Base64). 
     To do this, add a **Set Parameter** node named **Get token** next to the **eSputnik Credentials** node.
@@ -103,6 +102,7 @@ Add the following parameter in the **Parameters** section:
     Request method: GET
     Content-Type: Application/Json
     ``` 
+    
     3.6. Add the following parameters in the **Parameters** section:
     ```    
     {
@@ -114,13 +114,11 @@ Add the following parameter in the **Parameters** section:
     }
     ```
     where:
-    
     - `plaintext` is ordinary readable text
     - `emails` is email address of a recipient
     - `from` is email-address of a sender (must match with one of the sender’s existing addresses in the system)
     - `subject` is subject of a message
     - `htmlText` is HTML-code of a message
- 
     ![img](./img/send-email-params.png)
  
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***
@@ -201,13 +199,12 @@ Add the following parameter in the **Parameters** section:
     2.4. In the **Condition** node, add a ```{{results.failed}}  == true``` check and attach an error node named **failed** to the check. If the delivery is not successful, the **API** will reply with a ***true*** value in the **failed** parameter.
  
     2.5. If there is no reply from the **API**, add the following condition in the **Condition** node:
-     ```
+    ```
     {{results.delivered}} != true
     {{results.failed}} != true 
     ``` 
-    with forwarding your request to the **Delay** node
- 
-     ![img](./img/add-condition-node.png)
+    with forwarding this task to the **Delay** node
+    ![img](./img/add-condition-node.png)
  
 3. To test the process, go to the **View** mode and click the **New task** button.
 

@@ -67,14 +67,13 @@
 
 3. Ключом для вызова **API eSputnik** является логин и пароль входа в аккаунт. Чтобы при каждом вызове **API** не вводить логин и пароль, добавьте узел **Set Parameter** и назовите его **eSputnik Credentials**.
  
-     ![img](../../../en/plugins/esputnik/img/add-set-parameter-node.png)
+    ![img](../../../en/plugins/esputnik/img/add-set-parameter-node.png)
 
     3.1. После того, как Вы добавили узел, кликните на него и добавьте параметры в разделе **Parameters**:
     
     - `login` - логин входа на [esputnik.com](https://esputnik.com)
     - `password` - пароль входа на [esputnik.com](https://esputnik.com)
-
-     ![img](../../../en/plugins/esputnik/img/set-credentials.png)
+    ![img](../../../en/plugins/esputnik/img/set-credentials.png)
 
     3.2. Для вызова **API eSputnik** мы будем использовать [token](https://esputnik.com/api/example_v1_auth_token_POST.html). Он формируется при помощи `login` и `password` закодированного в [Base64](https://ru.wikipedia.org/wiki/Base64).
     
@@ -86,7 +85,6 @@
         "token": "$.base64_encode({{login}}:{{password}})"
     }
     ```
-    
     ![img](../../../en/plugins/esputnik/img/set-token.png)
 
     3.3.  После узла **Get token** добавьте узел **API Call**, который будет вызывать **API eSputnik** для отправки email-сообщения.
@@ -97,15 +95,12 @@
     ```
     https://esputnik.com/api/v1/message/email
     ```
-    
     3.5. Установите следующие значения в настройках узла **API Call**:
-    
     ```    
     Request format: Default
     Request method: GET
     Content-Type: Application/Json
     ```
-    
     3.6. В разделе **Parameters** добавьте параметры:
     ```    
     {
@@ -117,13 +112,11 @@
     }
     ```
     где:
-    
     - `plainText` - текст сообщения в виде простого текста
     - `emails` - email-адрес получателя
     - `from` - email-aдрес отправителя (должен совпадать с одним из существующих адресов отправителя в системе)
     - `subject` - тема письма
     - `htmlText` - HTML-код сообщения
-
     ![img](../../../en/plugins/esputnik/img/send-email-params.png)
 
     3.7. В разделе  ***Additionally*** поставьте чекбокс напротив ***Header parameters***
@@ -134,7 +127,6 @@
         "Authorization": "Basic {{token}}"
     }
     ```
-    
     ![img](../../../en/plugins/esputnik/img/auth-params.png)
 
 4. Для того, чтобы параметры автоматически подставлялись при ручной отправке заявки, нажмите на иконку **Task parameters** и добавьте 5 параметров: `plainText`, `emails`, `from`, `subject`, `htmlText`.
@@ -208,8 +200,7 @@
     {{results.delivered}} != true
     {{results.failed}} != true
     ```
-    с переводом заявки к узлу **Delay**
-
+    с переходом заявки в узел **Delay**
     ![img](../../../en/plugins/esputnik/img/add-condition-node.png)
 
 3. Для тестирования процесса перейдите в режим **View** и нажмите кнопку **New task**
