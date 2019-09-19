@@ -76,6 +76,7 @@ Before we start, let us register at the **eSputnik** service.
     - `login` - login to sign in at [esputnik.com](https://esputnik.com)
     - `password` - password to sign in at [esputnik.com](https://esputnik.com)
     ![img](./img/set-credentials.png)
+    
     3.2. To call the **eSputnik API**, we will use [token](https://esputnik.com/api/example_v1_auth_token_POST.html). It is generated using **login** and **password** encoded in [Base64](https://ru.wikipedia.org/wiki/Base64). To do this, add a **Set Parameter** node named **Get token** next to the **eSputnik Credentials** node. Add the following parameter in the **Parameters** section: 
     ```
     {
