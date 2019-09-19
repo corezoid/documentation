@@ -114,9 +114,7 @@ Before we start, let us register at the **eSputnik** service.
     3. `from` is email-address of a sender (must match with one of the sender’s existing addresses in the system)
     4. `subject` is subject of a message
     5. `htmlText` is HTML-code of a message
-    
     ![img](./img/send-email-params.png)
-    
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***.
     3.8. For authorization using the token, add the following: 
     ```
