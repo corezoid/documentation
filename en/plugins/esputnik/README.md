@@ -74,7 +74,7 @@ Before we start, let us register at the **eSputnik** service.
     - `login`: login to sign in at [esputnik.com](https://esputnik.com)
     - `password`: password to sign in at [esputnik.com](https://esputnik.com)
     ![img](./img/set-credentials.png)
-    3.2. To call the **eSputnik API**, we will use [token](https://esputnik.com/api/example_v1_auth_token_POST.html). It is generated using **login** and **password** encoded in [Base64](https://ru.wikipedia.org/wiki/Base64). </br>To do this, add a **Set Parameter** node named **Get token** next to the **eSputnik Credentials** node. Add the following parameter in the **Parameters** section: 
+    3.2. To call the **eSputnik API**, we will use [token](https://esputnik.com/api/example_v1_auth_token_POST.html). It is generated using **login** and **password** encoded in [Base64](https://ru.wikipedia.org/wiki/Base64). To do this, add a **Set Parameter** node named **Get token** next to the **eSputnik Credentials** node. Add the following parameter in the **Parameters** section: 
     ```
     {
         "token": "$.base64_encode({{login}}:{{password}})"
@@ -110,9 +110,7 @@ Before we start, let us register at the **eSputnik** service.
     - `subject` is subject of a message
     - `htmlText` is HTML-code of a message
     ![img](./img/send-email-params.png)
-    
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***.
-    
     3.8. For authorization using the token, add the following: 
     ```
     {
