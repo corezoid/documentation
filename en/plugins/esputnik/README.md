@@ -94,7 +94,7 @@ Before we start, let us register at the **eSputnik** service.
     Request format: Default
     Request method: GET
     Content-Type: Application/Json
-    ``` 
+    ```
     3.6. Add the following parameters in the **Parameters** section:
     ```    
     {
