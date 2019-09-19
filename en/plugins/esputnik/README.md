@@ -69,7 +69,6 @@ Before we start, let us register at the **eSputnik** service.
     ![img](./img/create-send-email-process.png)
 
 3. Login and sign-on password to your account are used as a key to make an **eSputnik API** call. To avoid entering login and password with each **API** call, add a **Set Parameter** node and name it **eSputnik Credentials**.
-
     ![img](./img/add-set-parameter-node.png)
     
     3.1. After you have added the node, click it and add the following parameters in the **Parameters** section:
@@ -77,9 +76,7 @@ Before we start, let us register at the **eSputnik** service.
     - `password`: password to sign in at [esputnik.com](https://esputnik.com)
     ![img](./img/set-credentials.png)
 
-    3.2. To call the **eSputnik API**, we will use [token](https://esputnik.com/api/example_v1_auth_token_POST.html). It is generated using **login** and **password** encoded in [Base64](https://ru.wikipedia.org/wiki/Base64). 
-    To do this, add a **Set Parameter** node named **Get token** next to the **eSputnik Credentials** node.
-Add the following parameter in the **Parameters** section: 
+    3.2. To call the **eSputnik API**, we will use [token](https://esputnik.com/api/example_v1_auth_token_POST.html). It is generated using **login** and **password** encoded in [Base64](https://ru.wikipedia.org/wiki/Base64). To do this, add a **Set Parameter** node named **Get token** next to the **eSputnik Credentials** node. Add the following parameter in the **Parameters** section: 
     ```
     {
         "token": "$.base64_encode({{login}}:{{password}})"
@@ -88,17 +85,20 @@ Add the following parameter in the **Parameters** section:
     ![img](./img/set-token.png)
 
     3.3. After the **Get token** node, add an **API Call** node, which will call **eSputnik API** for sending an email message.
+    
     3.4. After you have added the **API Call** node, click it and fill in a URL field.
     ***URL***: 
     ```
     https://esputnik.com/api/v1/message/email
     ```
+    
     3.5. Set the following values in the **API Call** node settings:
     ```    
     Request format: Default
     Request method: GET
     Content-Type: Application/Json
     ``` 
+    
     3.6. Add the following parameters in the **Parameters** section:
     ```    
     {
@@ -116,6 +116,7 @@ Add the following parameter in the **Parameters** section:
     - `subject` is subject of a message
     - `htmlText` is HTML-code of a message
     ![img](./img/send-email-params.png)
+    
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***.
     
     3.8. For authorization using the token, add the following: 
