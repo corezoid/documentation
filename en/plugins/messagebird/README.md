@@ -49,11 +49,9 @@ Before we start, let us register at the **MessageBird** service to get **API** k
     ![img](img/create-api-call-node.png)
 
    3.1. After you have added the **API Call** node, click it and fill in the ***API*** URL field: 
-
     ```
     https://rest.messagebird.com/messages
     ```
-
     ```
     Request format: Default
     Request method: POST
@@ -71,7 +69,6 @@ Before we start, let us register at the **MessageBird** service to get **API** k
     -  originator is the sender’s   mobile phone number (you may enter your number for the test)
     - recipients are the recipients’ phone numbers
     - body is the text of SMS
-    
     ![img](img/api-call-settings.png)  
    
     3.2. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***
@@ -85,13 +82,10 @@ Before we start, let us register at the **MessageBird** service to get **API** k
     ![img](img/messagebird-api-auth.png)
 
     3.4. In order to ensure that the parameters are filled in automatically each time when you manually create a request for SMS sending, click the **Task parameters** icon.
-     
     ![img](img/task-parameters-menu.png)
 
     3.5. In the appeared window, add 3 parameters: `key`, `recipients`, `text`.
-    
     ![img](img/add-task-parameters.png) 
-
     You have set up an **API Call** process (step 3 of this section) and it is now ready for sending SMS.
     
 4. To send SMS, go to the **View** mode in the **Send & check SMS** process 
@@ -122,11 +116,9 @@ Before we start, let us register at the **MessageBird** service to get **API** k
     Request method: GET
     Content-Type: Application/Json
     ```
- 
     ![img](img/check-status-auth-headers.png)
      
     2.3. In the ***Additionally*** section, set a checkbox opposite ***Header parameters*** and add the following:
-    
     ```    
     {
         "Authorization": "AccessKey {{key}}"

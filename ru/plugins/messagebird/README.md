@@ -22,15 +22,15 @@
 
     1.2. Для использования **API** отправки SMS выберите **SMS APIs**
     
-     ![img](../../../en/plugins/messagebird/img/select-sms-api.png)
+    ![img](../../../en/plugins/messagebird/img/select-sms-api.png)
 
     1.3. Для завершения регистрации авторизуйтесь на сайте с помощью Вашего номера мобильного телефона
     
-     ![img](../../../en/plugins/messagebird/img/get-live-api-key.png)
+    ![img](../../../en/plugins/messagebird/img/get-live-api-key.png)
 
     1.4. После успешной авторизации по номеру мобильного телефона перед Вами появится окно с запросом для отправки SMS. Если Вы выберите чекбокс ***Show Live API Key***, то увидите ключ для вызова **MessageBird API**. 
     
-     ![img](../../../en/plugins/messagebird/img/copy-live-api-key.png)
+    ![img](../../../en/plugins/messagebird/img/copy-live-api-key.png)
 
     Далее Вы настроите процесс в Corezoid для отправки и получения статуса отправки SMS посредством **MessageBird API**
     
@@ -50,7 +50,9 @@
 
     3.1 После того, как вы добавили узел **API Call**, кликните на него и заполните поле ***URL API***: 
 
-    [https://rest.messagebird.com/messages](https://rest.messagebird.com/messages)
+    ```
+    https://rest.messagebird.com/messages
+    ```
     
     ```
     Request format: Default
@@ -83,13 +85,10 @@
     ![img](../../../en/plugins/messagebird/img/messagebird-api-auth.png)
 
     3.4. Для того, чтобы параметры автоматически подставлялись при ручном создании заявки для отправки SMS, нажмите на иконку **Task parameters**
-     
     ![img](../../../en/plugins/messagebird/img/task-parameters-menu.png)
 
-    3.5. В появившемся окне добавьте 3 параметра: ***“key”, “recipients”, “text”***.
-    
+    3.5. В появившемся окне добавьте 3 параметра: `key`, `recipients`, `text`.
     ![img](../../../en/plugins/messagebird/img/add-task-parameters.png) 
-
     Настроенный Вами **API Call** из п. 3 раздела [Получение ключа](#получение-ключа-к-api) готов для отправки SMS.
     
 4. Для отправки SMS в процессе **Send & check SMS** перейдите в режим View 
@@ -100,7 +99,7 @@
     - **key** - ключ, который Вы получили на шаге 1.4 раздела [Получение ключа](#получение-ключа-к-api)
     - **recipients** - ваш номер мобильного телефона
     - **text** - текст SMS
-
+    
     В случае успешного вызова **API** Ваша заявка будет находиться в узле **Final**. Нажав на него Вы увидите содержимое заявки, одним из параметров которой является ***href***. В этом параметре указан ***URL*** сервиса, по которому можно проверить статус доставки SMS.
  
 ### Проверка статуса доставки SMS
@@ -222,6 +221,7 @@
             
         },
         "validity": null
+    }
     ```
      
    Из ответа видно, что **ID** сообщения передается в параметре **id**.
@@ -240,7 +240,7 @@
 
      ![img](../../../en/plugins/messagebird/img/final-process-view.png)
 
-    3.2. Для тестирования работы всего процесса повторите [шаг 4](4.) В случае успешного вызова API Ваша заявка будет находиться в узле Final. 
+    3.2. Для тестирования работы всего процесса повторите шаг 4 из раздела [Отправка SMS](#отправка-sms). В случае успешного вызова API Ваша заявка будет находиться в узле Final. 
     
     3.3. Нажмите на узел **Final**, чтобы увидите содержимое заявки c информацией по отправке статусе доставки SMS
  

@@ -124,7 +124,6 @@ Add the following parameter in the **Parameters** section:
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***
     
     3.8. For authorization using the token, add the following: 
-
     ```
     {
         "Authorization": "Basic {{token}}"

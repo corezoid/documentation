@@ -52,7 +52,7 @@ Within this tutorial, we are going to build 2 processes:
 
     1.8. Create more test requests to get a clear view of how the queue is collected (for example, 15 items).
 
-   ![img](./img/many-tasks.png)
+    ![img](./img/many-tasks.png)
 
 Thus, you have got a ready-to-use process for collecting requests you want to see in the queue (the **Queue** node).
  
@@ -62,7 +62,7 @@ Thus, you have got a ready-to-use process for collecting requests you want to se
 
     1.1. In the created process, add a **Get from Queue** node which will get requests from the queue.
 
-     ![img](./img/get-from-queue-node.png)
+    ![img](./img/get-from-queue-node.png)
 
     1.2. After the node is added, click it and in the ***Process*** field of the **Basic settings** section, select a process where your queue is stored. In our case, this process is called **Tasks Queue**. 
  
@@ -88,7 +88,7 @@ Thus, you have got a ready-to-use process for collecting requests you want to se
  
     3.3. In the ***Process*** field of the ***Basic settings*** section, enable the **Get from Queue** process so that a new request is created in the process as soon as the current request gets to the **Final** node. Each time a new request is created, the **Get from Queue** node will apply to the **Tasks Queue** process and take 1 request from the queue.
 
-     ![img](./img/recursion-node.png)
+    ![img](./img/recursion-node.png)
  
     3.4. To launch the cycle for reading requests from the queue, go to the **View** mode
  
