@@ -92,7 +92,6 @@ Before we start, let us register at the **eSputnik** service.
     ```
     https://esputnik.com/api/v1/message/email
     ```
-    
     3.5. Set the following values in the **API Call** node settings:
     ```    
     Request format: Default
@@ -100,7 +99,6 @@ Before we start, let us register at the **eSputnik** service.
     Content-Type: Application/Json
     ```
     3.6. Add the following parameters in the **Parameters** section:
-        
     ```    
     {
         "plainText": "{{plainText}}",
@@ -109,11 +107,15 @@ Before we start, let us register at the **eSputnik** service.
         "subject": "{{subject}}",
         "htmlText": "{{htmlText}}"
     }
-    ``` 
+    ```
+    where:
+     - `plaintext` is ordinary readable text
+     - `emails` is email address of a recipient
+     - `from` is email-address of a sender (must match with one of the sender’s existing addresses in the system)
+     - `subject` is subject of a message
+     - `htmlText` is HTML-code of a message
     ![img](./img/send-email-params.png)
-    
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***.
-    
     3.8. For authorization using the token, add the following: 
     ```
     {
