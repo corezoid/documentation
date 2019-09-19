@@ -66,9 +66,7 @@
     ![img](../../../en/plugins/esputnik/img/create-send-email-process.png)
 
 3. Ключом для вызова **API eSputnik** является логин и пароль входа в аккаунт. Чтобы при каждом вызове **API** не вводить логин и пароль, добавьте узел **Set Parameter** и назовите его **eSputnik Credentials**.
- 
     ![img](../../../en/plugins/esputnik/img/add-set-parameter-node.png)
-
     3.1. После того, как Вы добавили узел, кликните на него и добавьте параметры в разделе **Parameters**:
     - `login` - логин входа на [esputnik.com](https://esputnik.com)
     - `password` - пароль входа на [esputnik.com](https://esputnik.com)
@@ -82,21 +80,17 @@
     }
     ```
     ![img](../../../en/plugins/esputnik/img/set-token.png)
-
     3.3.  После узла **Get token** добавьте узел **API Call**, который будет вызывать **API eSputnik** для отправки email-сообщения.
-    
     3.4. После того, как вы добавили узел **API Call**, кликните на него и заполните поле ***URL***:
     ```
     https://esputnik.com/api/v1/message/email
     ```
-    
     3.5. Установите следующие значения в настройках узла **API Call**:
     ```    
     Request format: Default
     Request method: GET
     Content-Type: Application/Json
     ```
-    
     3.6. В разделе **Parameters** добавьте параметры:
     ```    
     {
@@ -114,9 +108,7 @@
     - `subject` - тема письма
     - `htmlText` - HTML-код сообщения
     ![img](../../../en/plugins/esputnik/img/send-email-params.png)
-
     3.7. В разделе  ***Additionally*** поставьте чекбокс напротив ***Header parameters***
-    
     3.8. Для авторизации с помощью токена добавьте:
     ```    
     {
