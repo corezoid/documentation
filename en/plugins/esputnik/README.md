@@ -70,6 +70,7 @@ Before we start, let us register at the **eSputnik** service.
 
 3. Login and sign-on password to your account are used as a key to make an **eSputnik API** call. To avoid entering login and password with each **API** call, add a **Set Parameter** node and name it **eSputnik Credentials**.
     ![img](./img/add-set-parameter-node.png)
+    
     3.1. After you have added the node, click it and add the following parameters in the **Parameters** section:
     - `login`: login to sign in at [esputnik.com](https://esputnik.com)
     - `password`: password to sign in at [esputnik.com](https://esputnik.com)
