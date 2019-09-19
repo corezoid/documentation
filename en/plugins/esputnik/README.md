@@ -81,7 +81,8 @@ Before we start, let us register at the **eSputnik** service.
     }
     ```
     ![img](./img/set-token.png)
-    3.3. After the **Get token** node, add an **API Call** node, which will call **eSputnik API** for sending an email message.</br></br>
+    3.3. After the **Get token** node, add an **API Call** node, which will call **eSputnik API** for sending an email message.
+    
     3.4. After you have added the **API Call** node, click it and fill in a URL field.
     ***URL***: 
     ```
@@ -111,7 +112,6 @@ Before we start, let us register at the **eSputnik** service.
     - `htmlText` is HTML-code of a message
     ![img](./img/send-email-params.png)
     3.7. In the ***Additionally*** section, set a checkbox opposite ***Header parameters***.
-    
     3.8. For authorization using the token, add the following: 
     ```
     {
