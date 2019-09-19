@@ -70,16 +70,12 @@
     ![img](../../../en/plugins/esputnik/img/add-set-parameter-node.png)
 
     3.1. После того, как Вы добавили узел, кликните на него и добавьте параметры в разделе **Parameters**:
-    
     - `login` - логин входа на [esputnik.com](https://esputnik.com)
     - `password` - пароль входа на [esputnik.com](https://esputnik.com)
     ![img](../../../en/plugins/esputnik/img/set-credentials.png)
 
     3.2. Для вызова **API eSputnik** мы будем использовать [token](https://esputnik.com/api/example_v1_auth_token_POST.html). Он формируется при помощи `login` и `password` закодированного в [Base64](https://ru.wikipedia.org/wiki/Base64).
-    
-    Для этого после узла **eSputnik Credentials** добавьте узел **Set Parameter** c именем **Get token**.
-
-    добавьте параметр в разделе **Parameters**:
+    Для этого после узла **eSputnik Credentials** добавьте узел **Set Parameter** c именем **Get token**. Добавьте параметр в разделе **Parameters**:
     ```    
     {
         "token": "$.base64_encode({{login}}:{{password}})"
@@ -89,18 +85,18 @@
 
     3.3.  После узла **Get token** добавьте узел **API Call**, который будет вызывать **API eSputnik** для отправки email-сообщения.
     
-    3.4. После того, как вы добавили узел **API Call**, кликните на него и заполните поле ***URL***
-    
-    ***URL***: 
+    3.4. После того, как вы добавили узел **API Call**, кликните на него и заполните поле ***URL***:
     ```
     https://esputnik.com/api/v1/message/email
     ```
+    
     3.5. Установите следующие значения в настройках узла **API Call**:
     ```    
     Request format: Default
     Request method: GET
     Content-Type: Application/Json
     ```
+    
     3.6. В разделе **Parameters** добавьте параметры:
     ```    
     {
